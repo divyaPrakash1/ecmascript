@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -12,7 +9,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     console.log('Dadda')
   }
-  items: Array<{title: string, link: string}> = [
+  items: Array<{ title: string, link: string }> = [
     { title: 'Explore the Docs', link: 'https://angular.dev' },
     { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
     { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
