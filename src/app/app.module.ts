@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { CharAtComponent } from './components/char-at/char-at.component';
 import { MultilineStringComponent } from './components/multiline-string/multiline-string.component';
+import { IsArrayComponent } from './components/is-array/is-array.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharAtComponent,
-    MultilineStringComponent
+    MultilineStringComponent,
+    IsArrayComponent
   ],
   imports: [
     BrowserModule,
