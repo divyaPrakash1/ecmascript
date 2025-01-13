@@ -6,13 +6,15 @@ import { AppComponent } from './components/app/app.component';
 import { CharAtComponent } from './components/char-at/char-at.component';
 import { MultilineStringComponent } from './components/multiline-string/multiline-string.component';
 import { IsArrayComponent } from './components/is-array/is-array.component';
+import { TrimComponent } from './components/trim/trim.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharAtComponent,
     MultilineStringComponent,
-    IsArrayComponent
+    IsArrayComponent,
+    TrimComponent
   ],
   imports: [
     BrowserModule,
