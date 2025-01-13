@@ -3,11 +3,11 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
-import { CharAtComponent } from './components/char-at/char-at.component';
-import { MultilineStringComponent } from './components/multiline-string/multiline-string.component';
-import { IsArrayComponent } from './components/is-array/is-array.component';
-import { TrimComponent } from './components/trim/trim.component';
-import { ForEachComponent } from './components/for-each/for-each.component';
+import { CharAtComponent } from './components/es-5/char-at/char-at.component';
+import { MultilineStringComponent } from './components/es-5/multiline-string/multiline-string.component';
+import { IsArrayComponent } from './components/es-5/is-array/is-array.component';
+import { TrimComponent } from './components/es-5/trim/trim.component';
+import { ForEachComponent } from './components/es-5/for-each/for-each.component';
 
 @NgModule({
   declarations: [
