@@ -4,11 +4,13 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { CharAtComponent } from './components/char-at/char-at.component';
+import { MultilineStringComponent } from './components/multiline-string/multiline-string.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CharAtComponent
+    CharAtComponent,
+    MultilineStringComponent
   ],
   imports: [
     BrowserModule,
