@@ -8,6 +8,7 @@ import { MultilineStringComponent } from './components/es-5/multiline-string/mul
 import { IsArrayComponent } from './components/es-5/is-array/is-array.component';
 import { TrimComponent } from './components/es-5/trim/trim.component';
 import { ForEachComponent } from './components/es-5/for-each/for-each.component';
+import { MapComponent } from './components/es-5/map/map.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ForEachComponent } from './components/es-5/for-each/for-each.component'
     MultilineStringComponent,
     IsArrayComponent,
     TrimComponent,
-    ForEachComponent
+    ForEachComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
