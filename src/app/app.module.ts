@@ -9,6 +9,7 @@ import { IsArrayComponent } from './components/es-5/is-array/is-array.component'
 import { TrimComponent } from './components/es-5/trim/trim.component';
 import { ForEachComponent } from './components/es-5/for-each/for-each.component';
 import { MapComponent } from './components/es-5/map/map.component';
+import { FilterComponent } from './components/es-5/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MapComponent } from './components/es-5/map/map.component';
     IsArrayComponent,
     TrimComponent,
     ForEachComponent,
-    MapComponent
+    MapComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
