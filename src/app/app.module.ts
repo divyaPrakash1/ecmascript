@@ -10,6 +10,7 @@ import { TrimComponent } from './components/es-5/trim/trim.component';
 import { ForEachComponent } from './components/es-5/for-each/for-each.component';
 import { MapComponent } from './components/es-5/map/map.component';
 import { FilterComponent } from './components/es-5/filter/filter.component';
+import { ReduceComponent } from './components/es-5/reduce/reduce.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FilterComponent } from './components/es-5/filter/filter.component';
     TrimComponent,
     ForEachComponent,
     MapComponent,
-    FilterComponent
+    FilterComponent,
+    ReduceComponent
   ],
   imports: [
     BrowserModule,
