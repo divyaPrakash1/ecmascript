@@ -14,6 +14,7 @@ import { ReduceComponent } from './reduce/reduce.component';
 import { TrimComponent } from './trim/trim.component';
 import { EveryComponent } from './every/every.component';
 import { SomeComponent } from './some/some.component';
+import { IndexOfComponent } from './index-of/index-of.component';
 
 
 
@@ -31,7 +32,8 @@ import { SomeComponent } from './some/some.component';
     ReduceComponent,
     TrimComponent,
     EveryComponent,
-    SomeComponent
+    SomeComponent,
+    IndexOfComponent
   ],
   imports: [
     CommonModule,

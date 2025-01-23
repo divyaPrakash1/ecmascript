@@ -12,6 +12,7 @@ import { MainES5Component } from './main-es5-component/main-es5.component';
 import { ReduceRightComponent } from './reduce-right/reduce-right.component';
 import { EveryComponent } from './every/every.component';
 import { SomeComponent } from './some/some.component';
+import { IndexOfComponent } from './index-of/index-of.component';
 
 
 
@@ -63,6 +64,10 @@ const routes: Routes = [
       {
         path: 'some',
         component: SomeComponent,
+      },
+      {
+        path: 'index-of',
+        component: IndexOfComponent,
       },
     ],
   }
