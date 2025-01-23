@@ -19,7 +19,7 @@ export class MainES5Component implements OnInit {
     { title: 'Filter', link: 'filter' },
     { title: 'Reduce', link: 'reduce' },
     { title: 'Reduce Right', link: 'reduce-right' },
-    // { title: 'JS - 2021', link: 'js-2021' },
+    { title: 'Every', link: 'every' },
     // { title: 'JS - 2022', link: 'js-2022' },
     // { title: 'JS - 2023', link: 'js-2023' },
     // { title: 'JS - 2024', link: 'js-2024' },

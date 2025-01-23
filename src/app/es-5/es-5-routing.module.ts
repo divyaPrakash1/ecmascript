@@ -10,6 +10,7 @@ import { FilterComponent } from './filter/filter.component';
 import { ReduceComponent } from './reduce/reduce.component';
 import { MainES5Component } from './main-es5-component/main-es5.component';
 import { ReduceRightComponent } from './reduce-right/reduce-right.component';
+import { EveryComponent } from './every/every.component';
 
 
 
@@ -54,10 +55,10 @@ const routes: Routes = [
         path: 'reduce-right',
         component: ReduceRightComponent,
       },
-      // {
-      //   path: 'filter',
-      //   component: IsArrayComponent,
-      // },
+      {
+        path: 'every',
+        component: EveryComponent,
+      },
     ],
   }
 ];
