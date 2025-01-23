@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'es-5',
-    loadChildren: () => import('./../app/components/es-5/es-5.module').then(m => m.ES5Module)
+    loadChildren: () => import('./es-5/es-5.module').then(m => m.ES5Module)
   },
 ];
 

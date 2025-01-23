@@ -3,13 +3,31 @@ import { CommonModule } from '@angular/common';
 import { ES5RoutingModule } from './es-5-routing.module';
 import { ES5Component } from './es-5.component';
 import { MainES5Component } from './main-es5-component/main-es5.component';
+import { ReduceRightComponent } from './reduce-right/reduce-right.component';
+import { CharAtComponent } from './char-at/char-at.component';
+import { FilterComponent } from './filter/filter.component';
+import { ForEachComponent } from './for-each/for-each.component';
+import { IsArrayComponent } from './is-array/is-array.component';
+import { MapComponent } from './map/map.component';
+import { MultilineStringComponent } from './multiline-string/multiline-string.component';
+import { ReduceComponent } from './reduce/reduce.component';
+import { TrimComponent } from './trim/trim.component';
 
 
 
 @NgModule({
   declarations: [
     ES5Component,
-    MainES5Component
+    MainES5Component,
+    ReduceRightComponent,
+    CharAtComponent,
+    FilterComponent,
+    ForEachComponent,
+    IsArrayComponent,
+    MapComponent,
+    MultilineStringComponent,
+    ReduceComponent,
+    TrimComponent
   ],
   imports: [
     CommonModule,

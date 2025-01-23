@@ -9,6 +9,7 @@ import { MapComponent } from './map/map.component';
 import { FilterComponent } from './filter/filter.component';
 import { ReduceComponent } from './reduce/reduce.component';
 import { MainES5Component } from './main-es5-component/main-es5.component';
+import { ReduceRightComponent } from './reduce-right/reduce-right.component';
 
 
 
@@ -49,10 +50,10 @@ const routes: Routes = [
         path: 'reduce',
         component: ReduceComponent,
       },
-      // {
-      //   path: 'map',
-      //   component: TrimComponent,
-      // },
+      {
+        path: 'reduce-right',
+        component: ReduceRightComponent,
+      },
       // {
       //   path: 'filter',
       //   component: IsArrayComponent,
