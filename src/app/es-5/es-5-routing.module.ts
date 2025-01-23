@@ -11,6 +11,7 @@ import { ReduceComponent } from './reduce/reduce.component';
 import { MainES5Component } from './main-es5-component/main-es5.component';
 import { ReduceRightComponent } from './reduce-right/reduce-right.component';
 import { EveryComponent } from './every/every.component';
+import { SomeComponent } from './some/some.component';
 
 
 
@@ -58,6 +59,10 @@ const routes: Routes = [
       {
         path: 'every',
         component: EveryComponent,
+      },
+      {
+        path: 'some',
+        component: SomeComponent,
       },
     ],
   }

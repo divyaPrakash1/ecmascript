@@ -13,6 +13,7 @@ import { MultilineStringComponent } from './multiline-string/multiline-string.co
 import { ReduceComponent } from './reduce/reduce.component';
 import { TrimComponent } from './trim/trim.component';
 import { EveryComponent } from './every/every.component';
+import { SomeComponent } from './some/some.component';
 
 
 
@@ -29,7 +30,8 @@ import { EveryComponent } from './every/every.component';
     MultilineStringComponent,
     ReduceComponent,
     TrimComponent,
-    EveryComponent
+    EveryComponent,
+    SomeComponent
   ],
   imports: [
     CommonModule,
