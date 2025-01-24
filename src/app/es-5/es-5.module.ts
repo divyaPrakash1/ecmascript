@@ -15,6 +15,7 @@ import { TrimComponent } from './trim/trim.component';
 import { EveryComponent } from './every/every.component';
 import { SomeComponent } from './some/some.component';
 import { IndexOfComponent } from './index-of/index-of.component';
+import { LastIndexOfComponent } from './last-index-of/last-index-of.component';
 
 
 
@@ -33,7 +34,8 @@ import { IndexOfComponent } from './index-of/index-of.component';
     TrimComponent,
     EveryComponent,
     SomeComponent,
-    IndexOfComponent
+    IndexOfComponent,
+    LastIndexOfComponent
   ],
   imports: [
     CommonModule,

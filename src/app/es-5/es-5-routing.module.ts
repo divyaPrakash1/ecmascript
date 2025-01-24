@@ -13,6 +13,7 @@ import { ReduceRightComponent } from './reduce-right/reduce-right.component';
 import { EveryComponent } from './every/every.component';
 import { SomeComponent } from './some/some.component';
 import { IndexOfComponent } from './index-of/index-of.component';
+import { LastIndexOfComponent } from './last-index-of/last-index-of.component';
 
 
 
@@ -68,6 +69,10 @@ const routes: Routes = [
       {
         path: 'index-of',
         component: IndexOfComponent,
+      },
+      {
+        path: 'last-index-of',
+        component: LastIndexOfComponent,
       },
     ],
   }
