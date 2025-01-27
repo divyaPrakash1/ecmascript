@@ -16,6 +16,7 @@ import { EveryComponent } from './every/every.component';
 import { SomeComponent } from './some/some.component';
 import { IndexOfComponent } from './index-of/index-of.component';
 import { LastIndexOfComponent } from './last-index-of/last-index-of.component';
+import { ParseComponent } from './parse/parse.component';
 
 
 
@@ -35,7 +36,8 @@ import { LastIndexOfComponent } from './last-index-of/last-index-of.component';
     EveryComponent,
     SomeComponent,
     IndexOfComponent,
-    LastIndexOfComponent
+    LastIndexOfComponent,
+    ParseComponent
   ],
   imports: [
     CommonModule,
