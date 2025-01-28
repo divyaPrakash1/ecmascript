@@ -16,6 +16,7 @@ import { IndexOfComponent } from './index-of/index-of.component';
 import { LastIndexOfComponent } from './last-index-of/last-index-of.component';
 import { ParseComponent } from './parse/parse.component';
 import { StringifyComponent } from './stringify/stringify.component';
+import { DateNowComponent } from './date-now/date-now.component';
 
 
 
@@ -83,6 +84,10 @@ const routes: Routes = [
       {
         path: 'json-stringify',
         component: StringifyComponent,
+      },
+      {
+        path: 'date-now',
+        component: DateNowComponent,
       },
     ],
   }

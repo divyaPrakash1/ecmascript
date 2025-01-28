@@ -25,6 +25,7 @@ export class MainES5Component implements OnInit {
     { title: 'LastIndexOf', link: 'last-index-of' },
     { title: 'JSON Parse', link: 'json-parse' },
     { title: 'JSON Stringify', link: 'json-stringify' },
+    { title: 'Date Now', link: 'date-now' },
     // { title: 'JS - 2023', link: 'js-2023' },
     // { title: 'JS - 2024', link: 'js-2024' },
   ];

@@ -18,6 +18,7 @@ import { IndexOfComponent } from './index-of/index-of.component';
 import { LastIndexOfComponent } from './last-index-of/last-index-of.component';
 import { ParseComponent } from './parse/parse.component';
 import { StringifyComponent } from './stringify/stringify.component';
+import { DateNowComponent } from './date-now/date-now.component';
 
 
 
@@ -39,7 +40,8 @@ import { StringifyComponent } from './stringify/stringify.component';
     IndexOfComponent,
     LastIndexOfComponent,
     ParseComponent,
-    StringifyComponent
+    StringifyComponent,
+    DateNowComponent
   ],
   imports: [
     CommonModule,
