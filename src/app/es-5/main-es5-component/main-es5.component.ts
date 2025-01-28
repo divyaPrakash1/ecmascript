@@ -27,7 +27,6 @@ export class MainES5Component implements OnInit {
     { title: 'JSON Stringify', link: 'json-stringify' },
     { title: 'Date Now', link: 'date-now' },
     { title: 'Date TO ISO String', link: 'date-to-iso-string' },
-    // { title: 'JS - 2023', link: 'js-2023' },
-    // { title: 'JS - 2024', link: 'js-2024' },
+    { title: 'Date TO JSON', link: 'date-to-json' },
   ];
 }
