@@ -17,6 +17,7 @@ import { SomeComponent } from './some/some.component';
 import { IndexOfComponent } from './index-of/index-of.component';
 import { LastIndexOfComponent } from './last-index-of/last-index-of.component';
 import { ParseComponent } from './parse/parse.component';
+import { StringifyComponent } from './stringify/stringify.component';
 
 
 
@@ -37,7 +38,8 @@ import { ParseComponent } from './parse/parse.component';
     SomeComponent,
     IndexOfComponent,
     LastIndexOfComponent,
-    ParseComponent
+    ParseComponent,
+    StringifyComponent
   ],
   imports: [
     CommonModule,
