@@ -22,6 +22,7 @@ import { DateNowComponent } from './date-now/date-now.component';
 import { DateToISOStringComponent } from './date-to-isostring/date-to-isostring.component';
 import { DateTOJSONComponent } from './date-tojson/date-tojson.component';
 import { GetterSetterComponent } from './getter-setter/getter-setter.component';
+import { ReservedWordsComponent } from './reserved-words/reserved-words.component';
 
 
 
@@ -47,7 +48,8 @@ import { GetterSetterComponent } from './getter-setter/getter-setter.component';
     DateNowComponent,
     DateToISOStringComponent,
     DateTOJSONComponent,
-    GetterSetterComponent
+    GetterSetterComponent,
+    ReservedWordsComponent,
   ],
   imports: [
     CommonModule,

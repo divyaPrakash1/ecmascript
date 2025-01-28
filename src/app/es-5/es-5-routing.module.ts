@@ -20,6 +20,7 @@ import { DateNowComponent } from './date-now/date-now.component';
 import { DateToISOStringComponent } from './date-to-isostring/date-to-isostring.component';
 import { DateTOJSONComponent } from './date-tojson/date-tojson.component';
 import { GetterSetterComponent } from './getter-setter/getter-setter.component';
+import { ReservedWordsComponent } from './reserved-words/reserved-words.component';
 
 
 
@@ -103,6 +104,10 @@ const routes: Routes = [
       {
         path: 'getter-setter',
         component: GetterSetterComponent,
+      },
+      {
+        path: 'reserved-words',
+        component: ReservedWordsComponent,
       },
     ],
   }
