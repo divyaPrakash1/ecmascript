@@ -19,6 +19,7 @@ import { StringifyComponent } from './stringify/stringify.component';
 import { DateNowComponent } from './date-now/date-now.component';
 import { DateToISOStringComponent } from './date-to-isostring/date-to-isostring.component';
 import { DateTOJSONComponent } from './date-tojson/date-tojson.component';
+import { GetterSetterComponent } from './getter-setter/getter-setter.component';
 
 
 
@@ -98,6 +99,10 @@ const routes: Routes = [
       {
         path: 'date-to-json',
         component: DateTOJSONComponent,
+      },
+      {
+        path: 'getter-setter',
+        component: GetterSetterComponent,
       },
     ],
   }

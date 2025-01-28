@@ -21,6 +21,7 @@ import { StringifyComponent } from './stringify/stringify.component';
 import { DateNowComponent } from './date-now/date-now.component';
 import { DateToISOStringComponent } from './date-to-isostring/date-to-isostring.component';
 import { DateTOJSONComponent } from './date-tojson/date-tojson.component';
+import { GetterSetterComponent } from './getter-setter/getter-setter.component';
 
 
 
@@ -45,7 +46,8 @@ import { DateTOJSONComponent } from './date-tojson/date-tojson.component';
     StringifyComponent,
     DateNowComponent,
     DateToISOStringComponent,
-    DateTOJSONComponent
+    DateTOJSONComponent,
+    GetterSetterComponent
   ],
   imports: [
     CommonModule,

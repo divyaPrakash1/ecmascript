@@ -28,5 +28,6 @@ export class MainES5Component implements OnInit {
     { title: 'Date Now', link: 'date-now' },
     { title: 'Date TO ISO String', link: 'date-to-iso-string' },
     { title: 'Date TO JSON', link: 'date-to-json' },
+    { title: 'Getter Setter', link: 'getter-setter' },
   ];
 }
