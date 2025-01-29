@@ -21,6 +21,7 @@ import { DateToISOStringComponent } from './date-to-isostring/date-to-isostring.
 import { DateTOJSONComponent } from './date-tojson/date-tojson.component';
 import { GetterSetterComponent } from './getter-setter/getter-setter.component';
 import { ReservedWordsComponent } from './reserved-words/reserved-words.component';
+import { ObjectCreateComponent } from './object-create/object-create.component';
 
 
 
@@ -29,86 +30,27 @@ const routes: Routes = [
     path: '',
     component: ES5Component,
     children: [
-      {
-        path: '',
-        component: MainES5Component,
-      },
-      {
-        path: 'multiline-string',
-        component: MultilineStringComponent,
-      },
-      {
-        path: 'trim',
-        component: TrimComponent,
-      },
-      {
-        path: 'is-array',
-        component: IsArrayComponent,
-      },
-      {
-        path: 'for-each',
-        component: ForEachComponent,
-      },
-      {
-        path: 'map',
-        component: MapComponent,
-      },
-      {
-        path: 'filter',
-        component: FilterComponent,
-      },
-      {
-        path: 'reduce',
-        component: ReduceComponent,
-      },
-      {
-        path: 'reduce-right',
-        component: ReduceRightComponent,
-      },
-      {
-        path: 'every',
-        component: EveryComponent,
-      },
-      {
-        path: 'some',
-        component: SomeComponent,
-      },
-      {
-        path: 'index-of',
-        component: IndexOfComponent,
-      },
-      {
-        path: 'last-index-of',
-        component: LastIndexOfComponent,
-      },
-      {
-        path: 'json-parse',
-        component: ParseComponent,
-      },
-      {
-        path: 'json-stringify',
-        component: StringifyComponent,
-      },
-      {
-        path: 'date-now',
-        component: DateNowComponent,
-      },
-      {
-        path: 'date-to-iso-string',
-        component: DateToISOStringComponent,
-      },
-      {
-        path: 'date-to-json',
-        component: DateTOJSONComponent,
-      },
-      {
-        path: 'getter-setter',
-        component: GetterSetterComponent,
-      },
-      {
-        path: 'reserved-words',
-        component: ReservedWordsComponent,
-      },
+      { path: '', component: MainES5Component, },
+      { path: 'multiline-string', component: MultilineStringComponent, },
+      { path: 'trim', component: TrimComponent, },
+      { path: 'is-array', component: IsArrayComponent, },
+      { path: 'for-each', component: ForEachComponent, },
+      { path: 'map', component: MapComponent, },
+      { path: 'filter', component: FilterComponent, },
+      { path: 'reduce', component: ReduceComponent, },
+      { path: 'reduce-right', component: ReduceRightComponent, },
+      { path: 'every', component: EveryComponent, },
+      { path: 'some', component: SomeComponent, },
+      { path: 'index-of', component: IndexOfComponent, },
+      { path: 'last-index-of', component: LastIndexOfComponent, },
+      { path: 'json-parse', component: ParseComponent, },
+      { path: 'json-stringify', component: StringifyComponent, },
+      { path: 'date-now', component: DateNowComponent, },
+      { path: 'date-to-iso-string', component: DateToISOStringComponent, },
+      { path: 'date-to-json', component: DateTOJSONComponent, },
+      { path: 'getter-setter', component: GetterSetterComponent, },
+      { path: 'reserved-words', component: ReservedWordsComponent, },
+      { path: 'object-create', component: ObjectCreateComponent, },
     ],
   }
 ];

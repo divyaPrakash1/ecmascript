@@ -23,6 +23,7 @@ import { DateToISOStringComponent } from './date-to-isostring/date-to-isostring.
 import { DateTOJSONComponent } from './date-tojson/date-tojson.component';
 import { GetterSetterComponent } from './getter-setter/getter-setter.component';
 import { ReservedWordsComponent } from './reserved-words/reserved-words.component';
+import { ObjectCreateComponent } from './object-create/object-create.component';
 
 
 
@@ -50,6 +51,7 @@ import { ReservedWordsComponent } from './reserved-words/reserved-words.componen
     DateTOJSONComponent,
     GetterSetterComponent,
     ReservedWordsComponent,
+    ObjectCreateComponent
   ],
   imports: [
     CommonModule,
