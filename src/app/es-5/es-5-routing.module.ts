@@ -25,6 +25,7 @@ import { ObjectCreateComponent } from './object-create/object-create.component';
 import { ObjectKeysComponent } from './object-keys/object-keys.component';
 import { ObjectManagementComponent } from './object-management/object-management.component';
 import { ObjectProtectionComponent } from './object-protection/object-protection.component';
+import { ObjectDefinePropertyComponent } from './object-define-property/object-define-property.component';
 
 
 
@@ -57,6 +58,7 @@ const routes: Routes = [
       { path: 'object-keys', component: ObjectKeysComponent, },
       { path: 'object-management', component: ObjectManagementComponent, },
       { path: 'object-protection', component: ObjectProtectionComponent, },
+      { path: 'object-define-property', component: ObjectDefinePropertyComponent, },
     ],
   }
 ];

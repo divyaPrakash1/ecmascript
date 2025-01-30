@@ -27,6 +27,7 @@ import { ObjectCreateComponent } from './object-create/object-create.component';
 import { ObjectKeysComponent } from './object-keys/object-keys.component';
 import { ObjectManagementComponent } from './object-management/object-management.component';
 import { ObjectProtectionComponent } from './object-protection/object-protection.component';
+import { ObjectDefinePropertyComponent } from './object-define-property/object-define-property.component';
 
 
 
@@ -57,7 +58,8 @@ import { ObjectProtectionComponent } from './object-protection/object-protection
     ObjectCreateComponent,
     ObjectKeysComponent,
     ObjectManagementComponent,
-    ObjectProtectionComponent
+    ObjectProtectionComponent,
+    ObjectDefinePropertyComponent
   ],
   imports: [
     CommonModule,
