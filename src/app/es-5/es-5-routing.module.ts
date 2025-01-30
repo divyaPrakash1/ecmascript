@@ -22,6 +22,7 @@ import { DateTOJSONComponent } from './date-tojson/date-tojson.component';
 import { GetterSetterComponent } from './getter-setter/getter-setter.component';
 import { ReservedWordsComponent } from './reserved-words/reserved-words.component';
 import { ObjectCreateComponent } from './object-create/object-create.component';
+import { ObjectKeysComponent } from './object-keys/object-keys.component';
 
 
 
@@ -51,6 +52,7 @@ const routes: Routes = [
       { path: 'getter-setter', component: GetterSetterComponent, },
       { path: 'reserved-words', component: ReservedWordsComponent, },
       { path: 'object-create', component: ObjectCreateComponent, },
+      { path: 'object-keys', component: ObjectKeysComponent, },
     ],
   }
 ];

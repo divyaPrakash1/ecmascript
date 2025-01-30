@@ -31,5 +31,6 @@ export class MainES5Component implements OnInit {
     { title: 'Getter Setter', link: 'getter-setter' },
     { title: 'Reserved Words', link: 'reserved-words' },
     { title: 'Object Create', link: 'object-create' },
+    { title: 'Object Keys', link: 'object-keys' },
   ];
 }
