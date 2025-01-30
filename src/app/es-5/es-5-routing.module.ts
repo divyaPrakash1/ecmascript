@@ -26,6 +26,7 @@ import { ObjectKeysComponent } from './object-keys/object-keys.component';
 import { ObjectManagementComponent } from './object-management/object-management.component';
 import { ObjectProtectionComponent } from './object-protection/object-protection.component';
 import { ObjectDefinePropertyComponent } from './object-define-property/object-define-property.component';
+import { BindComponent } from './bind/bind.component';
 
 
 
@@ -59,6 +60,7 @@ const routes: Routes = [
       { path: 'object-management', component: ObjectManagementComponent, },
       { path: 'object-protection', component: ObjectProtectionComponent, },
       { path: 'object-define-property', component: ObjectDefinePropertyComponent, },
+      { path: 'bind', component: BindComponent, },
     ],
   }
 ];

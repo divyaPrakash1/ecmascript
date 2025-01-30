@@ -28,6 +28,7 @@ import { ObjectKeysComponent } from './object-keys/object-keys.component';
 import { ObjectManagementComponent } from './object-management/object-management.component';
 import { ObjectProtectionComponent } from './object-protection/object-protection.component';
 import { ObjectDefinePropertyComponent } from './object-define-property/object-define-property.component';
+import { BindComponent } from './bind/bind.component';
 
 
 
@@ -59,7 +60,8 @@ import { ObjectDefinePropertyComponent } from './object-define-property/object-d
     ObjectKeysComponent,
     ObjectManagementComponent,
     ObjectProtectionComponent,
-    ObjectDefinePropertyComponent
+    ObjectDefinePropertyComponent,
+    BindComponent
   ],
   imports: [
     CommonModule,

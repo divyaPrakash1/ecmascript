@@ -35,5 +35,6 @@ export class MainES5Component implements OnInit {
     { title: 'Object Management', link: 'object-management' },
     { title: 'Object Protection', link: 'object-protection' },
     { title: 'Object DefineProperty', link: 'object-define-property' },
+    { title: 'Bind', link: 'bind' },
   ];
 }
