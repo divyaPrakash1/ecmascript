@@ -1,0 +1,16 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'ecmspt-main-es6',
+  templateUrl: './main-es6.component.html',
+  styleUrl: './main-es6.component.scss'
+})
+export class MainES6Component {
+  constructor() { }
+  ngOnInit(): void {
+  }
+
+  items: Array<{ title: string, link: string }> = [
+    { title: 'Multiline String', link: 'multiline-string' },
+  ];
+}

@@ -8,6 +8,10 @@ const routes: Routes = [
     path: 'es-5',
     loadChildren: () => import('./es-5/es-5.module').then(m => m.ES5Module)
   },
+  {
+    path: 'es-6',
+    loadChildren: () => import('./es-6/es-6.module').then(m => m.ES6Module)
+  },
 ];
 
 @NgModule({

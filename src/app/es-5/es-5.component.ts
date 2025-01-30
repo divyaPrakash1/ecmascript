@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'ecmspt-es5',
   templateUrl: './es-5.component.html',
   styleUrl: './es-5.component.scss'
 })
