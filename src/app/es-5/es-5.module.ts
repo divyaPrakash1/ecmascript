@@ -29,6 +29,7 @@ import { ObjectManagementComponent } from './object-management/object-management
 import { ObjectProtectionComponent } from './object-protection/object-protection.component';
 import { ObjectDefinePropertyComponent } from './object-define-property/object-define-property.component';
 import { BindComponent } from './bind/bind.component';
+import { TrailingCommaComponent } from './trailing-comma/trailing-comma.component';
 
 
 
@@ -61,7 +62,8 @@ import { BindComponent } from './bind/bind.component';
     ObjectManagementComponent,
     ObjectProtectionComponent,
     ObjectDefinePropertyComponent,
-    BindComponent
+    BindComponent,
+    TrailingCommaComponent
   ],
   imports: [
     CommonModule,

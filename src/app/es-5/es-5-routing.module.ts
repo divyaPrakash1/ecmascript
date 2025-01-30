@@ -27,6 +27,7 @@ import { ObjectManagementComponent } from './object-management/object-management
 import { ObjectProtectionComponent } from './object-protection/object-protection.component';
 import { ObjectDefinePropertyComponent } from './object-define-property/object-define-property.component';
 import { BindComponent } from './bind/bind.component';
+import { TrailingCommaComponent } from './trailing-comma/trailing-comma.component';
 
 
 
@@ -61,6 +62,7 @@ const routes: Routes = [
       { path: 'object-protection', component: ObjectProtectionComponent, },
       { path: 'object-define-property', component: ObjectDefinePropertyComponent, },
       { path: 'bind', component: BindComponent, },
+      { path: 'trailing-comma', component: TrailingCommaComponent, },
     ],
   }
 ];
