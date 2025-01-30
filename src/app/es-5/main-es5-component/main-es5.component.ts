@@ -33,5 +33,6 @@ export class MainES5Component implements OnInit {
     { title: 'Object Create', link: 'object-create' },
     { title: 'Object Keys', link: 'object-keys' },
     { title: 'Object Management', link: 'object-management' },
+    { title: 'Object Protection', link: 'object-protection' },
   ];
 }

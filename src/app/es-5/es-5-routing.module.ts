@@ -24,6 +24,7 @@ import { ReservedWordsComponent } from './reserved-words/reserved-words.componen
 import { ObjectCreateComponent } from './object-create/object-create.component';
 import { ObjectKeysComponent } from './object-keys/object-keys.component';
 import { ObjectManagementComponent } from './object-management/object-management.component';
+import { ObjectProtectionComponent } from './object-protection/object-protection.component';
 
 
 
@@ -55,6 +56,7 @@ const routes: Routes = [
       { path: 'object-create', component: ObjectCreateComponent, },
       { path: 'object-keys', component: ObjectKeysComponent, },
       { path: 'object-management', component: ObjectManagementComponent, },
+      { path: 'object-protection', component: ObjectProtectionComponent, },
     ],
   }
 ];

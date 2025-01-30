@@ -26,6 +26,7 @@ import { ReservedWordsComponent } from './reserved-words/reserved-words.componen
 import { ObjectCreateComponent } from './object-create/object-create.component';
 import { ObjectKeysComponent } from './object-keys/object-keys.component';
 import { ObjectManagementComponent } from './object-management/object-management.component';
+import { ObjectProtectionComponent } from './object-protection/object-protection.component';
 
 
 
@@ -55,7 +56,8 @@ import { ObjectManagementComponent } from './object-management/object-management
     ReservedWordsComponent,
     ObjectCreateComponent,
     ObjectKeysComponent,
-    ObjectManagementComponent
+    ObjectManagementComponent,
+    ObjectProtectionComponent
   ],
   imports: [
     CommonModule,
