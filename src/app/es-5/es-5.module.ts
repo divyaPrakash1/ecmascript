@@ -25,6 +25,7 @@ import { GetterSetterComponent } from './getter-setter/getter-setter.component';
 import { ReservedWordsComponent } from './reserved-words/reserved-words.component';
 import { ObjectCreateComponent } from './object-create/object-create.component';
 import { ObjectKeysComponent } from './object-keys/object-keys.component';
+import { ObjectManagementComponent } from './object-management/object-management.component';
 
 
 
@@ -53,7 +54,8 @@ import { ObjectKeysComponent } from './object-keys/object-keys.component';
     GetterSetterComponent,
     ReservedWordsComponent,
     ObjectCreateComponent,
-    ObjectKeysComponent
+    ObjectKeysComponent,
+    ObjectManagementComponent
   ],
   imports: [
     CommonModule,
