@@ -11,6 +11,6 @@ export class MainES6Component {
   }
 
   items: Array<{ title: string, link: string }> = [
-    { title: 'Multiline String', link: 'multiline-string' },
+    { title: 'Let', link: 'let' },
   ];
 }
