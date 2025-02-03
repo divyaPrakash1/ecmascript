@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ES6Component } from './es-6.component';
 import { MainES6Component } from './main-es6/main-es6.component';
 import { LetComponent } from './let/let.component';
+import { ConstKeyWordComponent } from './const-key-word/const-key-word.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
     children: [
       { path: '', component: MainES6Component, },
       { path: 'let', component: LetComponent, },
+      { path: 'const', component: ConstKeyWordComponent, },
     ],
   }
 ];
