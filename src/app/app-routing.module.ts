@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'es-6',
     loadChildren: () => import('./es-6/es-6.module').then(m => m.ES6Module)
   },
+  {
+    path: 'exer-1',
+    loadChildren: () => import('./exer-1/exer-1.module').then(m => m.Exer1Module)
+  },
 ];
 
 @NgModule({

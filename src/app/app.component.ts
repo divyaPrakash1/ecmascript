@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
     { title: 'JS - 2022', link: 'js-2022' },
     { title: 'JS - 2023', link: 'js-2023' },
     { title: 'JS - 2024', link: 'js-2024' },
+    { title: 'Exercise 1', link: 'exer-1' },
   ];
   
   title = 'ES_Practice';
