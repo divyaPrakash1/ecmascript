@@ -13,5 +13,6 @@ export class MainES6Component {
   items: Array<{ title: string, link: string }> = [
     { title: 'Let', link: 'let' },
     { title: 'Const', link: 'const' },
+    { title: 'Arrow Function', link: 'arrow-function' },
   ];
 }

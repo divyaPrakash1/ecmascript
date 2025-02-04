@@ -5,6 +5,7 @@ import { ES6Component } from './es-6.component';
 import { MainES6Component } from './main-es6/main-es6.component';
 import { LetComponent } from './let/let.component';
 import { ConstKeyWordComponent } from './const-key-word/const-key-word.component';
+import { ArrowFunctionsComponent } from './arrow-functions/arrow-functions.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { ConstKeyWordComponent } from './const-key-word/const-key-word.component
     ES6Component,
     MainES6Component,
     LetComponent,
-    ConstKeyWordComponent
+    ConstKeyWordComponent,
+    ArrowFunctionsComponent
     
   ],
   imports: [
