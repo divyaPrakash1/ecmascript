@@ -17,7 +17,36 @@ export class CommonComponent implements OnInit {
     // this.calculateSum();
     // console.log(this.isAnagrams('hello', 'llohe'));
     // console.log(this.getFactorial(6));
-    console.log(this.getGCD(60, 90));
+    // console.log(this.getGCD(60, 90));
+    // this.mergeTwoArray();
+    // this.findMissingNumber();
+    // console.log(this.binarySearch([1,2,3,4,5,6,7,8,9,10], 6));
+
+    // const arr = [1, [2, [3, 4, [5, 6]]], 7, 8];
+    // console.log(this.flattenedArray(arr));
+
+    // const arr1 = [1, 2, 3, 4, 5, 6, 7];
+    // const k = 3;
+    // console.log(this.rotateArray(arr1, 3));
+
+    // this.getMostFrequent();
+
+    // console.log(this.isPerfectSquare(9));
+    // this.getInterSection();
+    // this.getUnion();
+    // this.countVowels();
+    // this.removeFalsyValues();
+    // console.log(this.checkAnagramsStr('dadda', 'ddsada'));
+    // console.log(this.getCommonPrefix(["flower", "flow", "flight"])); // Output: "fl"
+    // console.log(this.getCommonPrefix(["dog", "racecar", "car"]));    // Output: ""
+    // console.log(this.getCommonPrefix(["interspecies", "interstellar", "interstate"])); // Output: "inter"
+
+
+    // Example usage:
+    console.log(this.hasUniqueCharacters("abcdef")); // Output: true
+    console.log(this.hasUniqueCharacters("hello"));   // Output: false
+    console.log(this.hasUniqueCharacters("12345"));   // Output: true
+    console.log(this.hasUniqueCharacters("aabbcc"));  // Output: false
   }
 
   // 1. Write a function to check if a number is prime.
@@ -128,6 +157,217 @@ export class CommonComponent implements OnInit {
       b = remainder;
     }
     return a;
+  }
+
+  // 11. Write a function to merge two sorted arrays.
+  mergeTwoArray() {
+    const array1 = [1, 2, 3, 4, 5];
+    const array2 = [6, 7, 8, 9, 10];
+    const mergedArray = array1.concat(array2);
+    console.log('mergedArray', mergedArray);
+  }
+
+  // 12. Write a function to find the missing number in an array of numbers 1 to n.
+  findMissingNumber() {
+    const tempArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 21];
+    let sortedArray = tempArray.sort((a, b) => a - b);
+    console.log(sortedArray)
+    let missingNumbers: number[] = [];
+    for (let i = sortedArray[0]; i <= sortedArray[sortedArray.length-1]; i++) {
+      if (!sortedArray.includes(i)) missingNumbers.push(i);
+    }
+    console.log(missingNumbers);
+  }
+
+  // 13. Write a function to implement binary search.
+  binarySearch(arr: number[], target: number): number {
+    let left = arr[0];
+    let right = arr[arr.length - 1];
+    while (left <= right) {
+      const mid = Math.floor((left + right) / 2); // Find the middle index
+      if (arr[mid] === target) {
+        return mid;// Target found, return the index
+      } else if (arr[mid] > target) {
+        left = mid - 1; // Move the right pointer to the left of mid
+      } else {
+        right = mid + 1; // Move the left pointer to the right of mid
+      }
+    }
+    return -1; // Target not found
+  }
+  
+  // 14. Write a function to flatten an array.
+  flattenedArray(arra: any[]): any[] {
+    let resultArray: any[] = [];
+    arra.forEach(item => {
+      if (Array.isArray(item)) {
+        resultArray = resultArray.concat(this.flattenedArray(item))
+      } else {
+        resultArray.push(item);
+      }
+    });
+    return resultArray
+  }
+  
+  // 15. Write a function to find the largest sum of non - adjacent numbers in an array. // XXXX
+  
+  
+  // 16. Write a function to check if a number is a power of two.
+  checkPowerOfTwo(num: number): boolean {
+    if (num < 0) return false;   // If n is less than or equal to 0, it's not a power of two
+    while (num % 2 === 0) {   // Loop while n is divisible by 2
+      num = num / 2;
+    }
+    return num === 1;   // If n becomes 1, it was a power of two
+  }
+  
+  // 17. Write a function to rotate an array by k positions.
+  rotateArray(arr: any[], k: number) {
+    const n = arr.length;
+    // Handle the case where k is larger than the array length
+    k = k % n;
+
+    // Step 1: Reverse the whole array
+    this.reverse(arr, 0, n - 1);
+
+    // // Step 2: Reverse the first k elements
+    // this.reverse(arr, 0, k - 1);
+
+    // // Step 3: Reverse the remaining n-k elements
+    // this.reverse(arr, k, n - 1);
+    return arr;
+  }
+
+  // Helper function to reverse a portion of the array
+  reverse(arr: { [x: string]: any; }, start: number, end: number) {
+    while (start < end) {
+      // Swap elements at the start and end indices
+      [arr[start], arr[end]] = [arr[end], arr[start]];
+      start++;
+      end--;
+    }
+  }
+    
+  // 18. Write a function to implement a deep clone of an object.
+  deepObject(obj: Object) {
+    return JSON.parse(JSON.stringify(obj));
+  }
+  
+  // 19. Write a function to find the most frequent element in an array.
+  getMostFrequent() {
+    const arr = [1, 2, 3, 3, 2, 2, 4, 5, 3, 2];
+    const occurrence: any = {};
+    arr.forEach((e) => {
+      occurrence[e] = (occurrence[e] || 0) + 1;
+    });
+
+    let mostFrequent: any = arr[0];
+    let maxFrequency = occurrence[mostFrequent];
+
+    for (let element in occurrence) {
+      if (occurrence[element] > maxFrequency) {
+        maxFrequency = occurrence[element];
+        mostFrequent = element;
+      }
+    }
+    console.log('mostFrequent', mostFrequent);
+
+  }
+  
+  // 20. Write a function to check if a number is a perfect square.
+  isPerfectSquare(num: number): boolean {
+    if (num < 0) return false;
+    const sqrt = Math.sqrt(num); // get square
+    return sqrt === Math.floor(sqrt) // compute sqrt is perfect integer
+  }
+
+  // 21. Write a function to find the intersection of two arrays.
+  getInterSection() {
+    const arr1 = [1, 2, 2, 3, 4];
+    const arr2 = [2, 2, 4, 6];
+    let commonElements: number[] = [];
+    arr1.forEach(e => {
+      if (arr2.includes(e)) {
+        commonElements.push(e);
+      }
+    });
+    commonElements = commonElements.filter((e: number, i: number, self: number[]) => self.indexOf(e) === i);
+    console.log('commonElements', commonElements);
+  }
+
+  // 22. Write a function to find the union of two arrays.
+  getUnion() {
+    const arr1 = [1, 2, 2, 3, 4];
+    const arr2 = [2, 2, 4, 6];
+    let commonElements: number[] = [...arr1, ...arr2];
+    commonElements = commonElements.filter((e: number, i: number, self: number[]) => self.indexOf(e) === i);
+    console.log('commonElements', commonElements);
+  }
+
+  // 23. Write a function to count the number of vowels in a string.
+  countVowels() {
+    const testString: string = 'This is test string to count number of vowels.'; // 12 
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    let count = 0;
+    testString.split('').forEach((e, i) => {
+      if (vowels.includes(e)) {
+        count += 1;
+      }
+    });
+    console.log('vowels count is - ', count);
+  }
+
+  // 24. Write a function to remove all falsy values from an array.
+  removeFalsyValues() {
+    const values = [false, 0, "", null, undefined, NaN, -1, "Hello", []];
+    const properValues = values.filter(e => !!e);
+    console.log('properValues', properValues);
+  }
+
+  // 25. Write a function to check if a string is an anagram of another string.
+  checkAnagramsStr(str1: string, str2: string) {
+    return str1.toLowerCase().split('').sort().join('') === str2.toLowerCase().split('').sort().join('');
+  }
+
+  // 26. Write a function to reverse a string.
+  reverseStrings(str1: string) {
+    return str1.split('').reverse().join('');
+  }
+  
+  // 27. Write a function to check if a string is a palindrome.
+  isPalindromes(str1: string) {
+    return str1.split('').reverse().join('') === str1;
+  }
+  
+  // 28. Write a function to find the longest palindrome in a string. // XXXX
+  
+  // 29. Write a function to find the longest common prefix among an array of strings.
+  getCommonPrefix(arr: string[]): string |undefined {
+    if (!arr.length) return '';
+    // Sort the array of strings
+    arr.sort();
+    // Get the first and last string in the sorted array
+    let first = arr[0];
+    let last = arr[arr.length - 1];
+    let i = 0;
+    while (i < first.length && i < last.length && first[i] === last[i]) {
+      i++;
+    }  
+    return first.slice(0, i);
+  }
+  
+  // 30. Write a function to check if a string contains only unique characters.
+  hasUniqueCharacters(str: string): boolean {
+    let strChar: string[] = [];
+    let isUnique: boolean = true;
+    for (let i = 0; i < str.length; i++) {
+      if (!strChar.includes(str[i])) {
+        strChar.push(str[i]);
+      } else {
+        isUnique = false;
+      }
+    }
+    return isUnique;
   }
 
 
