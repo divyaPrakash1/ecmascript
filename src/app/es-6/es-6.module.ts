@@ -7,6 +7,7 @@ import { LetComponent } from './let/let.component';
 import { ConstKeyWordComponent } from './const-key-word/const-key-word.component';
 import { ArrowFunctionsComponent } from './arrow-functions/arrow-functions.component';
 import { DestructuringComponent } from './destructuring/destructuring.component';
+import { ArrayDestructuringComponent } from './array-destructuring/array-destructuring.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DestructuringComponent } from './destructuring/destructuring.component'
     LetComponent,
     ConstKeyWordComponent,
     ArrowFunctionsComponent,
-    DestructuringComponent
+    DestructuringComponent,
+    ArrayDestructuringComponent
     
   ],
   imports: [

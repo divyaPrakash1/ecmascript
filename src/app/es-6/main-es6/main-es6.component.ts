@@ -15,5 +15,6 @@ export class MainES6Component {
     { title: 'Const', link: 'const' },
     { title: 'Arrow Function', link: 'arrow-function' },
     { title: 'Destructuring', link: 'destructuring' },
+    { title: 'Array - Destructuring', link: 'array-destructuring' },
   ];
 }

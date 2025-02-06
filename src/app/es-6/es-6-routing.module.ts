@@ -6,6 +6,7 @@ import { LetComponent } from './let/let.component';
 import { ConstKeyWordComponent } from './const-key-word/const-key-word.component';
 import { ArrowFunctionsComponent } from './arrow-functions/arrow-functions.component';
 import { DestructuringComponent } from './destructuring/destructuring.component';
+import { ArrayDestructuringComponent } from './array-destructuring/array-destructuring.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
       { path: 'const', component: ConstKeyWordComponent, },
       { path: 'arrow-function', component: ArrowFunctionsComponent, },
       { path: 'destructuring', component: DestructuringComponent, },
+      { path: 'array-destructuring', component: ArrayDestructuringComponent, },
     ],
   }
 ];
