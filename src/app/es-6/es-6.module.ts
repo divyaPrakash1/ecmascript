@@ -8,6 +8,7 @@ import { ConstKeyWordComponent } from './const-key-word/const-key-word.component
 import { ArrowFunctionsComponent } from './arrow-functions/arrow-functions.component';
 import { DestructuringComponent } from './destructuring/destructuring.component';
 import { ArrayDestructuringComponent } from './array-destructuring/array-destructuring.component';
+import { SpreadAndRestOperatorComponent } from './spread-and-rest-operator/spread-and-rest-operator.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ArrayDestructuringComponent } from './array-destructuring/array-destruc
     ConstKeyWordComponent,
     ArrowFunctionsComponent,
     DestructuringComponent,
-    ArrayDestructuringComponent
+    ArrayDestructuringComponent,
+    SpreadAndRestOperatorComponent
     
   ],
   imports: [

@@ -7,6 +7,7 @@ import { ConstKeyWordComponent } from './const-key-word/const-key-word.component
 import { ArrowFunctionsComponent } from './arrow-functions/arrow-functions.component';
 import { DestructuringComponent } from './destructuring/destructuring.component';
 import { ArrayDestructuringComponent } from './array-destructuring/array-destructuring.component';
+import { SpreadAndRestOperatorComponent } from './spread-and-rest-operator/spread-and-rest-operator.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
       { path: 'arrow-function', component: ArrowFunctionsComponent, },
       { path: 'destructuring', component: DestructuringComponent, },
       { path: 'array-destructuring', component: ArrayDestructuringComponent, },
+      { path: 'spread-rest', component: SpreadAndRestOperatorComponent, },
     ],
   }
 ];

@@ -16,5 +16,6 @@ export class MainES6Component {
     { title: 'Arrow Function', link: 'arrow-function' },
     { title: 'Destructuring', link: 'destructuring' },
     { title: 'Array - Destructuring', link: 'array-destructuring' },
+    { title: 'Spread And Rest', link: 'spread-rest' },
   ];
 }
