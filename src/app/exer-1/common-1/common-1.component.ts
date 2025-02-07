@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ecmspt-common',
-  templateUrl: './common.component.html',
-  styleUrl: './common.component.scss'
+  selector: 'ecmspt-common-1',
+  templateUrl: './common-1.component.html',
+  styleUrl: './common-1.component.scss'
 })
-export class CommonComponent implements OnInit {
+export class Common1Component implements OnInit {
   ngOnInit(): void {
     // console.log(this.isPrime(31));
     // this.reverseString();
@@ -43,10 +43,17 @@ export class CommonComponent implements OnInit {
 
 
     // Example usage:
-    console.log(this.hasUniqueCharacters("abcdef")); // Output: true
-    console.log(this.hasUniqueCharacters("hello"));   // Output: false
-    console.log(this.hasUniqueCharacters("12345"));   // Output: true
-    console.log(this.hasUniqueCharacters("aabbcc"));  // Output: false
+    // console.log(this.hasUniqueCharacters("abcdef")); // Output: true
+    // console.log(this.hasUniqueCharacters("hello"));   // Output: false
+    // console.log(this.hasUniqueCharacters("12345"));   // Output: true
+    // console.log(this.hasUniqueCharacters("aabbcc"));  // Output: false
+
+    // this.convertLowerCaseWithoutLowercase();
+    this.sortArray();
+    console.log(this.factorils(8));
+    this.sortArray();
+    this.findFirstNonRepeatingCharector();
+    console.log(this.fibonaaci(13));
   }
 
   // 1. Write a function to check if a number is prime.
@@ -369,6 +376,76 @@ export class CommonComponent implements OnInit {
     }
     return isUnique;
   }
+
+  // 31. Write a function to convert a string to lowercase without using toLowerCase().
+  convertLowerCaseWithoutLowercase() {
+    const tempStr: string = 'THIS IS THE STRING TO CONVERT LOWERCASE WITHOUT USING LOWERCASE';
+    let strArr = tempStr.split('');
+    let lowerCaseStr = '';
+    strArr.forEach(e => lowerCaseStr = lowerCaseStr + (e != ' ' ? (String.fromCharCode(e.charCodeAt(0) + 32)) : ' '));
+    console.log('asdfasdf', lowerCaseStr);
+  }
+  
+  // 32. Write a function to sort an array of numbers in ascending order.
+  sortArray() {
+    const tempArray = [1, 2, 3, 2, 1, 2, 3, 4, 5, 4, 3, 3, 2, 2];
+    for (let i = 0; i < tempArray.length; i++) {
+      for (let j = 0; j < tempArray.length; j++) {
+        if (tempArray[i] < tempArray[j]) {
+          let temp = tempArray[i];
+          tempArray[i] = tempArray[j];
+          tempArray[j] = temp;
+        }
+      }
+    }
+    console.log('sortedArray', tempArray);
+  }
+  
+  // 33. Write a function to implement the bubble sort algorithm. // XXXX
+  
+  // 34. Write a function to implement the insertion sort algorithm. // XXXX
+  
+  // 35. Write a function to implement the selection sort algorithm. // XXXX
+  
+  // 36. Write a function to implement the merge sort algorithm. // XXXX
+  
+  // 37. Write a function to implement the quicksort algorithm. // XXXX
+  
+  // 38. Write a function to find the first non - repeating character in a string.
+  findFirstNonRepeatingCharector() {
+    let str = 'level';
+    let charCount: any = {}
+    for (let char of str) {
+      charCount[char] = (charCount[char] || 0) + 1; 
+    }
+    let nonRepeatingChar: string = '';
+    for (let c of str) {
+      if (charCount[c] === 1) {
+        nonRepeatingChar = c;
+        console.log('charCount[c]', nonRepeatingChar);
+        return;
+      }
+    }
+  }
+
+  // 39. Write a function to calculate the factorial of a number recursively.
+  factorils(n: number): number {
+    if (n === 0 || n === 1) return 1
+    else return n * this.factorils(n - 1);
+  }
+
+  // 40. Write a function to generate the Fibonacci sequence up to n numbers.
+  fibonaaci(n: number): number[] {
+    if (n === 0) return [0];
+    let libSeries = [0, 1];
+    if (n === 1) return libSeries;
+    while (n > 1) {
+      libSeries.push(libSeries[libSeries.length - 1] + libSeries[libSeries.length - 2]);
+      n--;
+    }
+    return libSeries
+  }
+
 
 
 
