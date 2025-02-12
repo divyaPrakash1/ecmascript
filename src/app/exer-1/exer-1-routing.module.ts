@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Exer1Component } from './exer-1.component';
 import { MainExer1Component } from './main-exer-1/main-exer-1.component';
 import { Common1Component } from './common-1/common-1.component';
+import { Common2Component } from './common-2/common-2.component';
 
 
 const routes: Routes = [
@@ -11,8 +12,8 @@ const routes: Routes = [
     component: Exer1Component,
     children: [
       { path: '', component: MainExer1Component, },
-      { path: 'common', component: Common1Component, },
-      // { path: 'const', component: ConstKeyWordComponent, },
+      { path: 'common-1', component: Common1Component, },
+      { path: 'common-2', component: Common2Component, },
       // { path: 'arrow-function', component: ArrowFunctionsComponent, },
     ],
   }
