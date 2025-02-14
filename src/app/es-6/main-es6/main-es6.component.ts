@@ -17,5 +17,7 @@ export class MainES6Component {
     { title: 'Destructuring', link: 'destructuring' },
     { title: 'Array - Destructuring', link: 'array-destructuring' },
     { title: 'Spread And Rest', link: 'spread-rest' },
+    { title: 'For Of', link: 'for-of' },
   ];
+
 }

@@ -8,6 +8,7 @@ import { ArrowFunctionsComponent } from './arrow-functions/arrow-functions.compo
 import { DestructuringComponent } from './destructuring/destructuring.component';
 import { ArrayDestructuringComponent } from './array-destructuring/array-destructuring.component';
 import { SpreadAndRestOperatorComponent } from './spread-and-rest-operator/spread-and-rest-operator.component';
+import { ForOfComponent } from './for-of/for-of.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
       { path: 'destructuring', component: DestructuringComponent, },
       { path: 'array-destructuring', component: ArrayDestructuringComponent, },
       { path: 'spread-rest', component: SpreadAndRestOperatorComponent, },
+      { path: 'for-of', component: ForOfComponent, },
     ],
   }
 ];

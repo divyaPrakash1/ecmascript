@@ -9,6 +9,7 @@ import { ArrowFunctionsComponent } from './arrow-functions/arrow-functions.compo
 import { DestructuringComponent } from './destructuring/destructuring.component';
 import { ArrayDestructuringComponent } from './array-destructuring/array-destructuring.component';
 import { SpreadAndRestOperatorComponent } from './spread-and-rest-operator/spread-and-rest-operator.component';
+import { ForOfComponent } from './for-of/for-of.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SpreadAndRestOperatorComponent } from './spread-and-rest-operator/sprea
     ArrowFunctionsComponent,
     DestructuringComponent,
     ArrayDestructuringComponent,
-    SpreadAndRestOperatorComponent
+    SpreadAndRestOperatorComponent,
+    ForOfComponent
     
   ],
   imports: [
