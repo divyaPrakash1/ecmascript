@@ -11,6 +11,7 @@ import { ArrayDestructuringComponent } from './array-destructuring/array-destruc
 import { SpreadAndRestOperatorComponent } from './spread-and-rest-operator/spread-and-rest-operator.component';
 import { ForOfComponent } from './for-of/for-of.component';
 import { ClassesComponent } from './classes/classes.component';
+import { DefaultParamComponent } from './default-param/default-param.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ClassesComponent } from './classes/classes.component';
     ArrayDestructuringComponent,
     SpreadAndRestOperatorComponent,
     ForOfComponent,
-    ClassesComponent
+    ClassesComponent,
+    DefaultParamComponent
     
   ],
   imports: [

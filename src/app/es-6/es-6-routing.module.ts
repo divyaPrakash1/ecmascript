@@ -10,6 +10,7 @@ import { ArrayDestructuringComponent } from './array-destructuring/array-destruc
 import { SpreadAndRestOperatorComponent } from './spread-and-rest-operator/spread-and-rest-operator.component';
 import { ForOfComponent } from './for-of/for-of.component';
 import { ClassesComponent } from './classes/classes.component';
+import { DefaultParamComponent } from './default-param/default-param.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
       { path: 'spread-rest', component: SpreadAndRestOperatorComponent, },
       { path: 'for-of', component: ForOfComponent, },
       { path: 'classes', component: ClassesComponent, },
+      { path: 'default-params', component: DefaultParamComponent, },
     ],
   }
 ];
