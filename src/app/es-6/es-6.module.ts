@@ -12,6 +12,7 @@ import { SpreadAndRestOperatorComponent } from './spread-and-rest-operator/sprea
 import { ForOfComponent } from './for-of/for-of.component';
 import { ClassesComponent } from './classes/classes.component';
 import { DefaultParamComponent } from './default-param/default-param.component';
+import { FunctionRestParamComponent } from './function-rest-param/function-rest-param.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { DefaultParamComponent } from './default-param/default-param.component';
     SpreadAndRestOperatorComponent,
     ForOfComponent,
     ClassesComponent,
-    DefaultParamComponent
+    DefaultParamComponent,
+    FunctionRestParamComponent
     
   ],
   imports: [

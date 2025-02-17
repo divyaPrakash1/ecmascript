@@ -20,6 +20,7 @@ export class MainES6Component {
     { title: 'For Of', link: 'for-of' },
     { title: 'Classes', link: 'classes' },
     { title: 'Default Parameter', link: 'default-params' },
+    { title: 'Rest Parameter', link: 'rest-params' },
   ];
 
 }
