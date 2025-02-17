@@ -13,6 +13,7 @@ import { ForOfComponent } from './for-of/for-of.component';
 import { ClassesComponent } from './classes/classes.component';
 import { DefaultParamComponent } from './default-param/default-param.component';
 import { FunctionRestParamComponent } from './function-rest-param/function-rest-param.component';
+import { IncludesComponent } from './includes/includes.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { FunctionRestParamComponent } from './function-rest-param/function-rest-
     ForOfComponent,
     ClassesComponent,
     DefaultParamComponent,
-    FunctionRestParamComponent
+    FunctionRestParamComponent,
+    IncludesComponent
     
   ],
   imports: [

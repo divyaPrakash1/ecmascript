@@ -12,6 +12,7 @@ import { ForOfComponent } from './for-of/for-of.component';
 import { ClassesComponent } from './classes/classes.component';
 import { DefaultParamComponent } from './default-param/default-param.component';
 import { FunctionRestParamComponent } from './function-rest-param/function-rest-param.component';
+import { IncludesComponent } from './includes/includes.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,7 @@ const routes: Routes = [
       { path: 'classes', component: ClassesComponent, },
       { path: 'default-params', component: DefaultParamComponent, },
       { path: 'rest-params', component: FunctionRestParamComponent, },
+      { path: 'includes', component: IncludesComponent, },
     ],
   }
 ];

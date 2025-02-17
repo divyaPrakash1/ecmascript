@@ -21,6 +21,7 @@ export class MainES6Component {
     { title: 'Classes', link: 'classes' },
     { title: 'Default Parameter', link: 'default-params' },
     { title: 'Rest Parameter', link: 'rest-params' },
+    { title: 'Includes', link: 'includes' },
   ];
 
 }
