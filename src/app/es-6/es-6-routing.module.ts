@@ -15,6 +15,7 @@ import { FunctionRestParamComponent } from './function-rest-param/function-rest-
 import { IncludesComponent } from './includes/includes.component';
 import { StartsWithComponent } from './starts-with/starts-with.component';
 import { EndsWithComponent } from './ends-with/ends-with.component';
+import { ArrayEntriesComponent } from './array-entries/array-entries.component';
 
 
 const routes: Routes = [
@@ -36,6 +37,7 @@ const routes: Routes = [
       { path: 'includes', component: IncludesComponent, },
       { path: 'starts-with', component: StartsWithComponent, },
       { path: 'ends-with', component: EndsWithComponent, },
+      { path: 'array-entries', component: ArrayEntriesComponent, },
     ],
   }
 ];

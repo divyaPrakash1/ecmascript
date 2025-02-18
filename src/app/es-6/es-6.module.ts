@@ -16,6 +16,7 @@ import { FunctionRestParamComponent } from './function-rest-param/function-rest-
 import { IncludesComponent } from './includes/includes.component';
 import { StartsWithComponent } from './starts-with/starts-with.component';
 import { EndsWithComponent } from './ends-with/ends-with.component';
+import { ArrayEntriesComponent } from './array-entries/array-entries.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { EndsWithComponent } from './ends-with/ends-with.component';
     FunctionRestParamComponent,
     IncludesComponent,
     StartsWithComponent,
-    EndsWithComponent
+    EndsWithComponent,
+    ArrayEntriesComponent
     
   ],
   imports: [

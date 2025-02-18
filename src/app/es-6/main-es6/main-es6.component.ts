@@ -24,6 +24,7 @@ export class MainES6Component {
     { title: 'Includes', link: 'includes' },
     { title: 'Starts With', link: 'starts-with' },
     { title: 'Ends With', link: 'ends-with' },
+    { title: 'Array Entries', link: 'array-entries' },
   ];
 
 }
