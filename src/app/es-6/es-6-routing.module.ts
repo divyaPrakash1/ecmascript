@@ -13,6 +13,7 @@ import { ClassesComponent } from './classes/classes.component';
 import { DefaultParamComponent } from './default-param/default-param.component';
 import { FunctionRestParamComponent } from './function-rest-param/function-rest-param.component';
 import { IncludesComponent } from './includes/includes.component';
+import { StartsWithComponent } from './starts-with/starts-with.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,7 @@ const routes: Routes = [
       { path: 'default-params', component: DefaultParamComponent, },
       { path: 'rest-params', component: FunctionRestParamComponent, },
       { path: 'includes', component: IncludesComponent, },
+      { path: 'starts-with', component: StartsWithComponent, },
     ],
   }
 ];

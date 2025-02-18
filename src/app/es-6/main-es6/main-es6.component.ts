@@ -22,6 +22,7 @@ export class MainES6Component {
     { title: 'Default Parameter', link: 'default-params' },
     { title: 'Rest Parameter', link: 'rest-params' },
     { title: 'Includes', link: 'includes' },
+    { title: 'Starts With', link: 'starts-with' },
   ];
 
 }

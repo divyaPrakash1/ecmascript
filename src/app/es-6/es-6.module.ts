@@ -14,6 +14,7 @@ import { ClassesComponent } from './classes/classes.component';
 import { DefaultParamComponent } from './default-param/default-param.component';
 import { FunctionRestParamComponent } from './function-rest-param/function-rest-param.component';
 import { IncludesComponent } from './includes/includes.component';
+import { StartsWithComponent } from './starts-with/starts-with.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { IncludesComponent } from './includes/includes.component';
     ClassesComponent,
     DefaultParamComponent,
     FunctionRestParamComponent,
-    IncludesComponent
+    IncludesComponent,
+    StartsWithComponent
     
   ],
   imports: [
