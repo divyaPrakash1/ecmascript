@@ -17,6 +17,7 @@ import { IncludesComponent } from './includes/includes.component';
 import { StartsWithComponent } from './starts-with/starts-with.component';
 import { EndsWithComponent } from './ends-with/ends-with.component';
 import { ArrayEntriesComponent } from './array-entries/array-entries.component';
+import { ArrayFromComponent } from './array-from/array-from.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ArrayEntriesComponent } from './array-entries/array-entries.component';
     IncludesComponent,
     StartsWithComponent,
     EndsWithComponent,
-    ArrayEntriesComponent
+    ArrayEntriesComponent,
+    ArrayFromComponent
     
   ],
   imports: [

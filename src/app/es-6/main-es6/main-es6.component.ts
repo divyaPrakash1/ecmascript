@@ -25,6 +25,7 @@ export class MainES6Component {
     { title: 'Starts With', link: 'starts-with' },
     { title: 'Ends With', link: 'ends-with' },
     { title: 'Array Entries', link: 'array-entries' },
+    { title: 'Array From', link: 'array-from' },
   ];
 
 }
