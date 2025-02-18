@@ -18,6 +18,7 @@ import { StartsWithComponent } from './starts-with/starts-with.component';
 import { EndsWithComponent } from './ends-with/ends-with.component';
 import { ArrayEntriesComponent } from './array-entries/array-entries.component';
 import { ArrayFromComponent } from './array-from/array-from.component';
+import { ArrayKeysComponent } from './array-keys/array-keys.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ArrayFromComponent } from './array-from/array-from.component';
     StartsWithComponent,
     EndsWithComponent,
     ArrayEntriesComponent,
-    ArrayFromComponent
+    ArrayFromComponent,
+    ArrayKeysComponent
     
   ],
   imports: [

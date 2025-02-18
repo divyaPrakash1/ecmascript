@@ -17,6 +17,7 @@ import { StartsWithComponent } from './starts-with/starts-with.component';
 import { EndsWithComponent } from './ends-with/ends-with.component';
 import { ArrayEntriesComponent } from './array-entries/array-entries.component';
 import { ArrayFromComponent } from './array-from/array-from.component';
+import { ArrayKeysComponent } from './array-keys/array-keys.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,7 @@ const routes: Routes = [
       { path: 'ends-with', component: EndsWithComponent, },
       { path: 'array-entries', component: ArrayEntriesComponent, },
       { path: 'array-from', component: ArrayFromComponent, },
+      { path: 'array-keys', component: ArrayKeysComponent, },
     ],
   }
 ];
