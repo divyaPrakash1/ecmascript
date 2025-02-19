@@ -20,6 +20,7 @@ import { ArrayEntriesComponent } from './array-entries/array-entries.component';
 import { ArrayFromComponent } from './array-from/array-from.component';
 import { ArrayKeysComponent } from './array-keys/array-keys.component';
 import { ArrayFindComponent } from './array-find/array-find.component';
+import { FindIndexComponent } from './find-index/find-index.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { ArrayFindComponent } from './array-find/array-find.component';
     ArrayEntriesComponent,
     ArrayFromComponent,
     ArrayKeysComponent,
-    ArrayFindComponent
+    ArrayFindComponent,
+    FindIndexComponent
     
   ],
   imports: [

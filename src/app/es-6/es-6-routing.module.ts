@@ -19,6 +19,7 @@ import { ArrayEntriesComponent } from './array-entries/array-entries.component';
 import { ArrayFromComponent } from './array-from/array-from.component';
 import { ArrayKeysComponent } from './array-keys/array-keys.component';
 import { ArrayFindComponent } from './array-find/array-find.component';
+import { FindIndexComponent } from './find-index/find-index.component';
 
 
 const routes: Routes = [
@@ -44,6 +45,7 @@ const routes: Routes = [
       { path: 'array-from', component: ArrayFromComponent, },
       { path: 'array-keys', component: ArrayKeysComponent, },
       { path: 'array-find', component: ArrayFindComponent, },
+      { path: 'array-find-index', component: FindIndexComponent, },
     ],
   }
 ];
