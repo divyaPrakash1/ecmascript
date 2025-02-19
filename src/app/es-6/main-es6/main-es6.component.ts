@@ -27,6 +27,7 @@ export class MainES6Component {
     { title: 'Array Entries', link: 'array-entries' },
     { title: 'Array From', link: 'array-from' },
     { title: 'Array Keys', link: 'array-keys' },
+    { title: 'Array Find', link: 'array-find' },
   ];
 
 }
