@@ -22,6 +22,7 @@ import { ArrayKeysComponent } from './array-keys/array-keys.component';
 import { ArrayFindComponent } from './array-find/array-find.component';
 import { FindIndexComponent } from './find-index/find-index.component';
 import { MathTruncComponent } from './math-trunc/math-trunc.component';
+import { MathSignComponent } from './math-sign/math-sign.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { MathTruncComponent } from './math-trunc/math-trunc.component';
     ArrayKeysComponent,
     ArrayFindComponent,
     FindIndexComponent,
-    MathTruncComponent
+    MathTruncComponent,
+    MathSignComponent
     
   ],
   imports: [
