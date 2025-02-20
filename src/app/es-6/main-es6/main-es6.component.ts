@@ -29,6 +29,7 @@ export class MainES6Component {
     { title: 'Array Keys', link: 'array-keys' },
     { title: 'Array Find', link: 'array-find' },
     { title: 'Array FindIndex', link: 'array-find-index' },
+    { title: 'Math Trunc', link: 'math-trunc' },
   ];
 
 }

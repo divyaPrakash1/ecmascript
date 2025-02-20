@@ -21,6 +21,7 @@ import { ArrayFromComponent } from './array-from/array-from.component';
 import { ArrayKeysComponent } from './array-keys/array-keys.component';
 import { ArrayFindComponent } from './array-find/array-find.component';
 import { FindIndexComponent } from './find-index/find-index.component';
+import { MathTruncComponent } from './math-trunc/math-trunc.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { FindIndexComponent } from './find-index/find-index.component';
     ArrayFromComponent,
     ArrayKeysComponent,
     ArrayFindComponent,
-    FindIndexComponent
+    FindIndexComponent,
+    MathTruncComponent
     
   ],
   imports: [
