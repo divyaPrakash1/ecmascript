@@ -22,6 +22,7 @@ import { ArrayFindComponent } from './array-find/array-find.component';
 import { FindIndexComponent } from './find-index/find-index.component';
 import { MathTruncComponent } from './math-trunc/math-trunc.component';
 import { MathSignComponent } from './math-sign/math-sign.component';
+import { MathCbrtComponent } from './math-cbrt/math-cbrt.component';
 
 
 const routes: Routes = [
@@ -50,6 +51,7 @@ const routes: Routes = [
       { path: 'array-find-index', component: FindIndexComponent, },
       { path: 'math-trunc', component: MathTruncComponent, },
       { path: 'math-sign', component: MathSignComponent, },
+      { path: 'math-cbrt', component: MathCbrtComponent, },
     ],
   }
 ];

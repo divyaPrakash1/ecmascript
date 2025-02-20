@@ -31,6 +31,7 @@ export class MainES6Component {
     { title: 'Array FindIndex', link: 'array-find-index' },
     { title: 'Math Trunc', link: 'math-trunc' },
     { title: 'Math Sign', link: 'math-sign' },
+    { title: 'Math Cbrt', link: 'math-cbrt' },
   ];
 
 }
