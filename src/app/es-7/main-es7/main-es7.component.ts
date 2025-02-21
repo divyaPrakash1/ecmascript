@@ -12,7 +12,8 @@ export class MainES7Component {
 
   items: Array<{ title: string, link: string }> = [
     { title: 'JS Expo (**)', link: 'js-expo' },
-    { title: 'JS Expo Assign (**=) ', link: 'js-expo-assign' },
+    { title: 'JS Expo Assign (**=)', link: 'js-expo-assign' },
+    { title: 'Array Includes', link: 'array-include' },
   ];
 
 }

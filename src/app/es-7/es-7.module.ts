@@ -5,6 +5,7 @@ import { ES7Component } from './es-7.component';
 import { MainES7Component } from './main-es7/main-es7.component';
 import { JsExponentiationComponent } from './js-exponentiation/js-exponentiation.component';
 import { JsExponentiationAssignmentComponent } from './js-exponentiation-assignment/js-exponentiation-assignment.component';
+import { ArrayIncludesComponent } from './array-includes/array-includes.component';
 
 
 @NgModule({
@@ -12,12 +13,12 @@ import { JsExponentiationAssignmentComponent } from './js-exponentiation-assignm
     MainES7Component,
     ES7Component,
     JsExponentiationComponent,
-    JsExponentiationAssignmentComponent
+    JsExponentiationAssignmentComponent,
+    ArrayIncludesComponent
   ],
   imports: [
     CommonModule,
     ES7RoutingModule,
-    
   ]
 })
 export class ES7Module { }
