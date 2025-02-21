@@ -11,7 +11,8 @@ export class MainES7Component {
   }
 
   items: Array<{ title: string, link: string }> = [
-    { title: 'JS Exponentiation', link: 'js-exponentiation' },
+    { title: 'JS Expo (**)', link: 'js-expo' },
+    { title: 'JS Expo Assign (**=) ', link: 'js-expo-assign' },
   ];
 
 }

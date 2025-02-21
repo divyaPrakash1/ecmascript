@@ -1,3 +1,4 @@
+import { JsExponentiationAssignmentComponent } from './js-exponentiation-assignment/js-exponentiation-assignment.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ES7Component } from './es-7.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
     component: ES7Component,
     children: [
       { path: '', component: MainES7Component, },
-      { path: 'js-exponentiation', component: JsExponentiationComponent, },
+      { path: 'js-expo', component: JsExponentiationComponent, },
+      { path: 'js-expo-assign', component: JsExponentiationAssignmentComponent, },
       
     ],
   }
