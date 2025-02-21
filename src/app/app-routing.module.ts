@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: () => import('./es-6/es-6.module').then(m => m.ES6Module)
   },
   {
+    path: 'js-2016',
+    loadChildren: () => import('./es-7/es-7.module').then(m => m.ES7Module)
+  },
+  {
     path: 'exer-1',
     loadChildren: () => import('./exer-1/exer-1.module').then(m => m.Exer1Module)
   },
