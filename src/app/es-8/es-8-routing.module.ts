@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ES8Component } from './es-8.component';
 import { MainES8Component } from './main-es8/main-es8.component';
+import { ObjectEntriesComponent } from './object-entries/object-entries.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
     children: [
       { path: '', component: MainES8Component, },      
       { path: 'js-str-padding', component: JsPaddingComponent, },      
+      { path: 'object-entries', component: ObjectEntriesComponent, },      
     ],
   }
 ];

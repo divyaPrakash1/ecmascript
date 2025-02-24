@@ -12,6 +12,7 @@ export class MainES8Component implements OnInit{
 
   items: Array<{ title: string, link: string }> = [
     { title: 'JS String padding', link: 'js-str-padding' },
+    { title: 'Object Entries', link: 'object-entries' },
   ];
 }
 
