@@ -7,6 +7,7 @@ import { JsPaddingComponent } from './js-padding/js-padding.component';
 import { ObjectEntriesComponent } from './object-entries/object-entries.component';
 import { ObjectValuesComponent } from './object-values/object-values.component';
 import { AsyncAwaitComponent } from './async-await/async-await.component';
+import { TrailingCommaFunctionsComponent } from './trailing-comma-functions/trailing-comma-functions.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AsyncAwaitComponent } from './async-await/async-await.component';
     JsPaddingComponent,
     ObjectEntriesComponent,
     ObjectValuesComponent,
-    AsyncAwaitComponent
+    AsyncAwaitComponent,
+    TrailingCommaFunctionsComponent
   ],
   imports: [
     CommonModule,

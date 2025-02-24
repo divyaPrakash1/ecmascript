@@ -6,6 +6,7 @@ import { MainES8Component } from './main-es8/main-es8.component';
 import { ObjectEntriesComponent } from './object-entries/object-entries.component';
 import { ObjectValuesComponent } from './object-values/object-values.component';
 import { AsyncAwaitComponent } from './async-await/async-await.component';
+import { TrailingCommaFunctionsComponent } from './trailing-comma-functions/trailing-comma-functions.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: 'object-entries', component: ObjectEntriesComponent, },      
       { path: 'object-values', component: ObjectValuesComponent, },      
       { path: 'async-await', component: AsyncAwaitComponent, },      
+      { path: 'comma-fn', component: TrailingCommaFunctionsComponent, },      
     ],
   }
 ];
