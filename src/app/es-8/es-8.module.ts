@@ -5,6 +5,7 @@ import { ES8Component } from './es-8.component';
 import { MainES8Component } from './main-es8/main-es8.component';
 import { JsPaddingComponent } from './js-padding/js-padding.component';
 import { ObjectEntriesComponent } from './object-entries/object-entries.component';
+import { ObjectValuesComponent } from './object-values/object-values.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { ObjectEntriesComponent } from './object-entries/object-entries.componen
     ES8Component,
     MainES8Component,
     JsPaddingComponent,
-    ObjectEntriesComponent
+    ObjectEntriesComponent,
+    ObjectValuesComponent
   ],
   imports: [
     CommonModule,
