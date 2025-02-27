@@ -16,6 +16,7 @@ export class MainES8Component implements OnInit{
     { title: 'Object Values', link: 'object-values' },
     { title: 'Async Await', link: 'async-await' },
     { title: 'Trailing Comma', link: 'comma-fn' },
+    { title: 'Own Property Des', link: 'own-prop' },
   ];
 }
 

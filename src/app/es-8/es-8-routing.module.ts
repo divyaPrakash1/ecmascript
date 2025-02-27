@@ -7,6 +7,7 @@ import { ObjectEntriesComponent } from './object-entries/object-entries.componen
 import { ObjectValuesComponent } from './object-values/object-values.component';
 import { AsyncAwaitComponent } from './async-await/async-await.component';
 import { TrailingCommaFunctionsComponent } from './trailing-comma-functions/trailing-comma-functions.component';
+import { GetOwnPropertyDescriptorsComponent } from './get-own-property-descriptors/get-own-property-descriptors.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'object-values', component: ObjectValuesComponent, },      
       { path: 'async-await', component: AsyncAwaitComponent, },      
       { path: 'comma-fn', component: TrailingCommaFunctionsComponent, },      
+      { path: 'own-prop', component: GetOwnPropertyDescriptorsComponent, },      
     ],
   }
 ];
