@@ -12,7 +12,6 @@ export class MainEs9Component {
 
   items: Array<{ title: string, link: string }> = [
     { title: 'Object Rest Props', link: 'object-rest-props' },
-    // { title: 'Common - 2', link: 'common-2' },
-    // { title: 'Common - 3', link: 'common-3' },
+    { title: 'New RegEx Feature', link: 'new-reg-ex-feature' },
   ];
 }
