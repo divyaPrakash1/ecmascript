@@ -9,7 +9,7 @@ import { NewRegExFeatureComponent } from './new-reg-ex-feature/new-reg-ex-featur
 @NgModule({
   declarations: [
     ObjectRestPropsComponent,
-    NewRegExFeatureComponent
+    NewRegExFeatureComponent,
   ],
   imports: [
     CommonModule,
