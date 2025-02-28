@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class MainEs10Component {
   items: Array<{ title: string, link: string }> = [
     { title: 'String Trim Starts', link: 'trim-starts' },
+    { title: 'String Trim End', link: 'trim-end' },
     // { title: 'New RegEx Feature', link: 'new-reg-ex-feature' },
   ];
   constructor() { }

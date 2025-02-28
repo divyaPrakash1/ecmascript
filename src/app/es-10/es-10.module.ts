@@ -5,13 +5,15 @@ import { ES10RoutingModule } from './es-10-routing.module';
 import { Es10Component } from './es-10.component';
 import { MainEs10Component } from './main-es-10/main-es-10.component';
 import { StringTrimStartComponent } from './string-trim-start/string-trim-start.component';
+import { StringTrimEndComponent } from './string-trim-end/string-trim-end.component';
 
 
 @NgModule({
   declarations: [
     Es10Component,
     MainEs10Component,
-    StringTrimStartComponent
+    StringTrimStartComponent,
+    StringTrimEndComponent
   ],
   imports: [
     CommonModule,
