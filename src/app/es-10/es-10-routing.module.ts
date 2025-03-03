@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Es10Component } from './es-10.component';
 import { StringTrimStartComponent } from './string-trim-start/string-trim-start.component';
 import { StringTrimEndComponent } from './string-trim-end/string-trim-end.component';
+import { ObjectFromEntriesComponent } from './object-from-entries/object-from-entries.component';
 
 const routes: Routes = [
   {
@@ -11,8 +12,9 @@ const routes: Routes = [
     component: Es10Component,
     children: [
       { path: '', component: MainEs10Component },
-      { path: 'trim-starts', component: StringTrimStartComponent },
+      { path: 'trim-start', component: StringTrimStartComponent },
       { path: 'trim-end', component: StringTrimEndComponent },
+      { path: 'object-from-entries', component: ObjectFromEntriesComponent },
     ]
   }
 ];
