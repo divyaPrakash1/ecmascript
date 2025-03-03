@@ -10,6 +10,7 @@ export class MainEs10Component {
     { title: 'String Trim Start', link: 'trim-start' },
     { title: 'String Trim End', link: 'trim-end' },
     { title: 'Object From Entries', link: 'object-from-entries' },
+    { title: 'Optional Catch Binding', link: 'optional-catch-binding' },
   ];
   constructor() { }
   ngOnInit(): void {

@@ -7,6 +7,7 @@ import { MainEs10Component } from './main-es-10/main-es-10.component';
 import { StringTrimStartComponent } from './string-trim-start/string-trim-start.component';
 import { StringTrimEndComponent } from './string-trim-end/string-trim-end.component';
 import { ObjectFromEntriesComponent } from './object-from-entries/object-from-entries.component';
+import { OptionalCatchBindingComponent } from './optional-catch-binding/optional-catch-binding.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ObjectFromEntriesComponent } from './object-from-entries/object-from-en
     MainEs10Component,
     StringTrimStartComponent,
     StringTrimEndComponent,
-    ObjectFromEntriesComponent
+    ObjectFromEntriesComponent,
+    OptionalCatchBindingComponent
   ],
   imports: [
     CommonModule,
