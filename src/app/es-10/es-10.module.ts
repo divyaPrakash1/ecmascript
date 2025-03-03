@@ -8,6 +8,7 @@ import { StringTrimStartComponent } from './string-trim-start/string-trim-start.
 import { StringTrimEndComponent } from './string-trim-end/string-trim-end.component';
 import { ObjectFromEntriesComponent } from './object-from-entries/object-from-entries.component';
 import { OptionalCatchBindingComponent } from './optional-catch-binding/optional-catch-binding.component';
+import { FlatComponent } from './flat/flat.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { OptionalCatchBindingComponent } from './optional-catch-binding/optional
     StringTrimStartComponent,
     StringTrimEndComponent,
     ObjectFromEntriesComponent,
-    OptionalCatchBindingComponent
+    OptionalCatchBindingComponent,
+    FlatComponent
   ],
   imports: [
     CommonModule,
