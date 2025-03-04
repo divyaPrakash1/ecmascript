@@ -12,6 +12,7 @@ export class MainEs10Component {
     { title: 'Object From Entries', link: 'object-from-entries' },
     { title: 'Optional Catch Binding', link: 'optional-catch-binding' },
     { title: 'Array Flat', link: 'flat' },
+    { title: 'Array Flat Map', link: 'flat-map' },
   ];
   constructor() { }
   ngOnInit(): void {

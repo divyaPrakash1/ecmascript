@@ -7,6 +7,7 @@ import { StringTrimEndComponent } from './string-trim-end/string-trim-end.compon
 import { ObjectFromEntriesComponent } from './object-from-entries/object-from-entries.component';
 import { OptionalCatchBindingComponent } from './optional-catch-binding/optional-catch-binding.component';
 import { FlatComponent } from './flat/flat.component';
+import { FlatMapComponent } from './flat-map/flat-map.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'object-from-entries', component: ObjectFromEntriesComponent },
       { path: 'optional-catch-binding', component: OptionalCatchBindingComponent },
       { path: 'flat', component: FlatComponent },
+      { path: 'flat-map', component: FlatMapComponent },
     ]
   }
 ];

@@ -9,6 +9,7 @@ import { StringTrimEndComponent } from './string-trim-end/string-trim-end.compon
 import { ObjectFromEntriesComponent } from './object-from-entries/object-from-entries.component';
 import { OptionalCatchBindingComponent } from './optional-catch-binding/optional-catch-binding.component';
 import { FlatComponent } from './flat/flat.component';
+import { FlatMapComponent } from './flat-map/flat-map.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FlatComponent } from './flat/flat.component';
     StringTrimEndComponent,
     ObjectFromEntriesComponent,
     OptionalCatchBindingComponent,
-    FlatComponent
+    FlatComponent,
+    FlatMapComponent
   ],
   imports: [
     CommonModule,
