@@ -5,13 +5,15 @@ import { Es11RoutingModule } from './es-11-routing.module';
 import { Es11Component } from './es-11.component';
 import { MainEs11Component } from './main-es-11/main-es-11.component';
 import { BigintComponent } from './bigint/bigint.component';
+import { StringMatchAllComponent } from './string-match-all/string-match-all.component';
 
 
 @NgModule({
   declarations: [
     Es11Component,
     MainEs11Component,
-    BigintComponent
+    BigintComponent,
+    StringMatchAllComponent
   ],
   imports: [
     CommonModule,
