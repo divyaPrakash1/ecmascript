@@ -10,6 +10,7 @@ import { ObjectFromEntriesComponent } from './object-from-entries/object-from-en
 import { OptionalCatchBindingComponent } from './optional-catch-binding/optional-catch-binding.component';
 import { FlatComponent } from './flat/flat.component';
 import { FlatMapComponent } from './flat-map/flat-map.component';
+import { ArraySortComponent } from './array-sort/array-sort.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FlatMapComponent } from './flat-map/flat-map.component';
     ObjectFromEntriesComponent,
     OptionalCatchBindingComponent,
     FlatComponent,
-    FlatMapComponent
+    FlatMapComponent,
+    ArraySortComponent
   ],
   imports: [
     CommonModule,

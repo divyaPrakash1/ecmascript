@@ -13,6 +13,7 @@ export class MainEs10Component {
     { title: 'Optional Catch Binding', link: 'optional-catch-binding' },
     { title: 'Array Flat', link: 'flat' },
     { title: 'Array Flat Map', link: 'flat-map' },
+    { title: 'Array Sort', link: 'array-sort' },
   ];
   constructor() { }
   ngOnInit(): void {

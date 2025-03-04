@@ -8,6 +8,7 @@ import { ObjectFromEntriesComponent } from './object-from-entries/object-from-en
 import { OptionalCatchBindingComponent } from './optional-catch-binding/optional-catch-binding.component';
 import { FlatComponent } from './flat/flat.component';
 import { FlatMapComponent } from './flat-map/flat-map.component';
+import { ArraySortComponent } from './array-sort/array-sort.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: 'optional-catch-binding', component: OptionalCatchBindingComponent },
       { path: 'flat', component: FlatComponent },
       { path: 'flat-map', component: FlatMapComponent },
+      { path: 'array-sort', component: ArraySortComponent },
     ]
   }
 ];
