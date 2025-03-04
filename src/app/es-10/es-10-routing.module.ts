@@ -9,6 +9,7 @@ import { OptionalCatchBindingComponent } from './optional-catch-binding/optional
 import { FlatComponent } from './flat/flat.component';
 import { FlatMapComponent } from './flat-map/flat-map.component';
 import { ArraySortComponent } from './array-sort/array-sort.component';
+import { SaparatorComponent } from './saparator/saparator.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
       { path: 'flat', component: FlatComponent },
       { path: 'flat-map', component: FlatMapComponent },
       { path: 'array-sort', component: ArraySortComponent },
+      { path: 'saparator', component: SaparatorComponent },
     ]
   }
 ];

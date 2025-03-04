@@ -11,6 +11,7 @@ import { OptionalCatchBindingComponent } from './optional-catch-binding/optional
 import { FlatComponent } from './flat/flat.component';
 import { FlatMapComponent } from './flat-map/flat-map.component';
 import { ArraySortComponent } from './array-sort/array-sort.component';
+import { SaparatorComponent } from './saparator/saparator.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ArraySortComponent } from './array-sort/array-sort.component';
     OptionalCatchBindingComponent,
     FlatComponent,
     FlatMapComponent,
-    ArraySortComponent
+    ArraySortComponent,
+    SaparatorComponent
   ],
   imports: [
     CommonModule,
