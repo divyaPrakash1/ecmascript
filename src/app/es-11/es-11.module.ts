@@ -6,6 +6,7 @@ import { Es11Component } from './es-11.component';
 import { MainEs11Component } from './main-es-11/main-es-11.component';
 import { BigintComponent } from './bigint/bigint.component';
 import { StringMatchAllComponent } from './string-match-all/string-match-all.component';
+import { NullishCoalescingComponent } from './nullish-coalescing/nullish-coalescing.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { StringMatchAllComponent } from './string-match-all/string-match-all.com
     Es11Component,
     MainEs11Component,
     BigintComponent,
-    StringMatchAllComponent
+    StringMatchAllComponent,
+    NullishCoalescingComponent
   ],
   imports: [
     CommonModule,
