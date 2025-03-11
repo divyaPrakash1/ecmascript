@@ -10,6 +10,7 @@ export class MainEs11Component {
     { title: 'Big Int', link: 'bigint' },
     { title: 'String Match All', link: 'string-match-all' },
     { title: 'Nullish Coalescing', link: 'nullish-coalescing' },
+    { title: 'Optional Chaining', link: 'optional-chaining' },
   ];
   constructor() { }
   ngOnInit(): void {
