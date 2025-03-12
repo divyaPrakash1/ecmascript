@@ -71,18 +71,15 @@ export class OptionalChainingComponent implements OnInit {
         age: null
       }
     };
-
     console.log(user.profile?.name ?? "Unknown");  // Output: "Alice"
     console.log(user.profile?.age ?? 25);         // Output: 25 (because age is null)
     console.log(user?.address?.city ?? "Not Provided"); // Output: "Not Provided" (because address is undefined)
-
   }
 
   // Can you combine?.with destructuring assignment ? Why or why not ?
   // ...No
   example3() {
     const user = null;
-
     // ❌ Error: Cannot destructure property 'name' of 'user' as it is null.
     // const { name } = user?.profile;
     console.log(name);
@@ -95,22 +92,20 @@ export class OptionalChainingComponent implements OnInit {
       undefined,
       { name: "Bob" }
     ];
-
     for (const user of users) {
       console.log(user?.name); // ✅ Outputs: "Alice", undefined, "Bob"
     }
   }
+
   // How does?.behave differently from && when accessing nested properties ?
   // How does JavaScript evaluate expressions containing multiple?.operators in a single chain ?
   example5() {
     const obj: any = {
       name: 'Dadda'
     }
-
     if (obj?.name && obj?.dadda) {
       console.log(undefined) // not run
     }
   }
-  
             
 }

@@ -9,8 +9,9 @@ export class MainEs11Component {
   items: Array<{ title: string, link: string }> = [
     { title: 'Big Int', link: 'bigint' },
     { title: 'String Match All', link: 'string-match-all' },
-    { title: 'Nullish Coalescing', link: 'nullish-coalescing' },
-    { title: 'Optional Chaining', link: 'optional-chaining' },
+    { title: 'Nullish Coalescing (??)', link: 'nullish-coalescing' },
+    { title: 'Optional Chaining (?.)', link: 'optional-chaining' },
+    { title: 'Lgcl Assin (&&=)', link: 'logical-and-assign' },
   ];
   constructor() { }
   ngOnInit(): void {

@@ -6,6 +6,7 @@ import { BigintComponent } from './bigint/bigint.component';
 import { StringMatchAllComponent } from './string-match-all/string-match-all.component';
 import { NullishCoalescingComponent } from './nullish-coalescing/nullish-coalescing.component';
 import { OptionalChainingComponent } from './optional-chaining/optional-chaining.component';
+import { LogincalAndAssignmentOptrComponent } from './logincal-and-assignment-optr/logincal-and-assignment-optr.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: 'string-match-all', component: StringMatchAllComponent },
       { path: 'nullish-coalescing', component: NullishCoalescingComponent },
       { path: 'optional-chaining', component: OptionalChainingComponent },
+      { path: 'logical-and-assign', component: LogincalAndAssignmentOptrComponent },
     ]
   }
 ];
