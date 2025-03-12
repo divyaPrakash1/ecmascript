@@ -7,6 +7,7 @@ import { StringMatchAllComponent } from './string-match-all/string-match-all.com
 import { NullishCoalescingComponent } from './nullish-coalescing/nullish-coalescing.component';
 import { OptionalChainingComponent } from './optional-chaining/optional-chaining.component';
 import { LogincalAndAssignmentOptrComponent } from './logincal-and-assignment-optr/logincal-and-assignment-optr.component';
+import { LogincalOrAssignmentOptrComponent } from './logincal-or-assignment-optr/logincal-or-assignment-optr.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'nullish-coalescing', component: NullishCoalescingComponent },
       { path: 'optional-chaining', component: OptionalChainingComponent },
       { path: 'logical-and-assign', component: LogincalAndAssignmentOptrComponent },
+      { path: 'logical-or-assign', component: LogincalOrAssignmentOptrComponent },
     ]
   }
 ];

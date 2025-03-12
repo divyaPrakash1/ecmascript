@@ -12,6 +12,7 @@ export class MainEs11Component {
     { title: 'Nullish Coalescing (??)', link: 'nullish-coalescing' },
     { title: 'Optional Chaining (?.)', link: 'optional-chaining' },
     { title: 'Lgcl Assin (&&=)', link: 'logical-and-assign' },
+    { title: 'Lgcl Or (||=)', link: 'logical-or-assign' },
   ];
   constructor() { }
   ngOnInit(): void {

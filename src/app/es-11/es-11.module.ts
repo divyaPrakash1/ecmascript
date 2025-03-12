@@ -8,6 +8,8 @@ import { BigintComponent } from './bigint/bigint.component';
 import { StringMatchAllComponent } from './string-match-all/string-match-all.component';
 import { NullishCoalescingComponent } from './nullish-coalescing/nullish-coalescing.component';
 import { OptionalChainingComponent } from './optional-chaining/optional-chaining.component';
+import { LogincalAndAssignmentOptrComponent } from './logincal-and-assignment-optr/logincal-and-assignment-optr.component';
+import { LogincalOrAssignmentOptrComponent } from './logincal-or-assignment-optr/logincal-or-assignment-optr.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { OptionalChainingComponent } from './optional-chaining/optional-chaining
     BigintComponent,
     StringMatchAllComponent,
     NullishCoalescingComponent,
-    OptionalChainingComponent
+    OptionalChainingComponent,
+    LogincalAndAssignmentOptrComponent,
+    LogincalOrAssignmentOptrComponent,
   ],
   imports: [
     CommonModule,
