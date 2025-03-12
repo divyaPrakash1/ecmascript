@@ -1,4 +1,4 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Es11Component } from './es-11.component';
 import { MainEs11Component } from './main-es-11/main-es-11.component';

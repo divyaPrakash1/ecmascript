@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'js-2020',
     loadChildren: () => import('./es-11/es-11.module').then(m => m.ES11Module)
   },
+  {
+    path: 'js-2021',
+    loadChildren: () => import('./es-12/es-12.module').then(m => m.ES12Module)
+  },
 
   {
     path: 'exer-1',
