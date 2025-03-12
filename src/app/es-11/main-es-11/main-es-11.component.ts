@@ -13,6 +13,7 @@ export class MainEs11Component {
     { title: 'Optional Chaining (?.)', link: 'optional-chaining' },
     { title: 'Lgcl Assin (&&=)', link: 'logical-and-assign' },
     { title: 'Lgcl Or (||=)', link: 'logical-or-assign' },
+    { title: 'N Coale Assin (??=)', link: 'nullish-coalescing-assign' },
   ];
   constructor() { }
   ngOnInit(): void {

@@ -10,6 +10,7 @@ import { NullishCoalescingComponent } from './nullish-coalescing/nullish-coalesc
 import { OptionalChainingComponent } from './optional-chaining/optional-chaining.component';
 import { LogincalAndAssignmentOptrComponent } from './logincal-and-assignment-optr/logincal-and-assignment-optr.component';
 import { LogincalOrAssignmentOptrComponent } from './logincal-or-assignment-optr/logincal-or-assignment-optr.component';
+import { NullishCoalesAssigOptrComponent } from './nullish-coales-assig-optr/nullish-coales-assig-optr.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { LogincalOrAssignmentOptrComponent } from './logincal-or-assignment-optr
     OptionalChainingComponent,
     LogincalAndAssignmentOptrComponent,
     LogincalOrAssignmentOptrComponent,
+    NullishCoalesAssigOptrComponent
   ],
   imports: [
     CommonModule,
