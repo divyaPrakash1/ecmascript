@@ -1,0 +1,33 @@
+.es-13-main-container {
+    .pill-group-1 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .pill-item {
+        margin: 15px;
+        padding: 10px;
+        height: 46px;
+        width: 187px;
+        border: 1px solid red;
+        border-color: red;
+        text-decoration: none;
+    }
+
+    .item-name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        text-align: center;
+    }
+
+    .pill-item:hover {
+        cursor: pointer;
+        background-color: lightgrey;
+        border: 1px solid rgb(43, 40, 40);
+        border-color: rgb(50, 47, 47);
+        color: red;
+    }
+}
