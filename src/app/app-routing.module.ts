@@ -49,6 +49,10 @@ const routes: Routes = [
     loadChildren: () => import('./es-15/es-15.module').then(m => m.ES15Module)
   },
   {
+    path: 'rxjs',
+    loadChildren: () => import('./rxjs/rxjs.module').then(m => m.RxjsModule)
+  },
+  {
     path: 'exer-1',
     loadChildren: () => import('./exer-1/exer-1.module').then(m => m.Exer1Module)
   },
