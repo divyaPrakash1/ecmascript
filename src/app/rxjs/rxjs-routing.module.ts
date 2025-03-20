@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RxjsComponent } from './rxjs.component';
 import { ObservableComponent } from './observable/observable.component';
 import { PromiseComponent } from './promise/promise.component';
+import { FromEventComponent } from './from-event/from-event.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
     children: [
       { path: '', component: ObservableComponent },
       { path: 'promise', component: PromiseComponent },
+      { path: 'from-event', component: FromEventComponent },
       { path: '**', redirectTo: 'promise' },
     ]
   }

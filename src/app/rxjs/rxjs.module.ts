@@ -6,6 +6,8 @@ import { RxjsComponent } from './rxjs.component';
 import { ObservableComponent } from './observable/observable.component';
 import { PromiseComponent } from './promise/promise.component';
 import { AsyncAwaitComponent } from './async-await/async-await.component';
+import { FromEventComponent } from './from-event/from-event.component';
+import { IntervalComponent } from './interval/interval.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { AsyncAwaitComponent } from './async-await/async-await.component';
     RxjsComponent,
     ObservableComponent,
     PromiseComponent,
-    AsyncAwaitComponent
+    AsyncAwaitComponent,
+    FromEventComponent,
+    IntervalComponent
   ],
   imports: [
     CommonModule,

@@ -8,10 +8,27 @@ import { Component } from '@angular/core';
 export class ObservableComponent {
   items: Array<{ title: string, link: string }> = [
     { title: 'Promise', link: 'promise' },
-    { title: 'Map GroupBy', link: 'map-group-by' },
+    { title: 'From Event', link: 'from-event' },
   ];
   constructor() { }
   ngOnInit(): void {
 
   }
+
+  // Observalble Stream -
+  // - User Input(Button click event)
+  // - Http request
+  // - Array 
+  // - Object
+
+  // Observable Hanlder -
+  // - Data
+  // - Error
+  // - Completion
+  // .subscribe(
+  //   (data) => console.log(data),
+  //   (error) => console.log(error),
+  //   () => console.log(data), // completion
+  // )
+
 }
