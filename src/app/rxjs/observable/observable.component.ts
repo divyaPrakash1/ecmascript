@@ -9,6 +9,7 @@ export class ObservableComponent {
   items: Array<{ title: string, link: string }> = [
     { title: 'Promise', link: 'promise' },
     { title: 'From Event', link: 'from-event' },
+    { title: 'Interval Timer', link: 'interval-timer' },
   ];
   constructor() { }
   ngOnInit(): void {

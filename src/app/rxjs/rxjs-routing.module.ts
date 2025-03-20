@@ -4,6 +4,7 @@ import { RxjsComponent } from './rxjs.component';
 import { ObservableComponent } from './observable/observable.component';
 import { PromiseComponent } from './promise/promise.component';
 import { FromEventComponent } from './from-event/from-event.component';
+import { IntervalTimerComponent } from './interval-timer/interval-timer.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
       { path: '', component: ObservableComponent },
       { path: 'promise', component: PromiseComponent },
       { path: 'from-event', component: FromEventComponent },
+      { path: 'interval-timer', component: IntervalTimerComponent },
       { path: '**', redirectTo: 'promise' },
     ]
   }
