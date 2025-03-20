@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RxjsComponent } from './rxjs.component';
-import { RxjsMainComponent } from './rxjs-main/rxjs-main.component';
+import { ObservableComponent } from './observable/observable.component';
 import { PromiseComponent } from './promise/promise.component';
 
 const routes: Routes = [
@@ -9,7 +9,7 @@ const routes: Routes = [
     path: '',
     component: RxjsComponent,
     children: [
-      { path: '', component: RxjsMainComponent },
+      { path: '', component: ObservableComponent },
       { path: 'promise', component: PromiseComponent },
       { path: '**', redirectTo: 'promise' },
     ]
