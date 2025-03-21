@@ -11,6 +11,7 @@ export class ObservableComponent {
     { title: 'From Event', link: 'from-event' },
     { title: 'Interval Timer', link: 'interval-timer' },
     { title: 'Of And From', link: 'of-and-from' },
+    { title: 'toArray', link: 'to-array' },
   ];
   constructor() { }
   ngOnInit(): void {

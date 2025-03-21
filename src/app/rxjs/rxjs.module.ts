@@ -9,6 +9,7 @@ import { AsyncAwaitComponent } from './async-await/async-await.component';
 import { FromEventComponent } from './from-event/from-event.component';
 import { IntervalTimerComponent } from './interval-timer/interval-timer.component';
 import { OfAndFromComponent } from './of-and-from/of-and-from.component';
+import { ToArrayComponent } from './to-array/to-array.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { OfAndFromComponent } from './of-and-from/of-and-from.component';
     AsyncAwaitComponent,
     FromEventComponent,
     IntervalTimerComponent,
-    OfAndFromComponent
+    OfAndFromComponent,
+    ToArrayComponent
   ],
   imports: [
     CommonModule,
