@@ -5,6 +5,7 @@ import { ObservableComponent } from './observable/observable.component';
 import { PromiseComponent } from './promise/promise.component';
 import { FromEventComponent } from './from-event/from-event.component';
 import { IntervalTimerComponent } from './interval-timer/interval-timer.component';
+import { OfAndFromComponent } from './of-and-from/of-and-from.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: 'promise', component: PromiseComponent },
       { path: 'from-event', component: FromEventComponent },
       { path: 'interval-timer', component: IntervalTimerComponent },
+      { path: 'of-and-from', component: OfAndFromComponent },
       { path: '**', redirectTo: 'promise' },
     ]
   }

@@ -10,6 +10,7 @@ export class ObservableComponent {
     { title: 'Promise', link: 'promise' },
     { title: 'From Event', link: 'from-event' },
     { title: 'Interval Timer', link: 'interval-timer' },
+    { title: 'Of And From', link: 'of-and-from' },
   ];
   constructor() { }
   ngOnInit(): void {
