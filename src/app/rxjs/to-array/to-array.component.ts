@@ -8,15 +8,15 @@ import { CommanService } from '../service/comman.service';
   styleUrl: './to-array.component.scss'
 })
 export class ToArrayComponent implements OnInit, OnDestroy {
-  
+
   obsMsg: any = {};
   subscription!: Subscription;
 
   users = [
-    {name:'Divya Prakash Mishra', skill: 'Angular'},
-    {name:'Tarun', skill: 'React'},
-    {name:'Sandeep', skill: 'Angular'},
-    {name:'Amendra', skill: 'None'},
+    { name: 'Divya Prakash Mishra', skill: 'Angular' },
+    { name: 'Tarun', skill: 'React' },
+    { name: 'Sandeep', skill: 'Angular' },
+    { name: 'Amendra', skill: 'None' },
   ]
 
   constructor(private _common: CommanService) { }
@@ -47,8 +47,8 @@ export class ToArrayComponent implements OnInit, OnDestroy {
       .subscribe(res => {
         console.log(res);
       });
-    
-    // Ex - 02
+
+    // Ex - 03 
     const source3 = of('Divya', 'Prakash', 'Mishra');
     this.subscription = source3
       .pipe(

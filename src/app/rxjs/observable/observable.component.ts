@@ -12,6 +12,7 @@ export class ObservableComponent {
     { title: 'Interval Timer', link: 'interval-timer' },
     { title: 'Of And From', link: 'of-and-from' },
     { title: 'toArray', link: 'to-array' },
+    { title: 'Custom Observable', link: 'custum-observable' },
   ];
   constructor() { }
   ngOnInit(): void {

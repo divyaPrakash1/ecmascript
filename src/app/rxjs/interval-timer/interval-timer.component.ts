@@ -13,10 +13,11 @@ export class IntervalTimerComponent implements OnInit, OnDestroy {
   constructor(private _common: CommanService) { }
   ngOnInit(): void {
     // const broadCasteVideo = interval(1000);
+    // timer(delay, interval);
     const broadCasteVideo = timer(3500, 1500); // First argument is delay time (after that time, timer will start, second argument is interval) 
     this.subscription = broadCasteVideo.subscribe(res => {
       // console.log(res);
-      this.obsMsg = `Video : ${res+1}`;
+      this.obsMsg = `Video : ${res + 1}`;
       this._common.print(this.obsMsg, 'elContainer1');
       this._common.print(this.obsMsg, 'elContainer2');
       this._common.print(this.obsMsg, 'elContainer3');
@@ -24,9 +25,6 @@ export class IntervalTimerComponent implements OnInit, OnDestroy {
         this.subscription.unsubscribe();
       }
     });
-
-    
-    console.log('dfs')
   }
 
 
