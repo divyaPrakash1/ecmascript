@@ -8,7 +8,7 @@ import { from, of, Subscription } from 'rxjs';
   styleUrl: './of-and-from.component.scss'
 })
 export class OfAndFromComponent implements OnInit, OnDestroy {
-  
+
   obsMsg: any = {};
   subscription!: Subscription;
   constructor(private _common: CommanService) { }
@@ -21,24 +21,22 @@ export class OfAndFromComponent implements OnInit, OnDestroy {
 
     const obs1 = of('Divya', 'Prakash', 'Mishra');
     this.subscription = obs1.subscribe(res => {
-      console.log(res);
       this._common.print(res, 'elContainer');
-    });
+    })
 
-    const obs2 = of({a:'Divya', b:'Prakash', c:'Mishra'});
+    const obs2 = of({ a: 'Divya', b: 'Prakash', c: 'Mishra' });
     this.subscription = obs2.subscribe(res => {
-      this.obsMsg = res;
       console.log(res);
-      // this._common.print(res, 'elContainer');
-    });
+      this.obsMsg = res;
+      this._common.print(JSON.stringify(res), 'elContainer1');
+    })
 
     // From operator accepts Array, Promise, String and return observable
-
     // From - Array
     const arr = ['Divya', 'Prakash', 'Mishra'];
     const obs3 = from(arr);
     this.subscription = obs3.subscribe(res => {
-      this.obsMsg = res;
+      // this.obsMsg = res;
       console.log(res);
       this._common.print(res, 'elContainer2');
     });
