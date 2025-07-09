@@ -11,16 +11,15 @@ export class FromEventComponent implements OnInit, AfterViewInit, OnDestroy {
   subscription!: Subscription
   constructor(private _common: CommanService) { }
   @ViewChild('addBtn') addBtn!: ElementRef;
-  
+
   ngOnInit(): void {
-    
-    
+
   }
 
   ngAfterViewInit(): void {
     let count = 1;
     this.subscription = fromEvent(this.addBtn.nativeElement, 'click').subscribe(res => {
-      console.log('Video : ', count);
+      // console.log('Video : ', count);
       this._common.print(`Video : ${count}`, 'elContainer');
       this._common.print(`Video : ${count}`, 'elContainer1');
       count++
