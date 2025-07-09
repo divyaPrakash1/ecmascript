@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './promise.component.scss'
 })
 export class PromiseComponent implements OnInit {
-  promiseVal: string = '';
-  
+  promiseVal: any = '';
+
   dell = {
     brand: 'Dell',
     hardDisk: '2 TB',
@@ -24,44 +24,42 @@ export class PromiseComponent implements OnInit {
     brand: 'Not Available',
     status: 'Falied',
   }
-  
+
   isDellAvailable() {
-    return true;
+    return false;
   }
 
-
-
   isHpAvailable() {
-    return true;
+    return false;
   }
 
   ngOnInit(): void {
     let buyLaptop = new Promise((resolve, reject) => {
-      // resolve('Promise is Resolve');
-      // resolve('Promise is Reject');
+      // resolve('Promise is resolve')
+      // reject('Promise is reject')
+
+
+      // buyLaptop.then(res => {
+      //   console.log('Success', res);
+      // }).catch(res => {
+      //   console.log("Error", res);
+      // })
       if (this.isDellAvailable()) {
-        setTimeout(() => {
-          // resolve('Dell Purchased');
-          resolve(this.dell);
-        }, 5000);
+        resolve(this.dell)
       } else if (this.isHpAvailable()) {
-        setTimeout(() => {
-          // resolve('Hp Purchased');
-          resolve(this.hp);
-        }, 7000);
+        resolve(this.hp)
       } else {
-        setTimeout(() => {
-          // reject('Laptop is not available on store');
-          reject(this.notAvailable);
-        });
+        reject(this.notAvailable)
       }
-    })
-    buyLaptop.then((res: any) => {
-      console.log('Success :- ', res);
-      this.promiseVal = res;
-    }).catch((res: any) => {
-      console.log('Reject :- ', res);
     });
+
+    buyLaptop.then(res => {
+      console.log('res', res);
+      this.promiseVal = res;
+    }).catch(err => {
+      this.promiseVal = err;
+      console.log('Error ', err);
+    })
   }
 
   myFunction() {
