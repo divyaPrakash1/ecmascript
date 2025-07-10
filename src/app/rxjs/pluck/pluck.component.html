@@ -1,0 +1,65 @@
+<div class="my-3">
+    <h2>Pluck </h2>
+    <br>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <strong>Ex - 01</strong>
+            <p class="border my-2 bg-light rounded">of('Divya', 'Prakash', 'Mishra')</p>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Map : </strong> Data => 'Video' + Data
+            </p>
+            <br>
+            <table class="table">
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                </tr>
+                <tr  *ngFor="let d of data1">
+                    <td>
+                        {{d}}
+                    </td>
+                </tr>
+
+            </table>
+            
+        </div>
+        <div class="col-md-6">
+            <strong>Ex - 02 (With Nested Property)</strong>
+            <p class="border my-2 bg-light rounded">of('Divya', 'Prakash', 'Mishra')</p>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Map</strong>Map Data
+            </p>
+            <br>
+            <table class="table">
+                <tr>
+                    <th>
+                        Contact > Email
+                    </th>
+                </tr>
+                <tr *ngFor="let d of data2">
+                    <td>
+                        {{d}}
+                    </td>
+                </tr>
+            
+            </table>
+        </div>
+        <div class="col-md-12">
+            <strong>Ex - 03</strong>
+            <p class="border my-2 bg-light rounded">of('Divya', 'Prakash', 'Mishra')</p>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Map</strong>Map Data
+            </p>
+            <br>
+            <!-- <p> Data :- <strong class="success">{{msg3}}</strong></p> -->
+            <ul id="elContainer3">
+
+            </ul>
+        </div>
+    </div>
+</div>

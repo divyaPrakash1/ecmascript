@@ -12,6 +12,7 @@ import { OfAndFromComponent } from './of-and-from/of-and-from.component';
 import { ToArrayComponent } from './to-array/to-array.component';
 import { CustomObservableComponent } from './custom-observable/custom-observable.component';
 import { MapComponent } from './map/map.component';
+import { PluckComponent } from './pluck/pluck.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MapComponent } from './map/map.component';
     OfAndFromComponent,
     ToArrayComponent,
     CustomObservableComponent,
-    MapComponent
+    MapComponent,
+    PluckComponent
   ],
   imports: [
     CommonModule,

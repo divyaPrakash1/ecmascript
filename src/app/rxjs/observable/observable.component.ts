@@ -14,6 +14,7 @@ export class ObservableComponent {
     { title: 'toArray', link: 'to-array' },
     { title: 'Custom Observable', link: 'custum-observable' },
     { title: 'Map', link: 'map' },
+    { title: 'Pluck', link: 'pluck' },
   ];
   constructor() { }
   ngOnInit(): void {

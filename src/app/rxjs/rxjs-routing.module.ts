@@ -9,6 +9,7 @@ import { OfAndFromComponent } from './of-and-from/of-and-from.component';
 import { ToArrayComponent } from './to-array/to-array.component';
 import { CustomObservableComponent } from './custom-observable/custom-observable.component';
 import { MapComponent } from './map/map.component';
+import { PluckComponent } from './pluck/pluck.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
       { path: 'to-array', component: ToArrayComponent },
       { path: 'custum-observable', component: CustomObservableComponent },
       { path: 'map', component: MapComponent },
+      { path: 'pluck', component: PluckComponent },
       { path: '**', redirectTo: 'promise' },
     ]
   }
