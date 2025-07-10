@@ -11,6 +11,7 @@ import { IntervalTimerComponent } from './interval-timer/interval-timer.componen
 import { OfAndFromComponent } from './of-and-from/of-and-from.component';
 import { ToArrayComponent } from './to-array/to-array.component';
 import { CustomObservableComponent } from './custom-observable/custom-observable.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CustomObservableComponent } from './custom-observable/custom-observable
     IntervalTimerComponent,
     OfAndFromComponent,
     ToArrayComponent,
-    CustomObservableComponent
+    CustomObservableComponent,
+    MapComponent
   ],
   imports: [
     CommonModule,

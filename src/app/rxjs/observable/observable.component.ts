@@ -13,6 +13,7 @@ export class ObservableComponent {
     { title: 'Of And From', link: 'of-and-from' },
     { title: 'toArray', link: 'to-array' },
     { title: 'Custom Observable', link: 'custum-observable' },
+    { title: 'Map', link: 'map' },
   ];
   constructor() { }
   ngOnInit(): void {
