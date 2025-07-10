@@ -16,6 +16,7 @@ export class ObservableComponent {
     { title: 'Map', link: 'map' },
     { title: 'Pluck', link: 'pluck' },
     { title: 'Filter', link: 'filter' },
+    { title: 'Tap', link: 'tap' },
   ];
   constructor() { }
   ngOnInit(): void {

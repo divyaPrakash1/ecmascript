@@ -1,13 +1,15 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { filter, from, interval, map, Subscription, toArray } from 'rxjs';
+import { Subscription, from, filter, toArray, interval, map, tap } from 'rxjs';
 import { CommanService } from '../service/comman.service';
 
 @Component({
-  selector: 'ecmspt-filter',
-  templateUrl: './filter.component.html',
-  styleUrl: './filter.component.scss'
+  selector: 'ecmspt-tap',
+  templateUrl: './tap.component.html',
+  styleUrl: './tap.component.scss'
 })
-export class FilterComponent implements OnInit, OnDestroy {
+// Previously it was also called do operator
+// Transparently performs any action or side effect such as false loading or console the response,
+export class TapComponent implements OnInit, OnDestroy {
   @HostListener('window:beforeunload', ['$event'])
   beforeUnloadHandler(event: Event) {
     if (this.subscribe1) {
@@ -16,9 +18,9 @@ export class FilterComponent implements OnInit, OnDestroy {
     if (this.subscribe2) {
       this.subscribe2.unsubscribe();
     }
-    if (this.subscribe3) {
-      this.subscribe3.unsubscribe();
-    }
+    // if (this.subscribe3) {
+    //   this.subscribe3.unsubscribe();
+    // }
   }
 
   constructor(private _common: CommanService) { }
@@ -31,10 +33,11 @@ export class FilterComponent implements OnInit, OnDestroy {
   msg2: string = "";
   msg3: string = "";
 
-  data1: any = []
-  data2: any = []
-  data3: any = []
+  data1: any = [];
+  data2: any = [];
+  data3: any = [];
 
+  myColor: string = '';
 
   people = [
     {
@@ -103,56 +106,105 @@ export class FilterComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
 
     // Ex - 01 (By Length)
+    const names = [
+      'Amit',
+      'Priya',
+      'Ravi',
+      'Neha',
+      'Karan',
+      'Sneha',
+      'Vikas',
+      'Ritu',
+      'Arjun',
+      'Divya'
+    ];
 
-    const source1 = from(this.people);
-    this.subscribe1 = source1
+    const source = interval(1500);
+    this.subscribe1 = source
       .pipe(
-        filter(m => m.name.length > 6),
-        toArray()
+        tap(res => {
+          console.log('before', res)
+          if (res > 5)
+            this.subscribe1.unsubscribe()
+        }),
+        map(s => names[s]),
+        // tap(res => console.log('after', res))
       )
       .subscribe(res => {
-        console.log(res);
-        this.data1 = res;
-        // this.msg1 = res;
+        // console.log(res);
+        this._common.print(res, 'elContainer1');
       });
 
 
-    // Ex - 02 (By Gender)
+    const colors = [
+      'red',
+      'blue',
+      'green',
+      'yellow',
+      'purple',
+      'orange',
+      'pink',
+      'brown',
+      'black',
+      'white'
+    ];
 
-    const source2 = from(this.people);
+    const source2 = interval(1000);
+    // const source2 = from(colors);
     this.subscribe2 = source2
-      .pipe(
-        filter(m => m.gender === 'Male'),
-        toArray()
-      )
+      // .pipe(
+      //   tap(res => this.myColor = res)
+      // )
       .subscribe(res => {
         console.log(res);
+        this.myColor = colors[res];
         this.data2 = res;
+        this._common.print(colors[res], 'elContainer2');
         // this.msg1 = res;
+        setTimeout(() => {
+          this.subscribe2.unsubscribe();
+        }, 1500)
       });
 
 
-    // Ex - 03 (By Item)
+    // // Ex - 02 (By Gender)
 
-    const source3 = from(this.people);
-    this.subscribe3 = source3
-      .pipe(
-        filter(m => m.id <= 6),
-        toArray()
-      )
-      .subscribe(res => {
-        console.log(res);
-        this.data3 = res;
-        // this.msg1 = res;
-      });
+    // const source2 = from(this.people);
+    // this.subscribe2 = source2
+    //   .pipe(
+    //     filter(m => m.gender === 'Male'),
+    //     toArray()
+    //   )
+    //   .subscribe(res => {
+    //     console.log(res);
+    //     this.data2 = res;
+    //     // this.msg1 = res;
+    //   });
+
+
+    // // Ex - 03 (By Item)
+
+    // const source3 = from(this.people);
+    // this.subscribe3 = source3
+    //   .pipe(
+    //     filter(m => m.id <= 6),
+    //     toArray()
+    //   )
+    //   .subscribe(res => {
+    //     console.log(res);
+    //     this.data3 = res;
+    //     // this.msg1 = res;
+    //   });
 
   }
 
 
   ngOnDestroy(): void {
-    this.subscribe1.unsubscribe()
-    this.subscribe2.unsubscribe()
-    this.subscribe3.unsubscribe()
+    this.subscribe1.unsubscribe();
+    this.subscribe2.unsubscribe();
+    // this.subscribe3.unsubscribe()
   }
+
+} {
 
 }
