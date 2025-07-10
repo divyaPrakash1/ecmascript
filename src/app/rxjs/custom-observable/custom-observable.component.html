@@ -1,0 +1,35 @@
+<div class="my-3">
+    <h2>Custum Observable</h2>
+    <br>
+    <strong>Ex - 01 Of</strong>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <strong>Ex - 01 - Manual</strong>
+            <hr>
+            <ul id="elContainer1" class="tech-list" [ngClass]="{'error' : status === 'error', 'complete' : status === 'completed'}">
+                
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <strong>Ex - 02 - Custom Interval</strong>
+            <hr>
+            <ul id="elContainer2" class="tech-list" [ngClass]="{'error' : status1 === 'error', 'complete' : status1 === 'completed'}">
+                
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="border my-2 bg-light rounded">
+                <strong>Ex- 03 - Random Names : </strong>
+                'Divya' 'Prakash' 'Mishra' 'Agam' 'Prakash' 'Mishra'
+            </p>
+            <hr>
+            <p>Current Name : <strong class="text-success">{{names}}</strong></p>
+            <span class="badge text-bg-success">Success</span>
+            <ul id="elContainer3">
+            </ul>
+        </div>
+    </div>
+</div>

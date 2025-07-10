@@ -10,6 +10,7 @@ import { FromEventComponent } from './from-event/from-event.component';
 import { IntervalTimerComponent } from './interval-timer/interval-timer.component';
 import { OfAndFromComponent } from './of-and-from/of-and-from.component';
 import { ToArrayComponent } from './to-array/to-array.component';
+import { CustomObservableComponent } from './custom-observable/custom-observable.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ToArrayComponent } from './to-array/to-array.component';
     FromEventComponent,
     IntervalTimerComponent,
     OfAndFromComponent,
-    ToArrayComponent
+    ToArrayComponent,
+    CustomObservableComponent
   ],
   imports: [
     CommonModule,
