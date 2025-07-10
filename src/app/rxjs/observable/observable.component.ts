@@ -15,6 +15,7 @@ export class ObservableComponent {
     { title: 'Custom Observable', link: 'custum-observable' },
     { title: 'Map', link: 'map' },
     { title: 'Pluck', link: 'pluck' },
+    { title: 'Filter', link: 'filter' },
   ];
   constructor() { }
   ngOnInit(): void {
