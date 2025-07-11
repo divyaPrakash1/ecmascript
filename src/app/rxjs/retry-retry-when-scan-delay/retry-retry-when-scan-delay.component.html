@@ -1,0 +1,78 @@
+<div class="my-3">
+    <h2>Retry, RetryWhen and Scan </h2>
+    <br>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <strong>Ex - 01 Retry(5)</strong>
+            <p class="border my-2 bg-light rounded">Retry(5)</p>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Retry(5)</strong>Retry(5)
+            </p>
+            <br>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Website
+                        </th>
+                    </tr>
+                    <tr *ngFor="let d of data1; let i=index">
+                        <td>
+                            {{i+1}}
+                        </td>
+                        <td>
+                            {{d.name}}
+                        </td>
+                        <td>
+                            {{d.website}}
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+                <button  class="btn btn-primary" (click)="fetchDetails()" type="button">
+                    <span class="spinner-border spinner-border-sm" role="status" area-hidden="true" *ngIf="isLoading">
+                    </span>
+                    {{isLoading ? 'Loading..' : 'Fetch Details'}}
+                </button>
+                Status:- <strong [ngClass]="{'text-success': dataStatus === 'Data fetched', 'text-danger': dataStatus === 'Error while fetching data'}">{{dataStatus}}</strong>
+            <ul id="elContainer1">
+
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <strong>Ex - 02 RetryWhen</strong>
+            <p class="border my-2 bg-light rounded">RetryWhen</p>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>RetryWhen</strong>RetryWhen
+            </p>
+            <br>
+            <ul id="elContainer2">
+
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <strong>Ex - 03 Scan</strong>
+            <p class="border my-2 bg-light rounded">Scan</p>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Scan</strong>Scan
+            </p>
+            <br>
+            <ul id="elContainer3">
+
+            </ul>
+        </div>
+    </div>
+</div>

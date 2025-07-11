@@ -17,7 +17,8 @@ export class ObservableComponent {
     { title: 'Pluck', link: 'pluck' },
     { title: 'Filter', link: 'filter' },
     { title: 'Tap', link: 'tap' },
-    { title: 'Take', link: 'take' },
+    { title: 'Take, TakeLast, TakeUntill', link: 'take' },
+    { title: 'Retry, Scan, Delay', link: 'retry' },
   ];
   constructor() { }
   ngOnInit(): void {

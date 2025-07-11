@@ -16,6 +16,7 @@ import { PluckComponent } from './pluck/pluck.component';
 import { FilterComponent } from './filter/filter.component';
 import { TapComponent } from './tap/tap.component';
 import { TakeOpComponent } from './take-op/take-op.component';
+import { RetryRetryWhenScanDelayComponent } from './retry-retry-when-scan-delay/retry-retry-when-scan-delay.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TakeOpComponent } from './take-op/take-op.component';
     PluckComponent,
     FilterComponent,
     TapComponent,
-    TakeOpComponent
+    TakeOpComponent,
+    RetryRetryWhenScanDelayComponent
   ],
   imports: [
     CommonModule,
