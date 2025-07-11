@@ -19,6 +19,7 @@ export class ObservableComponent {
     { title: 'Tap', link: 'tap' },
     { title: 'Take, TakeLast, TakeUntill', link: 'take' },
     { title: 'Retry, Scan, Delay', link: 'retry' },
+    { title: 'DebounceTime, DistinctUntilChanged', link: 'debounce-time' },
   ];
   constructor() { }
   ngOnInit(): void {

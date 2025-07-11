@@ -14,6 +14,7 @@ import { FilterComponent } from './filter/filter.component';
 import { TapComponent } from './tap/tap.component';
 import { TakeOpComponent } from './take-op/take-op.component';
 import { RetryRetryWhenScanDelayComponent } from './retry-retry-when-scan-delay/retry-retry-when-scan-delay.component';
+import { DebounceTimeDistinctUntillChangedComponent } from './debounce-time-distinct-untill-changed/debounce-time-distinct-untill-changed.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,7 @@ const routes: Routes = [
       { path: 'tap', component: TapComponent },
       { path: 'take', component: TakeOpComponent },
       { path: 'retry', component: RetryRetryWhenScanDelayComponent },
+      { path: 'debounce-time', component: DebounceTimeDistinctUntillChangedComponent },
       { path: '**', redirectTo: 'promise' },
     ]
   }
