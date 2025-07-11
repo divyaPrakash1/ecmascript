@@ -12,23 +12,6 @@ import { CommanService } from '../service/comman.service';
 //
 //
 export class RetryRetryWhenScanDelayComponent implements OnInit, OnDestroy {
-
-  // @HostListener('window:beforeunload', ['$event'])
-  // beforeUnloadHandler(event: Event) {
-  //   if (this.subscribe1) {
-  //     this.subscribe1.unsubscribe();
-  //   }
-  //   if (this.subscribe2) {
-  //     this.subscribe2.unsubscribe();
-  //   }
-  //   if (this.subscribe3) {
-  //     this.subscribe3.unsubscribe();
-  //   }
-  // }
-
-  // subscribe1!: Subscription;
-  // subscribe2!: Subscription;
-  // subscribe3!: Subscription;
   isLoading: boolean = false;
   dataStatus: string = 'No Data';
   constructor(private _common: CommanService) { }
@@ -36,20 +19,6 @@ export class RetryRetryWhenScanDelayComponent implements OnInit, OnDestroy {
 
 
   data1: any = [];
-  // data2: any = [];
-  // colors = [
-  //   'Red',
-  //   'Blue',
-  //   'Green',
-  //   'Yellow',
-  //   'Purple',
-  //   'Orange',
-  //   'Pink',
-  //   'Brown',
-  //   'Black',
-  //   'White'
-  // ];
-
   ngOnInit(): void {
 
   }
@@ -85,10 +54,5 @@ export class RetryRetryWhenScanDelayComponent implements OnInit, OnDestroy {
     )
   }
   ngOnDestroy(): void {
-    // this.subscribe1.unsubscribe();
-    // this.subscribe2.unsubscribe();
-    // if (this.subscribe3) {
-    //   this.subscribe3.unsubscribe();
-    // }
   }
 }
