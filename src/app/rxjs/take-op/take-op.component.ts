@@ -1,14 +1,16 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { from, fromEvent, map, pluck, Subscription, toArray } from 'rxjs';
+import { Subscription, interval, pluck, toArray, map, take, from, takeLast, takeUntil, timer, fromEvent } from 'rxjs';
 import { CommanService } from '../service/comman.service';
 
 @Component({
-  selector: 'ecmspt-pluck',
-  templateUrl: './pluck.component.html',
-  styleUrl: './pluck.component.scss'
+  selector: 'ecmspt-take-op',
+  templateUrl: './take-op.component.html',
+  styleUrl: './take-op.component.scss'
 })
-// Pluck operator only pluck Object property
-export class PluckComponent implements OnInit, OnDestroy {
+// take op takes mentioned elements from the starting of the stream
+// takeLast op takes mentioned elements from the last of the stream
+// takeUntill op takes mentioned elements till the mentioned condition of the stream (it accepts observable)
+export class TakeOpComponent implements OnInit, OnDestroy {
 
 
   @HostListener('window:beforeunload', ['$event'])
@@ -82,43 +84,58 @@ export class PluckComponent implements OnInit, OnDestroy {
     },
   ];
 
-
   data1: any = [];
   data2: any = [];
+  colors = [
+    'Red',
+    'Blue',
+    'Green',
+    'Yellow',
+    'Purple',
+    'Orange',
+    'Pink',
+    'Brown',
+    'Black',
+    'White'
+  ];
 
   ngOnInit(): void {
 
-    // Ex - 01
-    const cusObs1 = from(this.people);
-    this.subscribe1 = cusObs1
-      .pipe(
-        // map(data => data.name), 
-        pluck('name'), // it is same working as map wroking on above line
-        toArray()
-      )
-      .subscribe(res => {
-        console.log(res);
-        this.data1 = res;
-        this._common.print(res.toString(), 'elContainer1');
-      })
+    // Ex - 01 take()
+    const source1 = from(this.colors)
+    this.subscribe1 = source1.pipe(take(5)).subscribe(res => {
+      console.log(res);
+      this._common.print(res, 'elContainer1')
+    })
 
-    // Ex - 01
-    const cusObs2 = from(this.people);
-    this.subscribe1 = cusObs2
-      .pipe(
-        // pluck('email'), // [undefined, ... 10 times ]// as it is searching root level
-        pluck('contact', 'email'), // [undefined, ... 10 times ]// as it is searching root level
-        toArray()
-      )
-      .subscribe(res => {
+    // Ex - 02 takeLast()
+    const source2 = from(this.colors)
+    this.subscribe2 = source2.pipe(takeLast(2)).subscribe(res => {
+      console.log(res);
+      this._common.print(res, 'elContainer2')
+    })
+
+    // Ex - 03 takeUntill()
+    if (typeof document !== 'undefined') {
+      const condition1 = timer(5000);
+      const condition2 = fromEvent(document, 'click');
+      const source3 = interval(1000);
+      this.subscribe3 = source3.pipe(
+        map(res => 'Number ' + res),
+        // takeUntil(condition1) // it will unsubscribe after 5 seconds
+        takeUntil(condition2) // it will unsubscribe when user click on page
+      ).subscribe(res => {
         console.log(res);
-        this.data2 = res;
-        this._common.print(res.toString(), 'elContainer1');
+        this._common.print(res + "", 'elContainer3')
       })
+    }
+
   }
   ngOnDestroy(): void {
     this.subscribe1.unsubscribe();
-    // this.subscribe2.unsubscribe();
-    // this.subscribe3.unsubscribe();
+    this.subscribe2.unsubscribe();
+    if (this.subscribe3) {
+      this.subscribe3.unsubscribe();
+    }
   }
 }

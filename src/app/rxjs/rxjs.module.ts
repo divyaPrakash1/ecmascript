@@ -15,6 +15,7 @@ import { MapComponent } from './map/map.component';
 import { PluckComponent } from './pluck/pluck.component';
 import { FilterComponent } from './filter/filter.component';
 import { TapComponent } from './tap/tap.component';
+import { TakeOpComponent } from './take-op/take-op.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TapComponent } from './tap/tap.component';
     MapComponent,
     PluckComponent,
     FilterComponent,
-    TapComponent
+    TapComponent,
+    TakeOpComponent
   ],
   imports: [
     CommonModule,

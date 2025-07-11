@@ -17,6 +17,7 @@ export class ObservableComponent {
     { title: 'Pluck', link: 'pluck' },
     { title: 'Filter', link: 'filter' },
     { title: 'Tap', link: 'tap' },
+    { title: 'Take', link: 'take' },
   ];
   constructor() { }
   ngOnInit(): void {

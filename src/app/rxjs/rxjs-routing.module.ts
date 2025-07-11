@@ -12,6 +12,7 @@ import { MapComponent } from './map/map.component';
 import { PluckComponent } from './pluck/pluck.component';
 import { FilterComponent } from './filter/filter.component';
 import { TapComponent } from './tap/tap.component';
+import { TakeOpComponent } from './take-op/take-op.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
       { path: 'pluck', component: PluckComponent },
       { path: 'filter', component: FilterComponent },
       { path: 'tap', component: TapComponent },
+      { path: 'take', component: TakeOpComponent },
       { path: '**', redirectTo: 'promise' },
     ]
   }
