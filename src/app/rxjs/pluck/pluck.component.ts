@@ -1,6 +1,6 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { from, fromEvent, map, pluck, Subscription, toArray } from 'rxjs';
-import { CommanService } from '../service/comman.service';
+import { CommonService } from '../service/comman.service';
 
 @Component({
   selector: 'ecmspt-pluck',
@@ -27,7 +27,7 @@ export class PluckComponent implements OnInit, OnDestroy {
   subscribe1!: Subscription;
   subscribe2!: Subscription;
   subscribe3!: Subscription;
-  constructor(private _common: CommanService) { }
+  constructor(private _common: CommonService) { }
 
   people = [
     {

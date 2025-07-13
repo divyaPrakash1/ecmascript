@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { interval, Subscription, timer } from 'rxjs';
-import { CommanService } from '../service/comman.service';
+import { CommonService } from '../service/comman.service';
 
 @Component({
   selector: 'ecmspt-interval-timer',
@@ -10,7 +10,7 @@ import { CommanService } from '../service/comman.service';
 export class IntervalTimerComponent implements OnInit, OnDestroy {
   obsMsg: string = '';
   subscription!: Subscription;
-  constructor(private _common: CommanService) { }
+  constructor(private _common: CommonService) { }
   ngOnInit(): void {
     // const broadCasteVideo = interval(1000);
     // timer(delay, interval);

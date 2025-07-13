@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { fromEvent, Subscription } from 'rxjs';
-import { CommanService } from '../service/comman.service';
+import { CommonService } from '../service/comman.service';
 
 @Component({
   selector: 'ecmspt-from-event',
@@ -9,7 +9,7 @@ import { CommanService } from '../service/comman.service';
 })
 export class FromEventComponent implements OnInit, AfterViewInit, OnDestroy {
   subscription!: Subscription
-  constructor(private _common: CommanService) { }
+  constructor(private _common: CommonService) { }
   @ViewChild('addBtn') addBtn!: ElementRef;
 
   ngOnInit(): void {

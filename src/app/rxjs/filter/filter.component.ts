@@ -1,6 +1,6 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { filter, from, interval, map, Subscription, toArray } from 'rxjs';
-import { CommanService } from '../service/comman.service';
+import { CommonService } from '../service/comman.service';
 
 @Component({
   selector: 'ecmspt-filter',
@@ -21,7 +21,7 @@ export class FilterComponent implements OnInit, OnDestroy {
     }
   }
 
-  constructor(private _common: CommanService) { }
+  constructor(private _common: CommonService) { }
 
   subscribe1!: Subscription;
   subscribe2!: Subscription;

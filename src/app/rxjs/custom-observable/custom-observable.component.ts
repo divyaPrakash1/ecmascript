@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { interval, Observable, Subscription } from 'rxjs';
-import { CommanService } from '../service/comman.service';
+import { CommonService } from '../service/comman.service';
 
 @Component({
   selector: 'ecmspt-custom-observable',
@@ -11,7 +11,7 @@ export class CustomObservableComponent implements OnInit, OnDestroy {
 
   subscription!: Subscription
 
-  constructor(private _common: CommanService) { }
+  constructor(private _common: CommonService) { }
 
   status: string = "";
   status1: string = "";

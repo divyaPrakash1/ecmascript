@@ -15,6 +15,7 @@ import { TapComponent } from './tap/tap.component';
 import { TakeOpComponent } from './take-op/take-op.component';
 import { RetryRetryWhenScanDelayComponent } from './retry-retry-when-scan-delay/retry-retry-when-scan-delay.component';
 import { DebounceTimeDistinctUntillChangedComponent } from './debounce-time-distinct-untill-changed/debounce-time-distinct-untill-changed.component';
+import { SubjectAndBehaviourSubjectComponent } from './subject-and-behaviour-subject/subject-and-behaviour-subject.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,7 @@ const routes: Routes = [
       { path: 'take', component: TakeOpComponent },
       { path: 'retry', component: RetryRetryWhenScanDelayComponent },
       { path: 'debounce-time', component: DebounceTimeDistinctUntillChangedComponent },
+      { path: 'subject-behaviour-subject', component: SubjectAndBehaviourSubjectComponent },
       { path: '**', redirectTo: 'promise' },
     ]
   }

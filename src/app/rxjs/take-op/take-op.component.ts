@@ -1,6 +1,6 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Subscription, interval, pluck, toArray, map, take, from, takeLast, takeUntil, timer, fromEvent } from 'rxjs';
-import { CommanService } from '../service/comman.service';
+import { CommonService } from '../service/comman.service';
 
 @Component({
   selector: 'ecmspt-take-op',
@@ -29,7 +29,7 @@ export class TakeOpComponent implements OnInit, OnDestroy {
   subscribe1!: Subscription;
   subscribe2!: Subscription;
   subscribe3!: Subscription;
-  constructor(private _common: CommanService) { }
+  constructor(private _common: CommonService) { }
 
   people = [
     {

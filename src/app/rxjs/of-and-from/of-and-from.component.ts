@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { CommanService } from '../service/comman.service';
+import { CommonService } from '../service/comman.service';
 import { from, of, Subscription } from 'rxjs';
 
 @Component({
@@ -11,7 +11,7 @@ export class OfAndFromComponent implements OnInit, OnDestroy {
 
   obsMsg: any = {};
   subscription!: Subscription;
-  constructor(private _common: CommanService) { }
+  constructor(private _common: CommonService) { }
 
 
   ngOnInit(): void {

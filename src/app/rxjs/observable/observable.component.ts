@@ -20,6 +20,7 @@ export class ObservableComponent {
     { title: 'Take, TakeLast, TakeUntill', link: 'take' },
     { title: 'Retry, Scan, Delay', link: 'retry' },
     { title: 'DebounceTime, DistinctUntilChanged', link: 'debounce-time' },
+    { title: 'Subject, Behaviour Subject', link: 'subject-behaviour-subject' },
   ];
   constructor() { }
   ngOnInit(): void {

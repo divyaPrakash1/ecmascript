@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { from, interval, map, Subscription } from 'rxjs';
 import { HostListener } from '@angular/core';
-import { CommanService } from '../service/comman.service';
+import { CommonService } from '../service/comman.service';
 
 @Component({
   selector: 'ecmspt-map',
@@ -24,7 +24,7 @@ export class MapComponent implements OnInit, OnDestroy {
       this.subscribe3.unsubscribe();
     }
   }
-  constructor(private _common: CommanService) { }
+  constructor(private _common: CommonService) { }
 
   subscribe1!: Subscription;
   subscribe2!: Subscription;

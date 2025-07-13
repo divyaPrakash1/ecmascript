@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CommanService {
+export class CommonService {
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object, private apiCall: HttpClient) { }
 

@@ -1,6 +1,6 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Subscription, from, take, takeLast, timer, fromEvent, interval, map, takeUntil, retry, retryWhen, delay, scan } from 'rxjs';
-import { CommanService } from '../service/comman.service';
+import { CommonService } from '../service/comman.service';
 
 @Component({
   selector: 'ecmspt-retry-retry-when-scan-delay',
@@ -14,7 +14,7 @@ import { CommanService } from '../service/comman.service';
 export class RetryRetryWhenScanDelayComponent implements OnInit, OnDestroy {
   isLoading: boolean = false;
   dataStatus: string = 'No Data';
-  constructor(private _common: CommanService) { }
+  constructor(private _common: CommonService) { }
 
 
 

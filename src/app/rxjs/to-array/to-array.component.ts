@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { from, interval, of, Subscription, take, toArray } from 'rxjs';
-import { CommanService } from '../service/comman.service';
+import { CommonService } from '../service/comman.service';
 
 @Component({
   selector: 'ecmspt-to-array',
@@ -19,7 +19,7 @@ export class ToArrayComponent implements OnInit, OnDestroy {
     { name: 'Amendra', skill: 'None' },
   ]
 
-  constructor(private _common: CommanService) { }
+  constructor(private _common: CommonService) { }
 
 
   // A function that returns an Observable that emits an array of items emitted by the source Observable when source completes.

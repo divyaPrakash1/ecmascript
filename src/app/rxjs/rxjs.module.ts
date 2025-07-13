@@ -18,6 +18,10 @@ import { TapComponent } from './tap/tap.component';
 import { TakeOpComponent } from './take-op/take-op.component';
 import { RetryRetryWhenScanDelayComponent } from './retry-retry-when-scan-delay/retry-retry-when-scan-delay.component';
 import { DebounceTimeDistinctUntillChangedComponent } from './debounce-time-distinct-untill-changed/debounce-time-distinct-untill-changed.component';
+import { SubjectAndBehaviourSubjectComponent } from './subject-and-behaviour-subject/subject-and-behaviour-subject.component';
+import { Comp1Component } from './subject-and-behaviour-subject/components/comp1/comp1.component';
+import { Comp2Component } from './subject-and-behaviour-subject/components/comp2/comp2.component';
+import { Comp3Component } from './subject-and-behaviour-subject/components/comp3/comp3.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { DebounceTimeDistinctUntillChangedComponent } from './debounce-time-dist
     TapComponent,
     TakeOpComponent,
     RetryRetryWhenScanDelayComponent,
-    DebounceTimeDistinctUntillChangedComponent
+    DebounceTimeDistinctUntillChangedComponent,
+    SubjectAndBehaviourSubjectComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component
   ],
   imports: [
     CommonModule,
