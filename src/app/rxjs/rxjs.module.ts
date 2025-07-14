@@ -26,6 +26,7 @@ import { ReplaySubjectComponent } from './replay-subject/replay-subject.componen
 import { AsyncSubjectComponent } from './async-subject/async-subject.component';
 import { ConcatOpComponent } from './concat-op/concat-op.component';
 import { MergeOpComponent } from './merge-op/merge-op.component';
+import { MergeMapComponent } from './merge-map/merge-map.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { MergeOpComponent } from './merge-op/merge-op.component';
     ReplaySubjectComponent,
     AsyncSubjectComponent,
     ConcatOpComponent,
-    MergeOpComponent
+    MergeOpComponent,
+    MergeMapComponent
   ],
   imports: [
     CommonModule,

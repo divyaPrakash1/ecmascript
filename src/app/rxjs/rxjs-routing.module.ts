@@ -20,6 +20,7 @@ import { ReplaySubjectComponent } from './replay-subject/replay-subject.componen
 import { AsyncSubjectComponent } from './async-subject/async-subject.component';
 import { ConcatOpComponent } from './concat-op/concat-op.component';
 import { MergeOpComponent } from './merge-op/merge-op.component';
+import { MergeMapComponent } from './merge-map/merge-map.component';
 
 const routes: Routes = [
   {
@@ -45,6 +46,7 @@ const routes: Routes = [
       { path: 'async-subject', component: AsyncSubjectComponent },
       { path: 'concat-op', component: ConcatOpComponent },
       { path: 'merge-op', component: MergeOpComponent },
+      { path: 'merge-map', component: MergeMapComponent },
       { path: '**', redirectTo: 'promise' },
     ]
   }

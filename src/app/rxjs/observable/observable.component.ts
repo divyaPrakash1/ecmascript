@@ -25,6 +25,7 @@ export class ObservableComponent {
     { title: 'AsyncSubject', link: 'async-subject' },
     { title: 'Concat Operator', link: 'concat-op' },
     { title: 'Merge Operator', link: 'merge-op' },
+    { title: 'MergeMap', link: 'merge-map' },
   ];
   constructor() { }
   ngOnInit(): void {
