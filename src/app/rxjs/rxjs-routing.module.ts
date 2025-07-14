@@ -21,6 +21,7 @@ import { AsyncSubjectComponent } from './async-subject/async-subject.component';
 import { ConcatOpComponent } from './concat-op/concat-op.component';
 import { MergeOpComponent } from './merge-op/merge-op.component';
 import { MergeMapComponent } from './merge-map/merge-map.component';
+import { ConcatMapComponent } from './concat-map/concat-map.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,7 @@ const routes: Routes = [
       { path: 'concat-op', component: ConcatOpComponent },
       { path: 'merge-op', component: MergeOpComponent },
       { path: 'merge-map', component: MergeMapComponent },
+      { path: 'concat-map', component: ConcatMapComponent },
       { path: '**', redirectTo: 'promise' },
     ]
   }
