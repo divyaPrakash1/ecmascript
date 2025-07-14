@@ -16,6 +16,7 @@ import { TakeOpComponent } from './take-op/take-op.component';
 import { RetryRetryWhenScanDelayComponent } from './retry-retry-when-scan-delay/retry-retry-when-scan-delay.component';
 import { DebounceTimeDistinctUntillChangedComponent } from './debounce-time-distinct-untill-changed/debounce-time-distinct-untill-changed.component';
 import { SubjectAndBehaviourSubjectComponent } from './subject-and-behaviour-subject/subject-and-behaviour-subject.component';
+import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,7 @@ const routes: Routes = [
       { path: 'retry', component: RetryRetryWhenScanDelayComponent },
       { path: 'debounce-time', component: DebounceTimeDistinctUntillChangedComponent },
       { path: 'subject-behaviour-subject', component: SubjectAndBehaviourSubjectComponent },
+      { path: 'replay-subject', component: ReplaySubjectComponent },
       { path: '**', redirectTo: 'promise' },
     ]
   }

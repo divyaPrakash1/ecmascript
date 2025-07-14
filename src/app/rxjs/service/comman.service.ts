@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, ReplaySubject, Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -9,6 +9,8 @@ export class CommonService {
   exclusive = new Subject<boolean>();
   // userName = new Subject<string>(); 
   userName = new BehaviorSubject<string>("Divya Prakash");
+  videoEmit = new ReplaySubject<string>(3, 5000); // 3 denotes that 3 previous items needed and 5000 denotes that user can get value if it is emitted within 5 seconds
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object, private apiCall: HttpClient) { }
 
   print(val: string, containerId: string) {
