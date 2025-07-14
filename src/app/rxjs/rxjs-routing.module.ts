@@ -19,6 +19,7 @@ import { SubjectAndBehaviourSubjectComponent } from './subject-and-behaviour-sub
 import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
 import { AsyncSubjectComponent } from './async-subject/async-subject.component';
 import { ConcatOpComponent } from './concat-op/concat-op.component';
+import { MergeOpComponent } from './merge-op/merge-op.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,7 @@ const routes: Routes = [
       { path: 'replay-subject', component: ReplaySubjectComponent },
       { path: 'async-subject', component: AsyncSubjectComponent },
       { path: 'concat-op', component: ConcatOpComponent },
+      { path: 'merge-op', component: MergeOpComponent },
       { path: '**', redirectTo: 'promise' },
     ]
   }

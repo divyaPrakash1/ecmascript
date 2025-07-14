@@ -24,6 +24,7 @@ export class ObservableComponent {
     { title: 'ReplaySubject', link: 'replay-subject' },
     { title: 'AsyncSubject', link: 'async-subject' },
     { title: 'Concat Operator', link: 'concat-op' },
+    { title: 'Merge Operator', link: 'merge-op' },
   ];
   constructor() { }
   ngOnInit(): void {
