@@ -9,7 +9,8 @@ import { CommonService } from '../service/comman.service';
 })
 
 // in concat op, concat all data observable one by one
-// ex first ob have one data, second have two data then it should concat first then second 
+// ex first ob have 5 data, second have 3 data and third having 4 data then it should concat all first then all second then all third
+
 export class ConcatOpComponent implements OnInit, OnDestroy {
 
 
