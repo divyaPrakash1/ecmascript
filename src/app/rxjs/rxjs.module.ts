@@ -24,6 +24,7 @@ import { Comp2Component } from './subject-and-behaviour-subject/components/comp2
 import { Comp3Component } from './subject-and-behaviour-subject/components/comp3/comp3.component';
 import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
 import { AsyncSubjectComponent } from './async-subject/async-subject.component';
+import { ConcatOpComponent } from './concat-op/concat-op.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { AsyncSubjectComponent } from './async-subject/async-subject.component';
     Comp2Component,
     Comp3Component,
     ReplaySubjectComponent,
-    AsyncSubjectComponent
+    AsyncSubjectComponent,
+    ConcatOpComponent
   ],
   imports: [
     CommonModule,

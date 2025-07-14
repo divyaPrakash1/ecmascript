@@ -18,6 +18,7 @@ import { DebounceTimeDistinctUntillChangedComponent } from './debounce-time-dist
 import { SubjectAndBehaviourSubjectComponent } from './subject-and-behaviour-subject/subject-and-behaviour-subject.component';
 import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
 import { AsyncSubjectComponent } from './async-subject/async-subject.component';
+import { ConcatOpComponent } from './concat-op/concat-op.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,7 @@ const routes: Routes = [
       { path: 'subject-behaviour-subject', component: SubjectAndBehaviourSubjectComponent },
       { path: 'replay-subject', component: ReplaySubjectComponent },
       { path: 'async-subject', component: AsyncSubjectComponent },
+      { path: 'concat-op', component: ConcatOpComponent },
       { path: '**', redirectTo: 'promise' },
     ]
   }

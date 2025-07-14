@@ -23,6 +23,7 @@ export class ObservableComponent {
     { title: 'Subject, Behaviour Subject', link: 'subject-behaviour-subject' },
     { title: 'ReplaySubject', link: 'replay-subject' },
     { title: 'AsyncSubject', link: 'async-subject' },
+    { title: 'Concat Operator', link: 'concat-op' },
   ];
   constructor() { }
   ngOnInit(): void {
