@@ -17,6 +17,7 @@ import { RetryRetryWhenScanDelayComponent } from './retry-retry-when-scan-delay/
 import { DebounceTimeDistinctUntillChangedComponent } from './debounce-time-distinct-untill-changed/debounce-time-distinct-untill-changed.component';
 import { SubjectAndBehaviourSubjectComponent } from './subject-and-behaviour-subject/subject-and-behaviour-subject.component';
 import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
+import { AsyncSubjectComponent } from './async-subject/async-subject.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,7 @@ const routes: Routes = [
       { path: 'debounce-time', component: DebounceTimeDistinctUntillChangedComponent },
       { path: 'subject-behaviour-subject', component: SubjectAndBehaviourSubjectComponent },
       { path: 'replay-subject', component: ReplaySubjectComponent },
+      { path: 'async-subject', component: AsyncSubjectComponent },
       { path: '**', redirectTo: 'promise' },
     ]
   }

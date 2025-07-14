@@ -23,6 +23,7 @@ import { Comp1Component } from './subject-and-behaviour-subject/components/comp1
 import { Comp2Component } from './subject-and-behaviour-subject/components/comp2/comp2.component';
 import { Comp3Component } from './subject-and-behaviour-subject/components/comp3/comp3.component';
 import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
+import { AsyncSubjectComponent } from './async-subject/async-subject.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ReplaySubjectComponent } from './replay-subject/replay-subject.componen
     Comp1Component,
     Comp2Component,
     Comp3Component,
-    ReplaySubjectComponent
+    ReplaySubjectComponent,
+    AsyncSubjectComponent
   ],
   imports: [
     CommonModule,

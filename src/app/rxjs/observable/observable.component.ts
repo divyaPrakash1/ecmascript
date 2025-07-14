@@ -21,7 +21,8 @@ export class ObservableComponent {
     { title: 'Retry, Scan, Delay', link: 'retry' },
     { title: 'DebounceTime, DistinctUntilChanged', link: 'debounce-time' },
     { title: 'Subject, Behaviour Subject', link: 'subject-behaviour-subject' },
-    { title: 'Replaybsbject', link: 'replay-subject' },
+    { title: 'ReplaySubject', link: 'replay-subject' },
+    { title: 'AsyncSubject', link: 'async-subject' },
   ];
   constructor() { }
   ngOnInit(): void {
