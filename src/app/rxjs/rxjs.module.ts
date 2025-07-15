@@ -29,6 +29,7 @@ import { MergeOpComponent } from './merge-op/merge-op.component';
 import { MergeMapComponent } from './merge-map/merge-map.component';
 import { ConcatMapComponent } from './concat-map/concat-map.component';
 import { SwitchMapComponent } from './switch-map/switch-map.component';
+import { MergeConcatSwitchMapComponent } from './merge-concat-switch-map/merge-concat-switch-map.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { SwitchMapComponent } from './switch-map/switch-map.component';
     MergeOpComponent,
     MergeMapComponent,
     ConcatMapComponent,
-    SwitchMapComponent
+    SwitchMapComponent,
+    MergeConcatSwitchMapComponent
   ],
   imports: [
     CommonModule,

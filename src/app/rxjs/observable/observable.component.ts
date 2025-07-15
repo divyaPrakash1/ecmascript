@@ -28,6 +28,7 @@ export class ObservableComponent {
     { title: 'MergeMap', link: 'merge-map' },
     { title: 'ConcatMap', link: 'concat-map' },
     { title: 'SwitchMap', link: 'switch-map' },
+    { title: 'Merge, Concat and SwitchMap', link: 'merge-concat-switch-map' },
   ];
   constructor() { }
   ngOnInit(): void {
