@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -30,6 +31,7 @@ import { MergeMapComponent } from './merge-map/merge-map.component';
 import { ConcatMapComponent } from './concat-map/concat-map.component';
 import { SwitchMapComponent } from './switch-map/switch-map.component';
 import { MergeConcatSwitchMapComponent } from './merge-concat-switch-map/merge-concat-switch-map.component';
+import { SwitchMap2Component } from './switch-map2/switch-map2.component';
 
 @NgModule({
   declarations: [
@@ -60,11 +62,13 @@ import { MergeConcatSwitchMapComponent } from './merge-concat-switch-map/merge-c
     MergeMapComponent,
     ConcatMapComponent,
     SwitchMapComponent,
-    MergeConcatSwitchMapComponent
+    MergeConcatSwitchMapComponent,
+    SwitchMap2Component
   ],
   imports: [
     CommonModule,
-    RxjsRoutingModule
+    RxjsRoutingModule,
+    FormsModule
   ]
 })
 export class RxjsModule { }

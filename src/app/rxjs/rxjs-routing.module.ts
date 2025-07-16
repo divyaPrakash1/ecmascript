@@ -24,6 +24,7 @@ import { MergeMapComponent } from './merge-map/merge-map.component';
 import { ConcatMapComponent } from './concat-map/concat-map.component';
 import { SwitchMapComponent } from './switch-map/switch-map.component';
 import { MergeConcatSwitchMapComponent } from './merge-concat-switch-map/merge-concat-switch-map.component';
+import { SwitchMap2Component } from './switch-map2/switch-map2.component';
 
 const routes: Routes = [
   {
@@ -53,6 +54,7 @@ const routes: Routes = [
       { path: 'concat-map', component: ConcatMapComponent },
       { path: 'switch-map', component: SwitchMapComponent },
       { path: 'merge-concat-switch-map', component: MergeConcatSwitchMapComponent },
+      { path: 'switch-map-2', component: SwitchMap2Component },
       { path: '**', redirectTo: 'promise' },
     ]
   }
