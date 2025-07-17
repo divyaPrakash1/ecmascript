@@ -32,6 +32,8 @@ import { ConcatMapComponent } from './concat-map/concat-map.component';
 import { SwitchMapComponent } from './switch-map/switch-map.component';
 import { MergeConcatSwitchMapComponent } from './merge-concat-switch-map/merge-concat-switch-map.component';
 import { SwitchMap2Component } from './switch-map2/switch-map2.component';
+import { ExhaustMapComponent } from './exhaust-map/exhaust-map.component';
+import { ShareReplayComponent } from './share-replay/share-replay.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,9 @@ import { SwitchMap2Component } from './switch-map2/switch-map2.component';
     ConcatMapComponent,
     SwitchMapComponent,
     MergeConcatSwitchMapComponent,
-    SwitchMap2Component
+    SwitchMap2Component,
+    ExhaustMapComponent,
+    ShareReplayComponent
   ],
   imports: [
     CommonModule,
