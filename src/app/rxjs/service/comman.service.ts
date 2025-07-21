@@ -1,7 +1,8 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
-import { AsyncSubject, BehaviorSubject, Observable, ReplaySubject, Subject } from 'rxjs';
+import { AsyncSubject, BehaviorSubject, catchError, Observable, ReplaySubject, Subject } from 'rxjs';
 import { Posts, Product, Product1 } from '../interface/product.interface';
+import { ErrorService } from './error.service';
 @Injectable({
   providedIn: 'root'
 })
@@ -25,7 +26,7 @@ export class CommonService {
   // public products$: Observable<Product1[]> = this.exhaustMapSubject.asObservable();
 
   private apiUrl = 'https://jsonplaceholder.typicode.com';
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private apiCall: HttpClient) { }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private apiCall: HttpClient, private _errorService: ErrorService) { }
 
   print(val: string, containerId: string) {
     if (typeof document !== 'undefined') {
@@ -57,7 +58,7 @@ export class CommonService {
 
   getPosts(keyword: number): Observable<Posts[]> {
     const url = !!keyword ? `${this.apiUrl}/posts?userId=${keyword}` : `${this.apiUrl}/posts`
-    return this.apiCall.get<Posts[]>(`${url}`);
+    return this.apiCall.get<Posts[]>(`${url}`).pipe(catchError(this._errorService.handleError));
   }
 
 }

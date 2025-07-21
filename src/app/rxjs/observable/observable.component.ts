@@ -34,7 +34,7 @@ export class ObservableComponent {
     { title: 'ShareReplay', link: 'share-replay' },
     { title: 'Combine Latest', link: 'combine-latest' },
     { title: 'Zip, ForkJoin', link: 'zip-forkjoin' },
-    // { title: 'Catch, ThrowError', link: 'catch-throw-error' },
+    { title: 'Catch, ThrowError', link: 'catch-throw-error' },
 
   ];
   constructor() { }
