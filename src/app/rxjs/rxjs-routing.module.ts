@@ -26,6 +26,7 @@ import { SwitchMapComponent } from './switch-map/switch-map.component';
 import { MergeConcatSwitchMapComponent } from './merge-concat-switch-map/merge-concat-switch-map.component';
 import { SwitchMap2Component } from './switch-map2/switch-map2.component';
 import { ExhaustMapComponent } from './exhaust-map/exhaust-map.component';
+import { ShareReplayComponent } from './share-replay/share-replay.component';
 
 const routes: Routes = [
   {
@@ -57,6 +58,7 @@ const routes: Routes = [
       { path: 'merge-concat-switch-map', component: MergeConcatSwitchMapComponent },
       { path: 'switch-map-2', component: SwitchMap2Component },
       { path: 'exhaust-map', component: ExhaustMapComponent },
+      { path: 'share-replay', component: ShareReplayComponent },
       { path: '**', redirectTo: 'promise' },
     ]
   }

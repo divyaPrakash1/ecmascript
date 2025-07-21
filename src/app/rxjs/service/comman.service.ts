@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { AsyncSubject, BehaviorSubject, Observable, ReplaySubject, Subject } from 'rxjs';
-import { Product, Product1 } from '../interface/product.interface';
+import { Posts, Product, Product1 } from '../interface/product.interface';
 @Injectable({
   providedIn: 'root'
 })
@@ -24,7 +24,7 @@ export class CommonService {
   exhaustMapSubject = new BehaviorSubject<Product1[]>(this.productsData);
   // public products$: Observable<Product1[]> = this.exhaustMapSubject.asObservable();
 
-  private apiUrl = 'https://jsonplaceholder.typicode.com/comments';
+  private apiUrl = 'https://jsonplaceholder.typicode.com';
   constructor(@Inject(PLATFORM_ID) private platformId: Object, private apiCall: HttpClient) { }
 
   print(val: string, containerId: string) {
@@ -42,7 +42,8 @@ export class CommonService {
 
 
   getFilteredProducts(keyword: string): Observable<Product[]> { // title_like=/mouse/i
-    const url = !!keyword ? `${this.apiUrl}?name_like=${keyword}` : `${this.apiUrl}`
+
+    const url = !!keyword ? `${this.apiUrl}/comments?name_like=${keyword}` : `${this.apiUrl}/comments`
     return this.apiCall.get<Product[]>(`${url}`);
   }
 
@@ -53,6 +54,12 @@ export class CommonService {
     }, 500);
 
   }
+
+  getPosts(keyword: number): Observable<Posts[]> {
+    const url = !!keyword ? `${this.apiUrl}/posts?userId=${keyword}` : `${this.apiUrl}/posts`
+    return this.apiCall.get<Posts[]>(`${url}`);
+  }
+
 }
 
 

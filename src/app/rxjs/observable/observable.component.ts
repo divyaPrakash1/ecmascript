@@ -31,6 +31,7 @@ export class ObservableComponent {
     { title: 'Merge, Concat and SwitchMap', link: 'merge-concat-switch-map' },
     { title: 'SwitchMap Example - 2', link: 'switch-map-2' },
     { title: 'ExhaustMap', link: 'exhaust-map' },
+    { title: 'ShareReplay', link: 'share-replay' },
   ];
   constructor() { }
   ngOnInit(): void {
