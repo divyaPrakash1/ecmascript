@@ -33,7 +33,7 @@ export class ObservableComponent {
     { title: 'ExhaustMap', link: 'exhaust-map' },
     { title: 'ShareReplay', link: 'share-replay' },
     { title: 'Combine Latest', link: 'combine-latest' },
-    // { title: 'Zip, ForkJoin', link: 'zip-forkjoin' },
+    { title: 'Zip, ForkJoin', link: 'zip-forkjoin' },
     // { title: 'Catch, ThrowError', link: 'catch-throw-error' },
 
   ];
