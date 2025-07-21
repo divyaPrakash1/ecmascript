@@ -34,6 +34,9 @@ import { MergeConcatSwitchMapComponent } from './merge-concat-switch-map/merge-c
 import { SwitchMap2Component } from './switch-map2/switch-map2.component';
 import { ExhaustMapComponent } from './exhaust-map/exhaust-map.component';
 import { ShareReplayComponent } from './share-replay/share-replay.component';
+import { CombineLatestComponent } from './combine-latest/combine-latest.component';
+import { ZipAndForkJoinComponent } from './zip-and-fork-join/zip-and-fork-join.component';
+import { CatchErrorAndThrowErrorComponent } from './catch-error-and-throw-error/catch-error-and-throw-error.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +70,10 @@ import { ShareReplayComponent } from './share-replay/share-replay.component';
     MergeConcatSwitchMapComponent,
     SwitchMap2Component,
     ExhaustMapComponent,
-    ShareReplayComponent
+    ShareReplayComponent,
+    CombineLatestComponent,
+    ZipAndForkJoinComponent,
+    CatchErrorAndThrowErrorComponent
   ],
   imports: [
     CommonModule,

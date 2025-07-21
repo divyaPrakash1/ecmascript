@@ -32,6 +32,10 @@ export class ObservableComponent {
     { title: 'SwitchMap Example - 2', link: 'switch-map-2' },
     { title: 'ExhaustMap', link: 'exhaust-map' },
     { title: 'ShareReplay', link: 'share-replay' },
+    { title: 'Combine Latest', link: 'combine-latest' },
+    // { title: 'Zip, ForkJoin', link: 'zip-forkjoin' },
+    // { title: 'Catch, ThrowError', link: 'catch-throw-error' },
+
   ];
   constructor() { }
   ngOnInit(): void {
