@@ -17,7 +17,7 @@ export class ErrorService {
       errMsg = err.error.message;
     }
 
-    return throwError(errMsg);
+    return throwError(() => errMsg);
   }
 }
 

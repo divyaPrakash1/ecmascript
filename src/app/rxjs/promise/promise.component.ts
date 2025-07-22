@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ecmspt-promise',
   templateUrl: './promise.component.html',
   styleUrl: './promise.component.scss'
 })
-export class PromiseComponent implements OnInit {
+export class PromiseComponent implements OnInit, AfterViewInit {
   promiseVal: any = '';
 
   dell = {
@@ -37,8 +37,6 @@ export class PromiseComponent implements OnInit {
     let buyLaptop = new Promise((resolve, reject) => {
       // resolve('Promise is resolve')
       // reject('Promise is reject')
-
-
       // buyLaptop.then(res => {
       //   console.log('Success', res);
       // }).catch(res => {
@@ -62,9 +60,36 @@ export class PromiseComponent implements OnInit {
     })
   }
 
+  isleaveApproved: boolean = true;
+
+
+  practiceMethod() {
+    const prms = new Promise((resolve, reject) => {
+      if (this.isleaveApproved) {
+        resolve('Go to trip')
+      } else {
+        reject('Back to work')
+      }
+    });
+
+    prms.then(res => {
+      console.log(res);
+    }).catch(err => {
+      console.log(err);
+    }).finally(() => {
+      console.log('All is Well') // It will always call, not depends on resolve/reject
+    })
+  }
+
+  ngAfterViewInit(): void {
+    this.practiceMethod();
+  }
+
   myFunction() {
     console.log('myFunction called');
   }
+
+
 
 
   // Promise: 
@@ -76,4 +101,6 @@ export class PromiseComponent implements OnInit {
   //   1. async or sync
   //   2. Return stream of value
   //     --------0--------0----------0-------
+
+
 }
