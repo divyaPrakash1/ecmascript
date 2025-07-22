@@ -11,10 +11,20 @@ export class OfAndFromComponent implements OnInit, OnDestroy {
 
   obsMsg: any = {};
   subscription!: Subscription;
+  subscription1!: Subscription;
+  subscription2!: Subscription;
+  subscription3!: Subscription;
+  subscription4!: Subscription;
+  subscription5!: Subscription;
   constructor(private _common: CommonService) { }
 
 
   ngOnInit(): void {
+    // this.example1();
+    this.example2();
+  }
+
+  example1() {
     // Of operator accepts object, string and return observable
 
     // Of
@@ -65,8 +75,59 @@ export class OfAndFromComponent implements OnInit, OnDestroy {
     });
   }
 
+
+  example2() {// of string, Obejct
+    const obs = of('this', 'is', 'test', 'string');
+    this.subscription1 = obs.subscribe(res => {
+      console.log(res);
+    });
+
+    const obs1 = of({ a: 1, b: 2, c: 3, d: 4 });
+    this.subscription2 = obs1.subscribe(res => {
+      console.log(res);
+    });
+
+
+    // from array, string, promise
+    const obs2 = from([1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 6, 5, 4, 3]);
+    this.subscription3 = obs2.subscribe(res => {
+      console.log(res);
+    });
+
+    const obs3 = from('this is the string that will pass to from operator');
+    this.subscription4 = obs3.subscribe(res => {
+      console.log(res);
+    });
+
+    const prms = new Promise((resolve, rejects) => {
+      resolve('Dadda');
+    })
+
+    const obs4 = from(prms);
+    this.subscription5 = obs4.subscribe(res => {
+      console.log(res);
+    })
+  }
+
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+    if (this.subscription1) {
+      this.subscription1.unsubscribe();
+    }
+    if (this.subscription2) {
+      this.subscription2.unsubscribe();
+    }
+    if (this.subscription3) {
+      this.subscription3.unsubscribe();
+    }
+    if (this.subscription4) {
+      this.subscription4.unsubscribe();
+    }
+    if (this.subscription5) {
+      this.subscription5.unsubscribe();
+    }
   }
 
 }

@@ -72,9 +72,15 @@ export class IntervalTimerComponent implements OnInit, AfterViewInit, OnDestroy 
 
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
-    this.subscription1.unsubscribe();
-    this.subscription2.unsubscribe();
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+    if (this.subscription1) {
+      this.subscription1.unsubscribe();
+    }
+    if (this.subscription2) {
+      this.subscription2.unsubscribe();
+    }
   }
 
 }
