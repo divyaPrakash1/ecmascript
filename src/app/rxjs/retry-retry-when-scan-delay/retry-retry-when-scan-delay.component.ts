@@ -53,6 +53,58 @@ export class RetryRetryWhenScanDelayComponent implements OnInit, OnDestroy {
       }
     )
   }
+
+  fetchDetails2() {
+    this.isLoading = true;
+    this._common.fetchDetails().pipe(
+      // retry(3)
+      retryWhen(err => err.pipe(
+        delay(2500),
+        scan((retryCount) => {
+          if (retryCount > 5) {
+            throw err
+          } else {
+            retryCount++;
+            this.dataStatus = 'Retrying Attempt #' + retryCount;
+            return retryCount;
+          }
+        }, 0)
+      ))
+    ).subscribe(res => {
+      console.log(res);
+      this.data1 = res;
+      this.isLoading = false;
+      this.dataStatus = 'Data fetched';
+    },
+      (error) => {
+        this.isLoading = false;
+        this.dataStatus = 'Error while fetching data';
+      })
+  }
+
+  fetchDetails3() {
+    this.isLoading = true;
+    this._common.fetchDetails().pipe(
+      // retry(2)
+      retryWhen(err => err.pipe(
+        delay(500),
+        scan((retryCount) => {
+          if (retryCount > 3) {
+            throw err
+          } else {
+            retryCount++;
+            return retryCount
+          }
+        }, 0)
+      ))
+    ).subscribe(res => {
+      this.isLoading = false;
+    }, (err) => {
+      this.isLoading = false;
+    })
+  }
+
+
   ngOnDestroy(): void {
   }
 }
