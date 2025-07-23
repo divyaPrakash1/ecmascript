@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { from, interval, map, Subscription } from 'rxjs';
+import { from, interval, map, Subscription, toArray } from 'rxjs';
 import { HostListener } from '@angular/core';
 import { CommonService } from '../service/comman.service';
 
@@ -23,20 +23,39 @@ export class MapComponent implements OnInit, OnDestroy {
     if (this.subscribe3) {
       this.subscribe3.unsubscribe();
     }
+    if (this.subscribe4) {
+      this.subscribe4.unsubscribe();
+    }
+    if (this.subscribe5) {
+      this.subscribe5.unsubscribe();
+    }
+    if (this.subscribe6) {
+      this.subscribe6.unsubscribe();
+    }
   }
   constructor(private _common: CommonService) { }
 
   subscribe1!: Subscription;
   subscribe2!: Subscription;
   subscribe3!: Subscription;
+  subscribe4!: Subscription;
+  subscribe5!: Subscription;
+  subscribe6!: Subscription;
 
   msg1: string = "";
   msg2: string = "";
   msg3: string = "";
 
   ngOnInit(): void {
-    // Ex - 01
 
+    // this.example1();
+    this.example2();
+
+
+  }
+
+  example1() {
+    // Ex - 01
     const broadcastVideo = interval(1000);
     this.subscribe1 = broadcastVideo
       .pipe(
@@ -59,7 +78,6 @@ export class MapComponent implements OnInit, OnDestroy {
     }, 10000)
 
     // Ex - 02
-
     const broadcastVideo3 = interval(1000);
     this.subscribe3 = broadcastVideo3
       .pipe(
@@ -76,8 +94,8 @@ export class MapComponent implements OnInit, OnDestroy {
         // console.log(res);
         this.msg3 = res;
       });
-    // Ex - 02
 
+    // Ex - 03
     const people = from([
       { id: 1, name: 'Amit Sharma' },
       { id: 2, name: 'Priya Mehra' },
@@ -99,14 +117,57 @@ export class MapComponent implements OnInit, OnDestroy {
         this.msg3 = res;
         this._common.print(res, 'elContainer')
       });
+  }
 
+  data = [
+    { id: 1, name: "Item 1", value: 10 },
+    { id: 2, name: "Item 2", value: 20 },
+    { id: 3, name: "Item 3", value: 30 },
+    { id: 4, name: "Item 4", value: 40 },
+    { id: 5, name: "Item 5", value: 50 },
+    { id: 6, name: "Item 6", value: 60 },
+    { id: 7, name: "Item 7", value: 70 },
+    { id: 8, name: "Item 8", value: 80 },
+    { id: 9, name: "Item 9", value: 90 },
+    { id: 10, name: "Item 10", value: 100 },
+  ];
+
+
+  example2() {
+    // Ex-01
+    const obs1 = from(this.data)
+    this.subscribe4 = obs1.pipe(
+      map(r => {
+        return { naam: r.name, val: r.value }
+      }),
+      toArray(),
+    ).subscribe(res => {
+      console.log("map", res);
+    })
   }
 
 
+
+
   ngOnDestroy(): void {
-    this.subscribe1.unsubscribe()
-    this.subscribe2.unsubscribe()
-    this.subscribe3.unsubscribe()
+    if (this.subscribe1) {
+      this.subscribe1.unsubscribe();
+    }
+    if (this.subscribe2) {
+      this.subscribe2.unsubscribe();
+    }
+    if (this.subscribe3) {
+      this.subscribe3.unsubscribe();
+    }
+    if (this.subscribe4) {
+      this.subscribe4.unsubscribe();
+    }
+    if (this.subscribe5) {
+      this.subscribe5.unsubscribe();
+    }
+    if (this.subscribe6) {
+      this.subscribe6.unsubscribe();
+    }
   }
 
 }
