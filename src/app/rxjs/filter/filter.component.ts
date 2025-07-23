@@ -19,6 +19,15 @@ export class FilterComponent implements OnInit, OnDestroy {
     if (this.subscribe3) {
       this.subscribe3.unsubscribe();
     }
+    if (this.subscribe4) {
+      this.subscribe4.unsubscribe();
+    }
+    if (this.subscribe5) {
+      this.subscribe5.unsubscribe();
+    }
+    if (this.subscribe6) {
+      this.subscribe6.unsubscribe();
+    }
   }
 
   constructor(private _common: CommonService) { }
@@ -26,6 +35,10 @@ export class FilterComponent implements OnInit, OnDestroy {
   subscribe1!: Subscription;
   subscribe2!: Subscription;
   subscribe3!: Subscription;
+
+  subscribe4!: Subscription;
+  subscribe5!: Subscription;
+  subscribe6!: Subscription;
 
   msg1: string = "";
   msg2: string = "";
@@ -102,6 +115,12 @@ export class FilterComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
+    // this.example1();
+    this.example2();
+
+  }
+
+  example1() {
     // Ex - 01 (By Length)
 
     const source1 = from(this.people);
@@ -145,14 +164,50 @@ export class FilterComponent implements OnInit, OnDestroy {
         this.data3 = res;
         // this.msg1 = res;
       });
-
   }
 
 
+  example2() {
+    const obs1 = from(this.people);
+    this.subscribe4 = obs1.pipe(
+      filter(r => r.id > 3),
+      toArray()
+    ).subscribe(res => {
+      console.log(res);
+    });
+    this.subscribe5 = obs1.pipe(
+      filter(r => r.gender === 'Male'),
+      toArray()
+    ).subscribe(res => {
+      console.log(res);
+    });
+    this.subscribe6 = obs1.pipe(
+      filter(r => r.name.length > 5),
+      toArray()
+    ).subscribe(res => {
+      console.log(res);
+    });
+  }
+
   ngOnDestroy(): void {
-    this.subscribe1.unsubscribe()
-    this.subscribe2.unsubscribe()
-    this.subscribe3.unsubscribe()
+    if (this.subscribe1) {
+      this.subscribe1.unsubscribe();
+    }
+    if (this.subscribe2) {
+      this.subscribe2.unsubscribe();
+    }
+    if (this.subscribe3) {
+      this.subscribe3.unsubscribe();
+    }
+    if (this.subscribe4) {
+      this.subscribe4.unsubscribe();
+    }
+    if (this.subscribe5) {
+      this.subscribe5.unsubscribe();
+    }
+    if (this.subscribe6) {
+      this.subscribe6.unsubscribe();
+    }
   }
 
 }
