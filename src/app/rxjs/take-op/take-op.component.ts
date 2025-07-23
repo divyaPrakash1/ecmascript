@@ -24,11 +24,23 @@ export class TakeOpComponent implements OnInit, OnDestroy {
     if (this.subscribe3) {
       this.subscribe3.unsubscribe();
     }
+    if (this.subscribe4) {
+      this.subscribe4.unsubscribe();
+    }
+    if (this.subscribe5) {
+      this.subscribe5.unsubscribe();
+    }
+    if (this.subscribe6) {
+      this.subscribe6.unsubscribe();
+    }
   }
 
   subscribe1!: Subscription;
   subscribe2!: Subscription;
   subscribe3!: Subscription;
+  subscribe4!: Subscription;
+  subscribe5!: Subscription;
+  subscribe6!: Subscription;
   constructor(private _common: CommonService) { }
 
   people = [
@@ -100,7 +112,13 @@ export class TakeOpComponent implements OnInit, OnDestroy {
   ];
 
   ngOnInit(): void {
+    // this.example1();
+    this.example2();
 
+
+  }
+
+  example1() {
     // Ex - 01 take()
     const source1 = from(this.colors)
     this.subscribe1 = source1.pipe(take(5)).subscribe(res => {
@@ -129,13 +147,46 @@ export class TakeOpComponent implements OnInit, OnDestroy {
         this._common.print(res + "", 'elContainer3')
       })
     }
+  }
+
+
+  example2() {
+    const obs1 = from(this.people);
+    this.subscribe4 = obs1.pipe(take(4), toArray()).subscribe(res => {
+      console.log('take 4', res)
+    });
+
+
+    this.subscribe4 = obs1.pipe(takeLast(4), toArray()).subscribe(res => {
+      console.log('takeLast 4', res)
+    });
+
+
+    const obs2Timer = timer(10000);
+    this.subscribe4 = obs1.pipe(takeUntil(obs2Timer), toArray()).subscribe(res => {
+      console.log('takeUntil 10 seconds', res)
+    });
 
   }
+
   ngOnDestroy(): void {
-    this.subscribe1.unsubscribe();
-    this.subscribe2.unsubscribe();
+    if (this.subscribe1) {
+      this.subscribe1.unsubscribe();
+    }
+    if (this.subscribe2) {
+      this.subscribe2.unsubscribe();
+    }
     if (this.subscribe3) {
       this.subscribe3.unsubscribe();
+    }
+    if (this.subscribe4) {
+      this.subscribe4.unsubscribe();
+    }
+    if (this.subscribe5) {
+      this.subscribe5.unsubscribe();
+    }
+    if (this.subscribe6) {
+      this.subscribe6.unsubscribe();
     }
   }
 }
