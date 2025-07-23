@@ -11,6 +11,10 @@ export class CommonService {
   exclusive = new Subject<boolean>();
   // userName = new Subject<string>(); 
   userName = new BehaviorSubject<string>("Divya Prakash");
+
+  // userName2 = new Subject<string>();
+  userName2 = new BehaviorSubject<string>("Divya Prakash");
+
   videoEmit = new ReplaySubject<string>(3, 5000); // 3 denotes that 3 previous items needed and 5000 denotes that user can get value if it is emitted within 5 seconds
 
   asyncVideoEmit = new AsyncSubject<string>();
