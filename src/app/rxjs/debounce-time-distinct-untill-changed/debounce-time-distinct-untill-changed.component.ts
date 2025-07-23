@@ -10,6 +10,7 @@ export class DebounceTimeDistinctUntillChangedComponent implements OnInit, After
 
   @ViewChild('myInput') myInput!: ElementRef; // Template reference variable
   @ViewChild('myInput1') myInput1!: ElementRef; // Template reference variable
+  @ViewChild('myInput2') myInput2!: ElementRef; // Template reference variable
 
   constructor() { }
 
@@ -22,7 +23,8 @@ export class DebounceTimeDistinctUntillChangedComponent implements OnInit, After
   }
   ngAfterViewInit(): void {
     // this.onSearch();
-    this.onSearch1();
+    // this.onSearch1();
+    this.onSearch2();
   }
 
   onSearch() {
@@ -60,6 +62,17 @@ export class DebounceTimeDistinctUntillChangedComponent implements OnInit, After
           // this.isLoading = false;
         }
       );
+  }
+
+  onSearch2() {
+    const obs1 = fromEvent<any>(this.myInput2.nativeElement, 'keyup').pipe(
+      map(e => e.target.value),
+      debounceTime(2500),
+      distinctUntilChanged()
+    )
+    obs1.subscribe(res => {
+      console.log('This is test to change response', res);
+    })
   }
 
 
