@@ -10,7 +10,12 @@ import { CommonService } from '../service/comman.service';
 export class ToArrayComponent implements OnInit, OnDestroy {
 
   obsMsg: any = {};
-  subscription!: Subscription;
+  subscription01!: Subscription;
+  subscription02!: Subscription;
+  subscription03!: Subscription;
+  subscription11!: Subscription;
+  subscription12!: Subscription;
+  subscription13!: Subscription;
 
   users = [
     { name: 'Divya Prakash Mishra', skill: 'Angular' },
@@ -26,21 +31,26 @@ export class ToArrayComponent implements OnInit, OnDestroy {
   // Get all values inside an array when the source completes
 
   ngOnInit(): void {
+    // this.example1();
+    this.example2();
+  }
+
+  example1() {
     // Ex - 01
     const source = interval(1000);
-    this.subscription = source.pipe(
+    this.subscription01 = source.pipe(
       take(5),
       toArray()
     ).subscribe(res => {
       console.log(res);
       if (res.length > 9) {
-        this.subscription.unsubscribe();
+        this.subscription01.unsubscribe();
       }
     });
 
     // Ex - 02
     const source2 = from(this.users);
-    this.subscription = source2
+    this.subscription02 = source2
       .pipe(
         toArray()
       )
@@ -50,21 +60,60 @@ export class ToArrayComponent implements OnInit, OnDestroy {
 
     // Ex - 03 
     const source3 = of('Divya', 'Prakash', 'Mishra');
-    this.subscription = source3
+    this.subscription03 = source3
       .pipe(
         toArray()
       )
       .subscribe(res => {
         console.log(res);
       });
+  }
 
+  example2() {
+    //Ex-01
+    const obs1 = interval(1500);
+    this.subscription11 = obs1.pipe(
+      take(5),
+      toArray()
+    ).subscribe(res => {
+      console.log('interval', res);
+    });
+
+    // Ex-02
+    const obs2 = from(this.users);
+    this.subscription12 = obs2.pipe(toArray()).subscribe(res => {
+      console.log('from', res)
+    });
+
+    // Ex-03
+    const obs3 = of('Divya', 'Prakash', 'Mishra');
+    this.subscription13 = obs3.pipe(toArray()).subscribe(res => {
+      console.log('of', res)
+    });
   }
 
 
 
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    if (this.subscription01) {
+      this.subscription01.unsubscribe();
+    }
+    if (this.subscription02) {
+      this.subscription02.unsubscribe();
+    }
+    if (this.subscription03) {
+      this.subscription03.unsubscribe();
+    }
+    if (this.subscription11) {
+      this.subscription11.unsubscribe();
+    }
+    if (this.subscription12) {
+      this.subscription12.unsubscribe();
+    }
+    if (this.subscription13) {
+      this.subscription13.unsubscribe();
+    }
   }
 
 }
