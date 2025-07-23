@@ -87,7 +87,12 @@ export class PluckComponent implements OnInit, OnDestroy {
   data2: any = [];
 
   ngOnInit(): void {
+    // this.example1();
+    this.example2();
 
+  }
+
+  example1() {
     // Ex - 01
     const cusObs1 = from(this.people);
     this.subscribe1 = cusObs1
@@ -107,7 +112,7 @@ export class PluckComponent implements OnInit, OnDestroy {
     this.subscribe1 = cusObs2
       .pipe(
         // pluck('email'), // [undefined, ... 10 times ]// as it is searching root level
-        pluck('contact', 'email'), // [undefined, ... 10 times ]// as it is searching root level
+        pluck('contact', 'email'),
         toArray()
       )
       .subscribe(res => {
@@ -116,9 +121,28 @@ export class PluckComponent implements OnInit, OnDestroy {
         this._common.print(res.toString(), 'elContainer1');
       })
   }
+
+  example2() {
+    const obs1 = from(this.people);
+    this.subscribe2 = obs1.pipe(
+      pluck('name'),
+      toArray()
+    ).subscribe(res => {
+      console.log('pluck name only', res);
+    })
+    this.subscribe3 = obs1.pipe(
+      pluck('contact', 'email'),
+      toArray()
+    ).subscribe(res => {
+      console.log('pluck email only', res);
+    })
+  }
   ngOnDestroy(): void {
-    this.subscribe1.unsubscribe();
-    // this.subscribe2.unsubscribe();
-    // this.subscribe3.unsubscribe();
+    if (this.subscribe1)
+      this.subscribe1.unsubscribe();
+    if (this.subscribe2)
+      this.subscribe2.unsubscribe();
+    if (this.subscribe3)
+      this.subscribe3.unsubscribe();
   }
 }

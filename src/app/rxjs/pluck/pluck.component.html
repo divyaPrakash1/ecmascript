@@ -12,17 +12,24 @@
             </p>
             <br>
             <table class="table">
-                <tr>
-                    <th>
-                        Name
-                    </th>
-                </tr>
-                <tr  *ngFor="let d of data1">
-                    <td>
-                        {{d}}
-                    </td>
-                </tr>
+                <thead>
 
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    
+                    <tr  *ngFor="let d of data1">
+                        <td>
+                            {{d}}
+                        </td>
+                    </tr>
+                    
+                </tbody>
             </table>
             
         </div>
@@ -35,16 +42,22 @@
             </p>
             <br>
             <table class="table">
-                <tr>
-                    <th>
-                        Contact > Email
-                    </th>
-                </tr>
-                <tr *ngFor="let d of data2">
-                    <td>
-                        {{d}}
-                    </td>
-                </tr>
+                <thead>
+
+                    <tr>
+                        <th>
+                            Contact > Email
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let d of data2">
+                        <td>
+                            {{d}}
+                        </td>
+                    </tr>
+                </tbody>
             
             </table>
         </div>
