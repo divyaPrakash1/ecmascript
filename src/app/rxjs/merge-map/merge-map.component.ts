@@ -8,6 +8,13 @@ import { from, map, mergeAll, mergeMap, Observable, of, Subscription } from 'rxj
   styleUrl: './merge-map.component.scss'
 })
 // it combination of map + mergeAll = mergeMap (Flattening operator)
+// in mergeMap, subscribe order will be same,
+// A1-----------------A3---------A5-------|-->
+// B------B-----B---|--------------------->
+// mergeMap(i => i*B--i*B--i*B----|)
+// A1B---A1B---A1B---A3B---A3B---A5B---A3B---A5B---A5B---|>
+
+
 export class MergeMapComponent implements OnInit, OnDestroy {
 
   constructor(private _common: CommonService) {
