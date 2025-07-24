@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonService } from '../service/comman.service';
-import { from, map, mergeAll, mergeMap, Observable, of } from 'rxjs';
+import { from, map, mergeAll, mergeMap, Observable, of, Subscription } from 'rxjs';
 
 @Component({
   selector: 'ecmspt-merge-map',
@@ -14,9 +14,17 @@ export class MergeMapComponent implements OnInit, OnDestroy {
 
   }
 
+  subscription1!: Subscription;
+  subscription2!: Subscription;
+  subscription3!: Subscription;
 
   ngOnInit(): void {
 
+    // this.example1();
+    this.example2();
+  }
+
+  example1() {
     const source = from(['Tech', 'Comedy', 'News']);
 
     // Tech Video Uploaded
@@ -68,11 +76,50 @@ export class MergeMapComponent implements OnInit, OnDestroy {
       });
   }
 
+  example2() {
+    const source = from(['Comedy', 'Tech', 'Dadda']);
+    this.subscription1 = source.pipe(
+      map(v => this.getData1(v))
+    ).subscribe(res => {
+      console.log('only with Map', res)
+    });
+
+    this.subscription2 = source.pipe(
+      map(v => this.getData1(v)),
+      mergeAll()
+    ).subscribe(res => {
+      console.log('map + mergeAll', res);
+    });
+
+
+    this.subscription3 = source.pipe(
+      mergeMap(v => this.getData1(v))
+    ).subscribe(res => {
+      console.log('mergeMap', res);
+    })
+
+  }
+
+
+  getData1(data: string): Observable<any> {
+    return of('Data Forn ' + data);
+  }
+
   getData(data: string): Observable<any> { // returns observable
     return of(data + ' Video Uploaded');
   }
 
   ngOnDestroy(): void {
+
+    if (this.subscription1) {
+      this.subscription1.unsubscribe();
+    }
+    if (this.subscription2) {
+      this.subscription2.unsubscribe();
+    }
+    if (this.subscription3) {
+      this.subscription3.unsubscribe();
+    }
 
   }
 
