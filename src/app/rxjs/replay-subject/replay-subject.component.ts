@@ -19,15 +19,28 @@ export class ReplaySubjectComponent implements OnInit, OnDestroy {
   user3List: any = [
   ];
 
+  user01List: any = [];
+  user02List: any = [];
+  user03List: any = [];
+
   // subscribeMode
   subscribeMode2: boolean = false;
   subscribeMode3: boolean = false;
+
+
+  subscribeMode02: boolean = false;
+  subscribeMode03: boolean = false;
 
 
   // subscription
   subscription2!: Subscription;
   subscription3!: Subscription;
   subscription4!: Subscription;
+
+
+  subscription02!: Subscription;
+  subscription03!: Subscription;
+  subscription04!: Subscription;
 
   // toggle properties
   methodInterval: boolean = false;
@@ -41,7 +54,11 @@ export class ReplaySubjectComponent implements OnInit, OnDestroy {
     this._common.videoEmit.subscribe(res => {
       console.log(res);
       this.user1List.push(res);
-    })
+    });
+
+    this._common.videoEmitRevise.subscribe(res => {
+      this.user01List.push(res);
+    });
   }
 
 
@@ -84,6 +101,34 @@ export class ReplaySubjectComponent implements OnInit, OnDestroy {
     }
     this.methodInterval = !this.methodInterval;
   }
+
+  addVideo(addVideo: string) {
+    this._common.videoEmitRevise.next(addVideo);
+  }
+
+  user02Subscribe() {
+    if (this.subscription02) {
+      this.subscription02.unsubscribe();
+    } else {
+      this.subscription02 = this._common.videoEmitRevise.subscribe(res => {
+        this.user02List.push(res);
+      })
+    }
+    this.subscribeMode02 = !this.subscribeMode02;
+  }
+
+  user03Subscribe() {
+    if (this.subscription03) {
+      this.subscription03.unsubscribe();
+    } else {
+      this.subscription03 = this._common.videoEmitRevise.subscribe(res => {
+        this.user03List.push(res);
+      })
+    }
+    this.subscribeMode03 = !this.subscribeMode03;
+  }
+
+
 
   ngOnDestroy(): void {
     this._common.videoEmit.next("");

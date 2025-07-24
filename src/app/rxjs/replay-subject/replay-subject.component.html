@@ -54,4 +54,50 @@
             </button>
         </div>
     </div>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-8">
+            <input type="text" name="" id="" #myInput1 class="form-control">
+        </div>
+        <div class="col-md-4">
+            <button type="button" class="btn btn-warning" (click)="addVideo(myInput1.value)">Add</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <strong>User - 01</strong>
+            <hr>
+            <ul class="video-list">
+                <li *ngFor="let user of user01List"><strong>Video : </strong> {{user}}</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <strong>User - 02</strong>
+            <hr>
+            <ul class="video-list">
+                <li *ngFor="let user of user02List"><strong>Video : </strong> {{user}}</li>
+
+            </ul>
+            <button class="btn" (click)="user02Subscribe()"
+                [ngClass]="{'btn-success': !subscribeMode02, 'btn-danger': subscribeMode02, }">
+                {{!subscribeMode02 ? 'Subscribe' : 'UnSubscribe'}}
+            </button>
+        </div>
+        <div class="col-md-4">
+            <strong>User - 03</strong>
+            <hr>
+            <ul class="video-list">
+                <li *ngFor="let user of user03List"><strong>Video : </strong> {{user}}</li>
+
+            </ul>
+            <button class="btn" (click)="user03Subscribe()"
+                [ngClass]="{'btn-success': !subscribeMode03, 'btn-danger': subscribeMode03, }">
+                {{!subscribeMode03 ? 'Subscribe' : 'UnSubscribe'}}
+            </button>
+        </div>
+    </div>
 </div>
