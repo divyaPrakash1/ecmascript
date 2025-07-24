@@ -20,6 +20,12 @@ export class ConcatOpComponent implements OnInit, OnDestroy {
 
 
   ngOnInit(): void {
+    // this.example1();
+    this.example2();
+  }
+
+
+  example1() {
     const sourceTech = interval(1000).pipe(map(v => 'Tech Video #' + (v + 1)), take(5));
     const sourceComedy = interval(1000).pipe(map(v => 'Comedy Video #' + (v + 1)), take(3));
     const sourceNews = interval(1000).pipe(map(v => 'News Video #' + (v + 1)), take(4));
@@ -28,6 +34,16 @@ export class ConcatOpComponent implements OnInit, OnDestroy {
     finalObs.subscribe(res => {
       console.log(res);
       this._common.print(res, 'elContainer')
+    })
+  }
+
+  example2() {
+    const obs1 = interval(1000).pipe(map(v => 'Study #' + v), take(5));
+    const obs2 = interval(2000).pipe(map(v => 'Office #' + v), take(5));
+    const obs3 = interval(3000).pipe(map(v => 'Trip #' + v), take(5));
+    const finalObs = concat(obs1, obs2, obs3)
+    finalObs.subscribe(res => {
+      console.log(res);
     })
   }
 
