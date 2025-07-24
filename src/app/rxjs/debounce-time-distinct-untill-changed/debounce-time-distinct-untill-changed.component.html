@@ -1,0 +1,52 @@
+<div class="my-3">
+    <h2>Retry, RetryWhen and Scan </h2>
+    <br>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <strong class="text-primary">Ex - 01 DeboumceTime</strong>
+            <p class="border my-2 bg-light rounded">DeboumceTime</p>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>DeboumceTime</strong>
+            </p>
+            <br>
+            <div class="mb-3">
+                <label class="form-label">Search...</label>
+                <input type="text" class="form-control" placeholder="Search..." aria-describedby="emailHelp" #myInput>
+            </div>
+
+            <span *ngIf="reqData">Requested Data:- <strong>{{reqData}}</strong></span>
+        </div>
+        <div class="col-md-4">
+            <strong class="text-primary">Ex - 02 DistinctUntillChanged</strong>
+            <p class="border my-2 bg-light rounded">DistinctUntillChanged</p>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>DistinctUntillChanged</strong>
+            </p>
+            <br>
+            <div class="mb-3">
+                <label class="form-label">Search...</label>
+                <input type="text" class="form-control" placeholder="Search..." aria-describedby="emailHelp" #myInput1>
+            </div>
+
+            <span *ngIf="reqData1">Requested Data:- <strong>{{reqData1}}</strong></span>
+        </div>
+        <div class="col-md-4">
+            <strong class="text-primary">Ex - 03 DistinctUntillChanged & DeboumceTime</strong>
+            <p class="border my-2 bg-light rounded">DistinctUntillChanged & DeboumceTime</p>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>DistinctUntillChanged & DeboumceTime</strong>
+            </p>
+            <br>
+            <div class="mb-3">
+                <label class="form-label">Search...</label>
+                <input type="text" class="form-control" placeholder="Search..." aria-describedby="emailHelp" #myInput2>
+            </div>
+
+            <span *ngIf="reqData1">Requested Data:- <strong>{{reqData1}}</strong></span>
+        </div>
+    </div>
+</div>

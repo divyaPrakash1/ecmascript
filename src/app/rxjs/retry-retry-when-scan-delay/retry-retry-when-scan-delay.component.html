@@ -1,0 +1,103 @@
+<div class="my-3">
+    <h2>Retry, RetryWhen and Scan </h2>
+    <br>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <strong>Ex - 01 Retry(5)</strong>
+            <p class="border my-2 bg-light rounded">Retry(5)</p>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Retry(5)</strong>Retry(5)
+            </p>
+            <br>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Website
+                        </th>
+                    </tr>
+                    <tr *ngFor="let d of data1; let i=index">
+                        <td>
+                            {{i+1}}
+                        </td>
+                        <td>
+                            {{d.name}}
+                        </td>
+                        <td>
+                            {{d.website}}
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+                <button  class="btn btn-primary" (click)="fetchDetails()" type="button">
+                    <span class="spinner-border spinner-border-sm" role="status" area-hidden="true" *ngIf="isLoading">
+                    </span>
+                    {{isLoading ? 'Loading..' : 'Fetch Details'}}
+                </button>
+                Status:- <strong [ngClass]="{'text-success': dataStatus === 'Data fetched', 'text-danger': dataStatus === 'Error while fetching data'}">{{dataStatus}}</strong>
+            <ul id="elContainer1">
+
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <strong>Ex - 01 Retry(3)</strong>
+            <p class="border my-2 bg-light rounded">Retry(3)</p>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Retry(5)</strong>Retry(3)
+            </p>
+            <br>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Website
+                        </th>
+                    </tr>
+                    <tr *ngFor="let d of data1; let i=index">
+                        <td>
+                            {{i+1}}
+                        </td>
+                        <td>
+                            {{d.name}}
+                        </td>
+                        <td>
+                            {{d.website}}
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+                <button  class="btn btn-primary" (click)="fetchDetails3()" type="button">
+                    <span class="spinner-border spinner-border-sm" role="status" area-hidden="true" *ngIf="isLoading">
+                    </span>
+                    {{isLoading ? 'Loading..' : 'Fetch Details'}}
+                </button>
+                Status:- <strong [ngClass]="{'text-success': dataStatus === 'Data fetched', 'text-danger': dataStatus === 'Error while fetching data'}">{{dataStatus}}</strong>
+            <ul id="elContainer1">
+
+            </ul>
+        </div>
+    </div>
+</div>

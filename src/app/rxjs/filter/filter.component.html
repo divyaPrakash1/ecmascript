@@ -1,0 +1,114 @@
+<div class="my-3">
+    <h2>Filter </h2>
+    <br>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <strong>Ex - 01 (Filter By Length)</strong>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Filter : </strong> By Length
+            </p>
+            <br>
+            <table class="table">
+                <tbody>
+
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                    </tr>
+                    <tr *ngFor="let d of data1; let i=index">
+                        <td>
+                            {{i+1}}
+                        </td>
+                        <td>
+                            {{d.name}}
+                        </td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+
+        </div>
+        <div class="col-md-4">
+            <strong>Ex - 01 (Filter By Gender)</strong>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Filter : </strong> By Gender
+            </p>
+            <br>
+            <table class="table">
+                <tbody>
+
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Gender
+                        </th>
+                    </tr>
+                    <tr *ngFor="let d of data2; let i=index">
+                        <td>
+                            {{i+1}}
+                        </td>
+                        <td>
+                            {{d.name}}
+                        </td>
+                        <td>
+                            {{d.gender}}
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+        <div class="col-md-4">
+            <strong>Ex - 01 (Filter By Item)</strong>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Filter : </strong> By Item
+            </p>
+            <br>
+            <table class="table">
+                <tbody>
+
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Gender
+                        </th>
+                    </tr>
+                    <tr *ngFor="let d of data3; let i=index">
+                        <td>
+                            {{i+1}}
+                        </td>
+                        <td>
+                            {{d.name}}
+                        </td>
+                        <td>
+                            {{d.gender}}
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+        
+    </div>
+</div>

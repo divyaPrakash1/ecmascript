@@ -7,12 +7,19 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
         }
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "ecmspt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -30,7 +37,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -102,5 +110,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "0ee7f4cc-0ca6-4f3b-9193-81ba4b977479"
   }
 }
