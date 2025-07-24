@@ -21,6 +21,8 @@ export class CommonService {
 
   asyncVideoEmit = new AsyncSubject<string>();
 
+  asyncVideoEmitRevise = new AsyncSubject<string>();
+
   private productsData: Product1[] = [
     { id: 1, name: 'Mouse', price: 25 },
     { id: 2, name: 'Keyboard', price: 45 },

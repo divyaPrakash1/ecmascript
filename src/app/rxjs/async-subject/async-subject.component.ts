@@ -13,6 +13,8 @@ export class AsyncSubjectComponent implements OnInit, OnDestroy {
 
 
   asyncVideoEmit: string = "";
+
+  asyncVideoEmitRevise: string = "";
   constructor(private _common: CommonService) {
 
   }
@@ -23,6 +25,10 @@ export class AsyncSubjectComponent implements OnInit, OnDestroy {
       console.log(res);
       this.asyncVideoEmit = res;
     })
+
+    this._common.asyncVideoEmitRevise.subscribe(res => {
+      this.asyncVideoEmitRevise = res;
+    })
   }
 
 
@@ -32,9 +38,17 @@ export class AsyncSubjectComponent implements OnInit, OnDestroy {
   }
 
 
+  addData(video: string) {
+    this._common.asyncVideoEmitRevise.next(video);
+  }
+
 
   onComplete() {
     this._common.asyncVideoEmit.complete();
+  }
+
+  onComplete1() {
+    this._common.asyncVideoEmitRevise.complete();
   }
 
   ngOnDestroy(): void {

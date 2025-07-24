@@ -35,4 +35,37 @@
             </button>
         </div>
     </div>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <br>
+
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <input type="text" name="" id="" class="form-control" #video1>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-warning" (click)="addData(video1.value)">Add Video</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-4">
+            <strong>User - 01</strong>
+            <hr>
+            <ul class="video-list">
+                <li><strong>Video : </strong> {{asyncVideoEmitRevise}}</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <strong>Click to Complete</strong>
+            <hr>
+            <button class="btn btn-success" (click)="onComplete1()">
+                Complete Subscription
+            </button>
+        </div>
+    </div>
 </div>
