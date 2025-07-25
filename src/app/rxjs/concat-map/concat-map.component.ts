@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { concatAll, concatMap, delay, from, map, mergeMap, Observable, of } from 'rxjs';
+import { concatAll, concatMap, delay, from, map, mergeMap, Observable, of, Subscription } from 'rxjs';
 import { CommonService } from '../service/comman.service';
 
 @Component({
@@ -16,6 +16,15 @@ import { CommonService } from '../service/comman.service';
 
 export class ConcatMapComponent implements OnInit, OnDestroy {
 
+  subscription1!: Subscription;
+  subscription2!: Subscription;
+  subscription3!: Subscription;
+  subscription4!: Subscription;
+  subscription5!: Subscription;
+  subscription6!: Subscription;
+  subscription7!: Subscription;
+  subscription8!: Subscription;
+
   constructor(private _common: CommonService) {
 
   }
@@ -23,6 +32,13 @@ export class ConcatMapComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
+    // this.example1();
+    this.example2();
+
+  }
+
+
+  example1() {
     const source = from(['Tech', 'Comedy', 'News']);
 
     // Ex -01 | Map
@@ -34,7 +50,7 @@ export class ConcatMapComponent implements OnInit, OnDestroy {
     //   }))
 
 
-    source.pipe(
+    this.subscription1 = source.pipe(
       map(res => this.getData(res))
     )
       .subscribe(res2 => {
@@ -53,7 +69,7 @@ export class ConcatMapComponent implements OnInit, OnDestroy {
     //   })
 
     // Ex -02 | mergeMap
-    source.pipe(
+    this.subscription2 = source.pipe(
       mergeMap(res => this.getData(res)),
     )
       .subscribe(res2 => {
@@ -63,7 +79,7 @@ export class ConcatMapComponent implements OnInit, OnDestroy {
 
 
     // Ex -03 | ConcatMap
-    source.pipe(
+    this.subscription3 = source.pipe(
       concatMap(res => this.getData(res)),
       // concatAll()
     )
@@ -71,16 +87,65 @@ export class ConcatMapComponent implements OnInit, OnDestroy {
         console.log(res2);
         this._common.print(res2.toString(), 'elContainer3')
       })
-
   }
 
   getData(data: string): Observable<any> { // returns observable
     return of(data + ' Video Uploaded').pipe(delay(1500));
   }
 
+  example2() {
+    const source = from(['Rajan', 'Mishra', 'Upendra', 'Mahendra',]);
+
+    this.subscription4 = source.pipe(
+      map(e => this.getData1(e))
+    ).subscribe(res => {
+      console.log('with map only', res)
+    });
+
+    this.subscription5 = source.pipe(
+      map(e => this.getData1(e)),
+      concatAll()
+    ).subscribe(res => {
+      console.log('map and concatAll', res)
+    });
+
+    this.subscription6 = source.pipe(
+      concatMap(e => this.getData1(e))
+    ).subscribe(res => {
+      console.log('with concatMap only', res)
+    });
+
+  }
+
+  getData1(value: string): Observable<any> {
+    return of('Daaaa ' + value);
+  }
 
   ngOnDestroy(): void {
-
+    if (this.subscription1) {
+      this.subscription1.unsubscribe();
+    }
+    if (this.subscription2) {
+      this.subscription2.unsubscribe();
+    }
+    if (this.subscription3) {
+      this.subscription3.unsubscribe();
+    }
+    if (this.subscription4) {
+      this.subscription4.unsubscribe();
+    }
+    if (this.subscription5) {
+      this.subscription5.unsubscribe();
+    }
+    if (this.subscription6) {
+      this.subscription6.unsubscribe();
+    }
+    if (this.subscription7) {
+      this.subscription7.unsubscribe();
+    }
+    if (this.subscription8) {
+      this.subscription8.unsubscribe();
+    }
   }
 
 }
