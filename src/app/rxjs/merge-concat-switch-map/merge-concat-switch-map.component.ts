@@ -15,6 +15,9 @@ export class MergeConcatSwitchMapComponent implements OnInit, OnDestroy {
   subscription4!: Subscription;
   subscription5!: Subscription;
   subscription6!: Subscription;
+  subscription7!: Subscription;
+  subscription8!: Subscription;
+  subscription9!: Subscription;
 
   constructor(private _common: CommonService) {
 
@@ -23,7 +26,8 @@ export class MergeConcatSwitchMapComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     // this.example1();
-    this.example2();
+    // this.example2();
+    this.example3();
 
   }
 
@@ -87,6 +91,38 @@ export class MergeConcatSwitchMapComponent implements OnInit, OnDestroy {
     ).subscribe(res => {
       console.log('switchMap =>', res); // Video Krishna after 5 seconds
     });
+  }
+
+  example3() {
+    const devResouce = from(['Divya Prakash', 'Tarun', 'Amendra', 'Deepak', 'Yashveer']);
+    // Ex-01 ConcatMap
+    this.subscription7 = devResouce.pipe(
+      concatMap(e => this.getData3(e))
+    ).subscribe(res => {
+      console.log('ConcatMap', res);
+    });
+
+
+    // Ex-01 mergeMap
+    this.subscription7 = devResouce.pipe(
+      mergeMap(e => this.getData3(e))
+    ).subscribe(res => {
+      console.log('mergeMap', res);
+    });
+
+    // Ex-01 switchMap
+    this.subscription7 = devResouce.pipe(
+      switchMap(e => this.getData3(e))
+    ).subscribe(res => {
+      console.log('switchMap', res);
+    });
+
+
+  }
+
+
+  getData3(str: any): Observable<any> {
+    return of(str + 'video').pipe(delay(5500));
   }
 
 
