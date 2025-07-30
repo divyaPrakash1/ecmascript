@@ -18,14 +18,20 @@ export class ShareReplayComponent implements OnInit, OnDestroy {
   userIdOne!: Observable<Array<Posts>>;
   userIdTwo!: Observable<Array<Posts>>;
 
+  id: number = 0;
   constructor(private _common: CommonService) {
 
   }
 
   // Share source and replay specified number of emissions on subscription.
-  // in below code I don't use sharereplay then 3 times api will call otherwise only one time api will call
+  // in below code if I don't use sharereplay then 3 times api will call otherwise only one time api will call
 
   ngOnInit(): void {
+    this.example1();
+    // this.example2();
+  }
+
+  example1() {
     // 01
     // this._common.getPosts(0).subscribe(res => {
     //   this.allPosts = res;
@@ -34,10 +40,7 @@ export class ShareReplayComponent implements OnInit, OnDestroy {
     //02
     // this.allProducts = this._common.getPosts(0);
 
-
     this.allProducts = this._common.getPosts(0).pipe(shareReplay());
-
-
     this.userIdOne = this.allProducts.pipe(
       map(re => re.filter(idOne => {
         return idOne.userId === 1
@@ -50,6 +53,18 @@ export class ShareReplayComponent implements OnInit, OnDestroy {
     );
 
   }
+
+  getUserIdFive() {
+    this.id++;
+    this.userIdOne = this.allProducts.pipe(
+      map(re => re.filter(idOne => {
+        return idOne.userId === this.id;
+      }))
+    );
+  }
+
+
+
   toggelIntervalM() {
 
   }
