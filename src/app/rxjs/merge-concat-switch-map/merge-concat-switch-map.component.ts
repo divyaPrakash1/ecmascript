@@ -153,6 +153,15 @@ export class MergeConcatSwitchMapComponent implements OnInit, OnDestroy {
     if (this.subscription6) {
       this.subscription6.unsubscribe();
     }
+    if (this.subscription7) {
+      this.subscription7.unsubscribe();
+    }
+    if (this.subscription8) {
+      this.subscription8.unsubscribe();
+    }
+    if (this.subscription9) {
+      this.subscription9.unsubscribe();
+    }
   }
 
 }
