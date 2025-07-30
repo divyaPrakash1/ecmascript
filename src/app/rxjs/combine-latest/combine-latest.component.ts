@@ -24,15 +24,24 @@ export class CombineLatestComponent implements OnInit, AfterViewInit, AfterConte
 
   @ViewChild('name') name!: ElementRef;
   @ViewChild('color1') color1!: ElementRef;
+  @ViewChild('name1') name1!: ElementRef;
+  @ViewChild('color2') color2!: ElementRef;
 
   nameSources = ['Divya', 'Prakash', 'Mishra', 'Agam', 'Shresth', 'Rajan', 'Shri Hari'];
   colours = ['red', 'green', 'yellow', 'purple', 'grey'];
+
   ngOnInit(): void {
 
   }
 
   ngAfterViewInit(): void {
+    // this.example1();
+    this.example2();
 
+
+  }
+
+  example1() {
     const nameObs = fromEvent<any>(this.name.nativeElement, 'change').pipe(map(event => event.target.value));
     const colorObs = fromEvent<any>(this.color1.nativeElement, 'change').pipe(pluck('target', 'value'));
 
@@ -50,7 +59,26 @@ export class CombineLatestComponent implements OnInit, AfterViewInit, AfterConte
     nameObs.pipe(withLatestFrom(colorObs)).subscribe(([name, color]) => {
       this.createBox(name, color, 'elContainer2');
     })
+  }
 
+
+  example2() {
+    console.log('aaaaaaaaaaaaaaaaaa');
+    const nameSourcesObs = fromEvent<any>(this.name1.nativeElement, 'change').pipe(pluck('target', 'value'))
+    const colorObs = fromEvent<any>(this.color2.nativeElement, 'change').pipe(map(e => e.target.value));
+
+    combineLatest(nameSourcesObs, colorObs).subscribe(([name, color]) => {
+      console.log(name, color);
+      this.createBox(name, color, 'elContainer01')
+    });
+
+    // master name-
+    // slave color-
+
+    nameSourcesObs.pipe(withLatestFrom(colorObs)).subscribe(([name, color]) => {
+      console.log('object')
+      this.createBox(name, color, 'elContainer02')
+    })
   }
 
   ngAfterContentInit(): void {
