@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './object-protection.component.html',
   styleUrl: './object-protection.component.scss'
 })
-export class ObjectProtectionComponent implements OnInit{
+export class ObjectProtectionComponent implements OnInit {
 
   ngOnInit(): void {
     this.protectAllProp();

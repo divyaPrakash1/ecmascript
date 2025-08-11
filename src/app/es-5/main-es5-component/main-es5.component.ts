@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './main-es5.component.scss'
 })
 export class MainES5Component implements OnInit {
-  constructor() {}
+  constructor() { }
   ngOnInit(): void {
   }
 
@@ -37,5 +37,6 @@ export class MainES5Component implements OnInit {
     { title: 'Object DefineProperty', link: 'object-define-property' },
     { title: 'Bind', link: 'bind' },
     { title: 'Trailing Comma', link: 'trailing-comma' },
+    { title: 'CharAt', link: 'char-at' },
   ];
 }

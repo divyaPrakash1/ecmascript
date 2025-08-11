@@ -9,7 +9,7 @@ export class ParseComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {
     // this.parseString();
-    // this.parsedNonStringValue();
+    this.parsedNonStringValue();
     // const validJSON = '{"name": "Alice", "age": 25}';
     // const invalidJSON = "{name: 'Alice'}";
     // this.handleJSONWithErrorhandling(validJSON);
@@ -18,7 +18,7 @@ export class ParseComponent implements OnInit {
     this.doubleNumeric();
   }
 
-  //   What is JSON.parse used for in JavaScript ?
+  // What is JSON.parse used for in JavaScript ?
   // JSON.parse is used to convert a JSON string into a corresponding JavaScript object or value
   mainMethod() {
     const jsonString = '{"name": "Alice", "age": 30, "isStudent": false}';
@@ -39,14 +39,14 @@ export class ParseComponent implements OnInit {
   // It can return all possible data type based on the structure and content of the JSON string being parsed
 
 
-  //   How would you parse the following JSON string into a JavaScript object ?
+  // How would you parse the following JSON string into a JavaScript object ?
   parseString() {
     //   { "name": "Alice", "age": 30, "hobbies": ["reading", "swimming"] }
     const parsedStr = JSON.parse('{"name": "Alice", "age": 30, "hobbies": ["reading", "swimming"]}');
     console.log('parsedStr', parsedStr);
   }
 
-  //   What happens if JSON.parse is called on a non - string value, like a number or null ?
+  // What happens if JSON.parse is called on a non - string value, like a number or null ?
   parsedNonStringValue() {
     const number1 = '34';
     const nulll = 'null'
@@ -56,7 +56,7 @@ export class ParseComponent implements OnInit {
 
   }
 
-  //   How would you handle errors while parsing JSON using JSON.parse?
+  // How would you handle errors while parsing JSON using JSON.parse?
   handleJSONWithErrorhandling(jsonOnject: string | Object | any) {
     try {
       const parsedString = JSON.parse(jsonOnject);
@@ -67,8 +67,8 @@ export class ParseComponent implements OnInit {
     }
   }
 
-  //   How can you use JSON.parse to safely parse JSON with a fallback for invalid data ?
-  //   How would you use JSON.parse to validate whether a string is in valid JSON format ?
+  // How can you use JSON.parse to safely parse JSON with a fallback for invalid data ?
+  // How would you use JSON.parse to validate whether a string is in valid JSON format ?
   copyOfHandleJSONWithErrorhandling(jsonOnject: string | Object | any) {
     try {
       const parsedString = JSON.parse(jsonOnject);
@@ -79,8 +79,8 @@ export class ParseComponent implements OnInit {
     }
   }
 
-  //   What are the potential risks of using JSON.parse on untrusted data? XXXX
-  //   How would you parse a JSON string with nested objects and arrays ? Provide an example
+  // What are the potential risks of using JSON.parse on untrusted data? XXXX
+  // How would you parse a JSON string with nested objects and arrays ? Provide an example
   parseNestedData() {
     const jsonString = `
 {
@@ -130,12 +130,12 @@ export class ParseComponent implements OnInit {
     }
   }
 
-  //   What is the second parameter of JSON.parse used for, and how does it work ? Provide an example.
-  //   Write an example where JSON.parse is used with a reviver function to convert date strings into Date objects.
-  //   How would you handle parsing a JSON string where the data is incomplete, like {
-  //   "name": "Alice", "age": ?
-  //   Demonstrate a scenario where JSON.parse could throw a SyntaxError, and explain how to handle it.
-  //   Write a function that safely parses a JSON string and returns a default object if the parsing fails.
+  // What is the second parameter of JSON.parse used for, and how does it work ? Provide an example.
+  // Write an example where JSON.parse is used with a reviver function to convert date strings into Date objects.
+  // How would you handle parsing a JSON string where the data is incomplete, like {
+  // "name": "Alice", "age": ?
+  // Demonstrate a scenario where JSON.parse could throw a SyntaxError, and explain how to handle it.
+  // Write a function that safely parses a JSON string and returns a default object if the parsing fails.
   parameterBeingUsedInJSONParse() {
     // key: The key of the current property being processed.
     // value: The value of the current property being processed.
@@ -163,7 +163,7 @@ export class ParseComponent implements OnInit {
     console.log(parsedData.joinDate instanceof Date); // Output: true
   }
 
-  //   How does JSON.parse handle duplicate keys in JSON objects ?
+  // How does JSON.parse handle duplicate keys in JSON objects ?
   parsedDuplicateValue() {
     // The last occurrence of a duplicate key takes precedence, and its value overwrites the previous ones.
     const jsonString = '{"key": "value1", "key": "value2"}';
@@ -172,7 +172,7 @@ export class ParseComponent implements OnInit {
     // Output: { key: 'value2' }
   }
 
-  //   Explain the difference in behavior of JSON.parse when used with valid JSON strings versus malformed JSON strings.
+  // Explain the difference in behavior of JSON.parse when used with valid JSON strings versus malformed JSON strings.
   checkJSON() {
     const validJSON = '{"name": "John", "age": 30}';
     const obj = JSON.parse(validJSON);  // { name: "John", age: 30 }
@@ -185,7 +185,7 @@ export class ParseComponent implements OnInit {
     }
   }
 
-  //   Parse the following JSON string and extract the value of the "email" field:
+  // Parse the following JSON string and extract the value of the "email" field:
   // {
   //   "user": {
   //     "id": 1,
@@ -252,10 +252,10 @@ export class ParseComponent implements OnInit {
   //   Can JSON.parse handle comments inside JSON ? If not, how would you handle JSON strings with comments ? // Not Allowed
   parsedWithComment() {
     const jsonWithComments = `{
-  "name": "John",  // User name
-  "age": 30,       /* User age */
-  "isActive": true
-}`;
+      "name": "John",  // User name
+      "age": 30,       /* User age */
+      "isActive": true
+    }`;
 
     const cleanJson = this.removeComments(jsonWithComments);
 

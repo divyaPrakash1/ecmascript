@@ -9,12 +9,12 @@ export class LastIndexOfComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // this.getLastOccurence();
+    this.getLastOccurence();
     // this.getAllOccurence();
     // this.removeLastOccurence();
     // this.checkOccurrenceMoreThanOnce();
-    console.log(this.isSymmetric([1, 2, 3, 2, 1])); // true
-    console.log(this.isSymmetric([1, 2, 3, 4, 5])); // false
+    // console.log(this.isSymmetric([1, 2, 3, 2, 1])); // true
+    // console.log(this.isSymmetric([1, 2, 3, 4, 5])); // false
   }
 
 
@@ -38,7 +38,7 @@ export class LastIndexOfComponent implements OnInit {
     console.log('last occurence of 2', lastOccurence)
   }
 
-  //   What will be the output of the following code ? Why ?
+  // What will be the output of the following code ? Why ?
   // const arr = [10, 20, 30, 40, 10];
   // console.log(arr.lastIndexOf(10, 2)); // ?
   getResult() {
@@ -85,7 +85,6 @@ export class LastIndexOfComponent implements OnInit {
   }
 
   // How can you use Array.lastIndexOf() to find all occurrences of an element in an array, starting from the end ? Example :
-  
   getAllOccurence() {
     const arr = [1, 2, 3, 1, 2, 3];
     const target = 2;
@@ -96,6 +95,8 @@ export class LastIndexOfComponent implements OnInit {
       idx = arr.lastIndexOf(target, idx - 1);
     }
     console.log('targetArrayIndex', targetArrayIndex);
+
+
   }
 
   // How would you use Array.lastIndexOf() to remove the last occurrence of a specific element in an array ? Example :
@@ -139,6 +140,18 @@ export class LastIndexOfComponent implements OnInit {
       }
     }
     return true; // Array is symmetric
+  }
+
+  getAllOcc() {
+    const arr = [1, 2, 3, 1, 2, 3, 2, 3, 2, 5, 5, 3, 3, 4, 3, 23, 42, 34, 3, 2, 4, 43, 2, 2];
+    const targetElement = 2;
+    const allTgtElement = [];
+    let idx = arr.lastIndexOf(targetElement);
+    while (idx != 0) {
+      allTgtElement.push(idx);
+      idx = arr.lastIndexOf(targetElement, idx - 1);
+    }
+    console.log('allTgtElement', allTgtElement);
   }
 
 }

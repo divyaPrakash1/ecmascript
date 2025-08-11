@@ -10,7 +10,7 @@ export class DateNowComponent implements OnInit {
 
   ngOnInit(): void {
     // this.getTime();
-    // this.getTimeMeasurement();
+    this.getTimeMeasurement();
   }
 
   // What is Date.now() in JavaScript, and what does it return?
@@ -57,7 +57,7 @@ export class DateNowComponent implements OnInit {
     console.log(Date.now());          // Millisecond precision
     console.log(performance.now());   // Sub-millisecond precision
   }
-  
+
   // What would happen if you use Date.now() in a JavaScript loop for time - based logic ?
   // Answer : Date.now() will return the current timestamp at the moment it is called.Using it inside a loop can be useful for checking elapsed time or creating time - based conditions(like a timeout), but the value will only change after each loop iteration completes.For accurate time tracking, you would typically need to capture the start time and calculate the elapsed time between iterations.
   getTimeBasedLogic() {

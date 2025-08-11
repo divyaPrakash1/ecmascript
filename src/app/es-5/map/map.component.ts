@@ -5,9 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './map.component.html',
   styleUrl: './map.component.scss'
 })
-export class MapComponent implements OnInit{
+export class MapComponent implements OnInit {
   constructor() { }
-  
+
   ngOnInit(): void {
     this.modifyArray();
     this.convertUpperCase();
@@ -19,13 +19,15 @@ export class MapComponent implements OnInit{
   }
 
 
+  // Write a simple program using map() to double the values in an array. // !!!
   modifyArray(): void { // !!!
     let tempArray = [2, 3, 4, 5, 6, 2, 7, 6, 5, 4, 3, 2];
     let doubleArray = tempArray.map(e => e * 2);
     console.log('tempArray', tempArray);
     console.log('doubleArray', doubleArray);
   }
-  
+
+  // Given an array of strings, use map() to convert all strings to uppercase. // @@@
   convertUpperCase(): void { // @@@
     const words = ["hello", "world"];
     let uppercaseArray = words.map(e => e.toUpperCase());
@@ -35,12 +37,12 @@ export class MapComponent implements OnInit{
 
   extractFromObjectWithMap(): void { // ###
     const objectArray = [
-      { fName: "Divya Prakash", lName: "Mishra", gender: 'Male'},
-      { fName: "Krishna", lName: "Yadav", gender: 'Male'},
-      { fName: "Kashish", lName: "Gupta", gender: 'Male'},
-      { fName: "Shalini", lName: "Sharma", gender: 'Female'},
-      { fName: "Sangeeta", lName: "Gehlot", gender: 'Female'},
-      { fName: "Nikhil", lName: "Garg", gender: 'Male'}
+      { fName: "Divya Prakash", lName: "Mishra", gender: 'Male' },
+      { fName: "Krishna", lName: "Yadav", gender: 'Male' },
+      { fName: "Kashish", lName: "Gupta", gender: 'Male' },
+      { fName: "Shalini", lName: "Sharma", gender: 'Female' },
+      { fName: "Sangeeta", lName: "Gehlot", gender: 'Female' },
+      { fName: "Nikhil", lName: "Garg", gender: 'Male' }
     ];
     const objectName = objectArray.map(obj => obj.fName);
     console.log(objectName);
@@ -58,9 +60,11 @@ export class MapComponent implements OnInit{
   }
 
   chainingWithMap(): void { // %%%
-    const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ];
-    const result = arr.map(e => e * 2).filter(e => e >10).map(e => e + 4 ).reduce((sum, el) => sum + el, 0);
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+    const result = arr.map(e => e * 2).filter(e => e > 10).map(e => e + 4).reduce((sum, el) => sum + el, 0);
     console.log('result', result);
+
+    const r = arr.map(e => e + 5).filter(e => e > 6).reduce((acc, cv) => acc + cv, 0);
   }
 
   withoutReturnInMap(): void { // ^^^
@@ -85,6 +89,8 @@ export class MapComponent implements OnInit{
     const result2 = arr.every(e => (e || 0) * 2);
     const result3 = arr.some(e => (e || 0) * 2);
     console.log('result', result, result1, result2, result3);
+
+    const result4 = arr.map(e => (e || 0) * 3);
   }
 
   forAndMap() { // ****
@@ -151,8 +157,6 @@ export class MapComponent implements OnInit{
   // How is the map() method different from a forEach() loop ? // it return array while foreach return undefined
   // Does map() modify the original array ? Explain why or why not. // No it will return new array !!!
 
-  // Write a simple program using map() to double the values in an array. // !!!
-  // Given an array of strings, use map() to convert all strings to uppercase. // @@@
   // const words = ["hello", "world"];
   // Expected output: ["HELLO", "WORLD"]
 
@@ -188,7 +192,7 @@ export class MapComponent implements OnInit{
   //   }
   //   return num * 2;
   // });
-  
+
   //Best-case Time	O(n)
   // const arr = [1, 2, 3, 4];
   // const result = arr.map(num => num * 2);

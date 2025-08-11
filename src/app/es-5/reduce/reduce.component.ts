@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReduceComponent implements OnInit {
   constructor() { }
-  
+
   ngOnInit(): void {
     // console.log('reduce method in array');
     // this.generalMethod();
@@ -20,21 +20,24 @@ export class ReduceComponent implements OnInit {
     // this.implementFilterAndMapUsingReduce();
     // this.getTotalAmount();
     // this.getLongestString();
-    // this.mergeMultipleArrayWithoutDuplicates();
+    this.mergeMultipleArrayWithoutDuplicates();
     // this.getInSingleSentence();
-    this.customObjectFromEntries();
-    
+    // this.customObjectFromEntries();
+
 
   }
 
   // array.reduce(callback(accumulator, currentValue, currentIndex, array), initialValue)
-  
+
+  // What is the reduce() method in JavaScript, and when would you use it ? // !!!
+  // Write a simple example of using reduce() to calculate the sum of an array of numbers. // !!!
   generalMethod() { // !!! used to iterate through an array and reduce its elements to a single accumulated value
     const tempArray = [1, 2, 3, 4, 5, 6, 7, 8, 91, 3];
     const sum = tempArray.reduce((acc, item) => acc + item, 0);
     console.log('sum', sum);
   }
 
+  // What are the parameters of the reduce() method, and what does each represent ? // @@@
   allParameterMethod() { // @@@
     const numbers = [1, 2, 3, 4];
     const result = numbers.reduce((accumulator, currentValue, currentIndex, array) => {
@@ -45,6 +48,7 @@ export class ReduceComponent implements OnInit {
     console.log(result); // Output: 12
   }
 
+  // What happens if you omit the initial value in the reduce() method ? How does it affect the iteration process ? // ###
   omitInitialValue() { // ###
     //  Providing an initialValue is generally safer because:
     //  It ensures that the reduce() method behaves predictably, even with empty arrays.
@@ -58,20 +62,21 @@ export class ReduceComponent implements OnInit {
     console.log(result); // Output: 10
   }
 
+  // Write a reduce() function to count the occurrences of each element in an array(e.g., ['a', 'b', 'a'] to { a: 2, b: 1 }). // $$$
   flatMultiDimensionalArray() { // $$$
     const arr = ['a', 'b', 'a'];
     const countOrrcurence = arr.reduce((acc: any, currentValue: any) => {
-      if (acc[currentValue]) {
-        acc[currentValue]++;
-      } else {
-        acc[currentValue] = 1;
-      }
+      // if (acc[currentValue]) {
+      acc[currentValue] = (acc[currentValue] || 0) + 1;
+      // } else {
+      //   acc[currentValue] = 1;
+      // }
       return acc
     }, {});
-
     console.log('countOrrcurence', countOrrcurence);
   }
 
+  // How would you implement reduce() to compute the maximum value in an array ? // %%%
   computeMaxValueArray() { // %%%
     const arr = [1, 2, 3, 4, 324, 342, 342, 342, 342, 23, 4123, 41, 234, 99999, 1234, 12, 341, 234, 1234, 12, 34];
     let maxValue = 0;
@@ -81,16 +86,25 @@ export class ReduceComponent implements OnInit {
       }
       return maxValue;
     }, 0);
-
     console.log('max value', value);
   }
 
+  // How would you use reduce() to group objects by a specific property ? Provide a detailed example. // ^^^
   reduceObjectWithSpecificProperty() { // ^^^ this object will be grouped by Age
     const people = [
       { name: 'Alice', age: 25 },
+      { name: 'Alice', age: 22 },
       { name: 'Bob', age: 30 },
+      { name: 'Bob', age: 32 },
+      { name: 'Charlie', age: 21 },
       { name: 'Charlie', age: 25 },
       { name: 'David', age: 30 },
+      { name: 'David', age: 32 },
+      { name: 'Eve', age: 35 },
+      { name: 'Eve', age: 35 },
+      { name: 'Eve', age: 32 },
+      { name: 'Eve', age: 35 },
+      { name: 'Eve', age: 33 },
       { name: 'Eve', age: 35 },
     ];
     const groupedObject = people.reduce((accumulator: any, currentValue) => {
@@ -102,8 +116,19 @@ export class ReduceComponent implements OnInit {
       return accumulator;
     }, {});
     console.log('groupedObject', groupedObject);
+
+    const groupedObjectByNames = people.reduce((accumulator: any, currentValue) => {
+      let name = currentValue.name;
+      if (!accumulator[name]) {
+        accumulator[name] = [];
+      }
+      accumulator[name].push(currentValue);
+      return accumulator
+    }, {});
+    console.log('groupedObjectByNames', groupedObjectByNames);
   }
-  
+
+  // Write a function using reduce() that transforms an array into an object with keys derived from the array values. // &&&
   reduceObjectWithSpexcificProperty() { // &&&
     const array = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
     const objectOccccurence = array.reduce((accumulator: any, currentValue) => {
@@ -116,7 +141,16 @@ export class ReduceComponent implements OnInit {
       return accumulator
     }, {});
     console.log('groupedObject', objectOccccurence);
+
+    const objectOcc = array.reduce((acc: any, cv: string) => {
+      acc[cv] = (acc[cv] || 0) + 1;
+      return acc;
+    }, {});
+
+    console.log('objectOcc', objectOcc)
   }
+
+  // Compare and contrast reduce() and reduceRight().When would you prefer one over the other ? // ***
   reduceAndReduceRight() { // ***
 
     // reduce(): Iterates from the first element to the last.
@@ -139,6 +173,7 @@ export class ReduceComponent implements OnInit {
     console.log(result3); // Output: "JavaScript World Hello"
   }
 
+  // How can you implement the functionality of map() or filter() using reduce() ? Provide code examples for both. // (((
   implementFilterAndMapUsingReduce() { // (((
     const tempArray = [1, 3, 235, 234, 43, 456, 56, 732, 5413, 452, 45, 4568, 567, 4625, 345, 1346, 356, 74, 67362, 344, 15];
 
@@ -153,12 +188,13 @@ export class ReduceComponent implements OnInit {
 
     // Map implementation
     const mapedArray = tempArray.reduce((accumulator: any[], currentValue) => {
-        accumulator.push(currentValue / 2);
+      accumulator.push(currentValue / 2);
       return accumulator;
     }, []);
     console.log('mapedArray', mapedArray);
   }
 
+  // Given an array of transactions, write a reduce() function to calculate the total balance for a user.Each transaction has an amount property. // )))
   getTotalAmount() { // )))
     const transactions = [
       { id: 1, amount: 100 },  // Deposit
@@ -167,12 +203,20 @@ export class ReduceComponent implements OnInit {
       { id: 4, amount: -30 }   // Withdrawal
     ];
     const amount = transactions.reduce((accumulator, currentValue) => {
-      accumulator+= currentValue.amount;
+      accumulator += currentValue.amount;
       return accumulator
     }, 0);
     console.log('amount', amount);
+
+    const ttlAmt = transactions.reduce((ac, cv) => {
+      ac += cv.amount;
+      return ac
+    }, 0);
+
+    console.log('object', ttlAmt);
   }
 
+  // You have an array of strings. Write a reduce() function to return the longest string in the array. // ---
   getLongestString() { // ---
     const strings = ['Deposit', 'Withdrawal', 'Deposit', 'Withdrawal', 'This is Longest String'];
     let tempLongestString = '';
@@ -186,20 +230,30 @@ export class ReduceComponent implements OnInit {
     console.log('longestString', longestString);
   }
 
+  // Implement a function using reduce() to merge multiple arrays into one without duplicates. // ===
   mergeMultipleArrayWithoutDuplicates() { // ===
     const tempArray1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     const tempArray2 = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
     const tempArray3 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
-    
+
     const mergedArray = tempArray1.concat(tempArray2).concat(tempArray3).reduce((accumulator: any, currentValue) => {
       if (!accumulator.includes(currentValue))
         accumulator.push(currentValue);
-        return accumulator
+      return accumulator
     }, []);
 
     console.log('mergedArray', mergedArray);
+
+    const pureData = tempArray1.concat(tempArray2).concat(tempArray3).reduce((ac: any, cv: any) => {
+      if (ac.indexOf(cv) === -1) {
+        ac.push(cv);
+      }
+      return ac;
+    }, []);
+    console.log('pureData', pureData);
   }
 
+  // Use reduce() to generate a formatted string summary from an array of objects.For example, summarize a list of people into a single sentence listing their names. // !!@@!!
   getInSingleSentence() { // !!@@!!
     const people = [
       { name: 'Alice', age: 25 },
@@ -217,10 +271,10 @@ export class ReduceComponent implements OnInit {
       }
       return accumulator;
     }, '');
-
     console.log('singleSentence', singleSentence);
   }
-  
+
+  // Using reduce(), implement a function that emulates the behavior of the Object.fromEntries() method. // ##@@##
   customObjectFromEntries() { // ##@@##
     const entries = [
       ['name', 'Alice'],
@@ -239,38 +293,21 @@ export class ReduceComponent implements OnInit {
   }
 
 
-//   What is the reduce() method in JavaScript, and when would you use it ? // !!!
-//   What are the parameters of the reduce() method, and what does each represent ? // @@@
-//   What does the reduce() method return? // a single value
-//   Explain the difference between reduce() and other array methods like map() or filter(). // reduce retrun single value, while filter and return array
-//   Write a simple example of using reduce() to calculate the sum of an array of numbers. // !!!
+  //   What does the reduce() method return? // a single value
+  //   Explain the difference between reduce() and other array methods like map() or filter(). // reduce retrun single value, while filter and return array
 
 
-//   What happens if you omit the initial value in the reduce() method ? How does it affect the iteration process ? // ###
-//   How can reduce() be used to flatten a multi - dimensional array ? Provide a code example.  //  XXX
-//   Write a reduce() function to count the occurrences of each element in an array(e.g., ['a', 'b', 'a'] to { a: 2, b: 1 }). // $$$
-//   How would you implement reduce() to compute the maximum value in an array ? // %%%
-//   Can reduce() handle asynchronous operations ? If so, how would you handle such cases ? // XXX
+  //   How can reduce() be used to flatten a multi - dimensional array ? Provide a code example.  //  XXX
+  //   Can reduce() handle asynchronous operations ? If so, how would you handle such cases ? // XXX
 
 
-//   How would you use reduce() to group objects by a specific property ? Provide a detailed example. // ^^^
-//   Write a function using reduce() that transforms an array into an object with keys derived from the array values. // &&&
-//   What are the performance implications of using reduce() on large datasets ? // performance will be slow as it is using callback
-//   Compare and contrast reduce() and reduceRight().When would you prefer one over the other ? // ***
-//   How can you implement the functionality of map() or filter() using reduce() ? Provide code examples for both. // (((
-    
-    
-//   Given an array of transactions, write a reduce() function to calculate the total balance for a user.Each transaction has an amount property. // )))
-//   You have an array of strings. Write a reduce() function to return the longest string in the array. // ---
-//   Implement a function using reduce() to merge multiple arrays into one without duplicates. // ===
-//   Use reduce() to generate a formatted string summary from an array of objects.For example, summarize a list of people into a single sentence listing their names. // !!@@!!
-//   How would you debug or optimize a complex reduce() implementation that’s hard to read or slow ? // Understand the logic and break into small piece of codes
-
-  
-//   Using reduce(), implement a function that emulates the behavior of the Object.fromEntries() method. // ##@@##
-//   Write a polyfill for the reduce() method. // XXXX
-//   Solve this: Convert an array of objects into a nested object based on multiple levels of keys using reduce(). // XXXX
+  //   What are the performance implications of using reduce() on large datasets ? // performance will be slow as it is using callback
 
 
+  //   How would you debug or optimize a complex reduce() implementation that’s hard to read or slow ? // Understand the logic and break into small piece of codes
+
+
+  //   Write a polyfill for the reduce() method. // XXXX
+  //   Solve this: Convert an array of objects into a nested object based on multiple levels of keys using reduce(). // XXXX
 
 }

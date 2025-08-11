@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ES5Component } from './es-5.component';
-import { MultilineStringComponent } from './multiline-string/multiline-string.component';
+import { MultilineStringComponent } from './multiline-string/MultilineStringComponent';
 import { TrimComponent } from './trim/trim.component';
 import { IsArrayComponent } from './is-array/is-array.component';
 import { ForEachComponent } from './for-each/for-each.component';
@@ -28,6 +28,7 @@ import { ObjectProtectionComponent } from './object-protection/object-protection
 import { ObjectDefinePropertyComponent } from './object-define-property/object-define-property.component';
 import { BindComponent } from './bind/bind.component';
 import { TrailingCommaComponent } from './trailing-comma/trailing-comma.component';
+import { CharAtComponent } from './char-at/char-at.component';
 
 
 
@@ -63,6 +64,7 @@ const routes: Routes = [
       { path: 'object-define-property', component: ObjectDefinePropertyComponent, },
       { path: 'bind', component: BindComponent, },
       { path: 'trailing-comma', component: TrailingCommaComponent, },
+      { path: 'char-at', component: CharAtComponent, },
     ],
   }
 ];

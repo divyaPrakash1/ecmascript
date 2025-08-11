@@ -16,6 +16,7 @@ export class CharAtComponent implements OnInit {
     this.getLetter();
     this.reverseStringUsingCharAt();
     this.firstOccurence();
+    this.clearinterValMethod();
   }
 
   getLetter(): void {
@@ -36,7 +37,7 @@ export class CharAtComponent implements OnInit {
   reverseStringUsingCharAt() { // reversed String using charAt method
     let str = 'The quick brown fox jumps over the lazy dog multiple times';
     let reversedStr = '';
-    for (let i = str.length-1; i >= 0; i--) {
+    for (let i = str.length - 1; i >= 0; i--) {
       reversedStr = reversedStr + str.charAt(i);
     }
     console.log('reversedStr', reversedStr);
@@ -55,22 +56,47 @@ export class CharAtComponent implements OnInit {
     }
   }
 
-//   What does the charAt() method do in JavaScript ?
-//   What is the syntax of the charAt() method ?
-//   If you call charAt() with an index out of range, what does it return?
-//   What is the difference between charAt() and accessing a character using bracket notation ([]) ?
-        
-//   How would you retrieve the first character of a string using charAt() ?
-//   Write a function that uses charAt() to reverse a string.
-//   If a string is "hello", what will charAt(1) return?
-//   What happens if you use a negative index with charAt() ?
-    
-//   How does charAt() handle non - integer or non - numeric index values ?
-//   Can charAt() be used with Unicode characters ? If so, are there any limitations ?
-//   Explain the performance implications of using charAt() in a loop versus other methods like substring().
-//   How would you find the first occurrence of a character in a string using charAt() ?
-  
-//   Is charAt() a mutating method ? Why or why not ?
-//   How does charAt() compare to modern JavaScript methods like `String.prototype
+
+  reversedStrings() {
+    let str = 'The quick brown fox jumps over the lazy dog multiple times';
+    let reversed = '';
+    for (let i = str.length; i >= 0; i--) {
+      reversed = reversed + str.charAt(i);
+    }
+  }
+
+  setTimeOuts() {
+    const timeOutIn5Seconds = setTimeout(() => {
+      console.log('object')
+    }, 5000)
+    clearTimeout(timeOutIn5Seconds);
+  }
+
+  clearinterValMethod() {
+    const clearIntervalId = setInterval(() => {
+      console.log('clearInterval in 4 seconds')
+    }, 2000);
+    setTimeout(() => {
+      clearInterval(clearIntervalId);
+    }, 4000)
+  }
+
+  //   What does the charAt() method do in JavaScript ?
+  //   What is the syntax of the charAt() method ?
+  //   If you call charAt() with an index out of range, what does it return?
+  //   What is the difference between charAt() and accessing a character using bracket notation ([]) ?
+
+  //   How would you retrieve the first character of a string using charAt() ?
+  //   Write a function that uses charAt() to reverse a string.
+  //   If a string is "hello", what will charAt(1) return?
+  //   What happens if you use a negative index with charAt() ?
+
+  //   How does charAt() handle non - integer or non - numeric index values ?
+  //   Can charAt() be used with Unicode characters ? If so, are there any limitations ?
+  //   Explain the performance implications of using charAt() in a loop versus other methods like substring().
+  //   How would you find the first occurrence of a character in a string using charAt() ?
+
+  //   Is charAt() a mutating method ? Why or why not ?
+  //   How does charAt() compare to modern JavaScript methods like `String.prototype
 
 }

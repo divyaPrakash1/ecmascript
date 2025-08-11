@@ -48,11 +48,9 @@ export class CommonService {
     return this.apiCall.get('https://jsonplaceholder.typicode.com/users')
   }
 
-
-
   getFilteredProducts(keyword: string): Observable<Product[]> { // title_like=/mouse/i
     const url = !!keyword ? `${this.apiUrl}/comments?name_like=${keyword}` : `${this.apiUrl}/comments`
-    return this.apiCall.get<Product[]>(`${url}`);
+    return this.apiCall.get<Product[]>(`${url}`).pipe(catchError(this._errorService.handleError));
   }
 
   addProduct(newProduct: Product1) {

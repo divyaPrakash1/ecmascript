@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './trim.component.scss'
 })
 export class TrimComponent implements OnInit {
-  constructor() {}
+  constructor() { }
   ngOnInit(): void {
     this.trimString();
   }

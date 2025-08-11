@@ -11,17 +11,83 @@ export class IsArrayComponent implements OnInit {
 
   }
 
+  countArray: number = 0;
+  nestedArray = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, [9, 10]]
+  ];
+
+  schoolTimetable = [
+    [ // Class 1
+      ["Math", "English", "Science"],      // Monday
+      ["History", "Math", "PE"],           // Tuesday
+      ["Science", "Computer", "English"],  // Wednesday
+    ],
+    [ // Class 2
+      ["Biology", "Math", "Geography"],    // Monday
+      ["English", "History", "PE"],        // Tuesday
+      ["Chemistry", "Math", "Computer"],   // Wednesday
+    ],
+    [ // Class 3
+      ["Physics", "Chemistry", "Math"],    // Monday
+      ["Biology", "History", "English"],   // Tuesday
+      ["Math", "Art", "Computer"],         // Wednesday
+    ]
+  ];
+
+  university = [
+    [ // Department 1: Computer Science
+      [ // Professor 1
+        {
+          courseName: "Data Structures",
+          students: ["Alice", "Bob", "Charlie"]
+        },
+        {
+          courseName: "Algorithms",
+          students: ["David", "Eve"]
+        }
+      ],
+      [ // Professor 2
+        {
+          courseName: "Operating Systems",
+          students: ["Frank", "Grace"]
+        }
+      ]
+    ],
+    [ // Department 2: Mathematics
+      [ // Professor 1
+        {
+          courseName: "Calculus",
+          students: ["Heidi", "Ivan"]
+        }
+      ],
+      [ // Professor 2
+        {
+          courseName: "Linear Algebra",
+          students: ["Judy", "Karl", "Leo"]
+        },
+        {
+          courseName: "Discrete Math",
+          students: ["Mallory"]
+        }
+      ]
+    ]
+  ];
+
   ngOnInit(): void {
-    let arrayType = [1, 2, 4, 4, 5, 4, 3, 2, 2];
-    let objectType = {name: 'Divya Prakash Mishra', age: 31, gender: 'M'};
-    console.log(this.checkArray(arrayType));
-    console.log(this.checkArray(objectType));
+    // let arrayType = [1, 2, 4, 4, 5, 4, 3, 2, 2];
+    // let objectType = { name: 'Divya Prakash Mishra', age: 31, gender: 'M' };
+    // console.log(this.checkArray(arrayType));
+    // console.log(this.checkArray(objectType));
+    console.log(this.calculateTotalArray(this.university));
   }
 
   checkArray(data: Array<any> | any): boolean {
     return Array.isArray(data);
   }
 
+  // How can you use Array.isArray() in combination with other array methods to ensure safe operations? **
   forSafeExecution(value: any) { // **
     if (Array.isArray(value)) {
       value.forEach(val => console.log('forEach'));
@@ -31,6 +97,16 @@ export class IsArrayComponent implements OnInit {
     } else {
       throw new Error('It\'s not an array');
     }
+  }
+
+  calculateTotalArray(arr: any[]) {
+    arr.forEach(ele => {
+      if (Array.isArray(ele)) {
+        this.countArray++;
+        this.calculateTotalArray(ele);
+      }
+    })
+    return this.countArray;
   }
 
 
@@ -58,10 +134,9 @@ export class IsArrayComponent implements OnInit {
   // console.log(arrayFromIframe instanceof Array); // false (due to cross-context)
   // console.log(Array.isArray(arrayFromIframe)); // true return true in case of iframe or window
   // console.log([1, 2, 3] instanceof Array);       // true
-  
+
   // How would you implement your own version of Array.isArray() ? return Object.prototype.toString.call(value) === "[Object Array]"
   // Why might you prefer Array.isArray() over typeof or instanceof in a large - scale application ? 
-  // How can you use Array.isArray() in combination with other array methods to ensure safe operations? **
 
 
 }

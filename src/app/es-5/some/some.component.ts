@@ -18,7 +18,7 @@ export class SomeComponent implements OnInit {
     this.combineMapWithSome();
   }
 
-  
+
 
 
   // What does the Array.some() method do?
@@ -40,7 +40,7 @@ export class SomeComponent implements OnInit {
   }
 
   // What is the return value of Array.some() when it is called on an empty array ? // False
-    
+
   // What are the parameters of the callback function used in Array.some() ?
   callbackParameter() { // element, index, array
     const tempArray = [1, 2, 2, 2, 3, 3, 5, 2, 2, 3, 6, 2, 3, 2, 3, 23];
@@ -49,18 +49,18 @@ export class SomeComponent implements OnInit {
   }
 
   // Explain how Array.some() works when the callback function returns a boolean value. // XXXX
-    
+
   // Given an array of numbers, how would you use Array.some() to check if there is at least one even number in the array ?
   checkAtLeastOneEvenNumber() {
     const tempArray = [1, 2, 2, 2, 3, 3, 5, 2, 2, 3, 6, 2, 3, 2, 3, 23];
-    const result = tempArray.some((element) => element %2 === 0);
+    const result = tempArray.some((element) => element % 2 === 0);
     console.log('result', result);
   }
 
   // Can you use Array.some() to validate an array of form inputs(e.g., check if at least one input is empty)? Provide an example.
   checkAtLeastOneElementisEmpty() {
     const tempArray = [1, 2, 2, 2, 3, 3, null, 2, 2, 3, 6, 2, 3, 2, 3, 23];
-    const result = tempArray.some(element => element==null);
+    const result = tempArray.some(element => element == null);
     console.log('result', result);
   }
 
@@ -73,16 +73,16 @@ export class SomeComponent implements OnInit {
 
 
   // What happens if the callback function in Array.some() throws an error ? // XXXX
-    
+
   // What is the time complexity of Array.some() ? Does it always iterate through the entire array ? // min O(1), max O(n), No
 
   // In the case of a large array, how does Array.some() handle performance compared to other methods like Array.filter() or Array.map() ? // some method iterate till that element where condition meets, while filter and map iterate through all element of array
-      
+
   // What is the this value inside the callback function when using Array.some() ? How can you control it ?
   callBackValue() { // element, index, array
     const result = [1, 2, 3, 4, 5].some((element, index, array) => element > 0);
   }
-    
+
   // Write a function that uses Array.some() to check if any object in an array of users has an age greater than or equal to 18.
   checkAge() {
     const users = [
@@ -93,6 +93,9 @@ export class SomeComponent implements OnInit {
     ];
     const result = users.some(obj => obj.age >= 18);
     console.log('result', result);
+
+
+    const isAgeIsGreater = users.some(e => e.age > 18);
   }
 
   // How can you use Array.some() to check if there are any items in a shopping cart that are out of stock(quantity is zero or less) ?
@@ -118,7 +121,7 @@ export class SomeComponent implements OnInit {
     const result = shoppingCart.map(e => e.quantity).some(el => el > 2);
     console.log('result', result);
   }
-    
+
   // How does Array.some() behave when the callback function returns non - boolean values(e.g., numbers, objects, etc.) ? What does Array.some() consider "truthy" or "falsy" ? //
   // below will be treated as falsy
   //   false
@@ -160,7 +163,7 @@ export class SomeComponent implements OnInit {
     };
     const hasNullValue = Object.values(nestedObj).some(user => Object.values(user).some(value => value === null));
   }
-    
+
   // If you're checking if any value in a large dataset meets a condition (e.g., detecting an invalid user in a large list), would you prefer Array.some() or another method? Justify your choice.
   checkInvalidUser() {
     const users = [

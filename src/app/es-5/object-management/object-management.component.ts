@@ -12,7 +12,7 @@ export class ObjectManagementComponent implements OnInit {
   }
 
   // Managing Objects
-  //   // Adding or changing an object property
+  // ...Adding or changing an object property
   // Object.defineProperty(object, property, descriptor)
 
   // // Adding or changing object properties
@@ -29,7 +29,7 @@ export class ObjectManagementComponent implements OnInit {
 
   // // Accessing the prototype
   // Object.getPrototypeOf(object)
-    
+
 
   allManagingExample() {
     // Adding or changing an object property
@@ -66,7 +66,7 @@ export class ObjectManagementComponent implements OnInit {
     // Accessing all Properties
     const nameDescriptors = Object.getOwnPropertyDescriptors(myObject);
     console.log('getOwnPropertyDescriptors', nameDescriptors);
-    
+
     // Returns all properties as an array
     const propertyName = Object.getOwnPropertyNames(myObject);
     console.log('propertyName', propertyName);
@@ -76,7 +76,7 @@ export class ObjectManagementComponent implements OnInit {
     console.log('prototype', prototype); // Output: {} (since it's the default
 
   }
-    
+
 
   //   Protecting Objects
   // // Prevents adding properties to an object

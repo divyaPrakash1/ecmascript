@@ -91,6 +91,7 @@ export class ObjectKeysComponent implements OnInit {
     Object.keys(obj).forEach((e) => console.log(e, obj[e]));
     const mapObj = Object.keys(obj).map((e) => `${e}: ${obj[e]}`);
     console.log('mapObj', mapObj);
+    const mapOb = Object.keys(obj).map(e => `${e}: ${obj[0]}`);
   }
 
   // Explain how Object.keys() interacts with inherited properties.

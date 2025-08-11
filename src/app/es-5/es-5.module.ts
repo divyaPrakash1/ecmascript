@@ -9,7 +9,7 @@ import { FilterComponent } from './filter/filter.component';
 import { ForEachComponent } from './for-each/for-each.component';
 import { IsArrayComponent } from './is-array/is-array.component';
 import { MapComponent } from './map/map.component';
-import { MultilineStringComponent } from './multiline-string/multiline-string.component';
+import { MultilineStringComponent } from './multiline-string/MultilineStringComponent';
 import { ReduceComponent } from './reduce/reduce.component';
 import { TrimComponent } from './trim/trim.component';
 import { EveryComponent } from './every/every.component';
@@ -68,7 +68,7 @@ import { TrailingCommaComponent } from './trailing-comma/trailing-comma.componen
   imports: [
     CommonModule,
     ES5RoutingModule,
-    
+
   ]
 })
 export class ES5Module { }

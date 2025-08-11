@@ -7,22 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReduceRightComponent implements OnInit {
 
-ngOnInit(): void {
-  // this.mainMethod();
-  // this.withInitialValue();
-  // this.reverseString();
-  // this.reverseArray();
-  // this.productArray();
+  ngOnInit(): void {
+    this.mainMethod();
+    // this.withInitialValue();
+    // this.reverseString();
+    // this.reverseArray();
+    // this.productArray();
 
-  // const nested = [1, [2, 3], [4, [5, 6]], 7];
-  // console.log(this.flatNestedArray(nested));
+    // const nested = [1, [2, 3], [4, [5, 6]], 7];
+    // console.log(this.flatNestedArray(nested));
 
-  // this.getSentenceFromStringArray();
-  // this.calculateMathmaticalExpression();
-  // this.stackLastInFirstOut();
-  // this.removeStringyfyAndObject();
-  this.useReduceRight();
-}
+    // this.getSentenceFromStringArray();
+    // this.calculateMathmaticalExpression();
+    // this.stackLastInFirstOut();
+    // this.removeStringyfyAndObject();
+    // this.useReduceRight();
+  }
 
   mainMethod() {
     const arr = ['a', 'b', 'c'];
@@ -49,7 +49,7 @@ ngOnInit(): void {
   reverseString() { // ###
     const words = ['world', 'hello'];
     const reduceResult = words.reduceRight((acc, curvalue) => {
-      acc+= curvalue;
+      acc += curvalue;
       return acc
     }, '');
     console.log('result', `Reduce result is ${reduceResult}`); // helloworld
@@ -66,7 +66,7 @@ ngOnInit(): void {
 
   productArray() { // %%%
     const originalArray = [1, 2, 3, 4, 5];
-    const reduceResult = originalArray.reduceRight((acc:number, curvalue) => {
+    const reduceResult = originalArray.reduceRight((acc: number, curvalue) => {
       acc = acc * curvalue;
       return acc;
     }, 1);
@@ -79,7 +79,7 @@ ngOnInit(): void {
       if (Array.isArray(curvalue)) {
         return acc.concat(this.flatNestedArray(curvalue));
       }
-       return acc.concat(curvalue);
+      return acc.concat(curvalue);
     }, []);
     // console.log('result', `Reduce result is ${reduceResult}`); // 
   }
@@ -87,8 +87,8 @@ ngOnInit(): void {
   getSentenceFromStringArray() { // &&&
     const words = ['world', 'hello'];
     const sentence = words.reduceRight((acc, curvalue) => {
-      acc = acc + ' ' +curvalue;
-       return acc
+      acc = acc + ' ' + curvalue;
+      return acc
     }, '');
     console.log('result', `Reduce result is ${sentence}`); // 
   }
@@ -112,7 +112,7 @@ ngOnInit(): void {
           case '/':
             arra[index - 1] = leftOperand / accumulator;
             break;
-        
+
           default:
             arra[index - 1] = leftOperand * accumulator;
             break;
@@ -161,79 +161,79 @@ ngOnInit(): void {
   useReduceRight() { // @@##@@
     const keys = ['a', 'b', 'c']; // Expected result: { a: { b: { c: {} } } }  
     const result = keys.reduceRight((accumulator, currentValue) => {
-     return ({ [currentValue]: accumulator });
-     
+      return ({ [currentValue]: accumulator });
+
     }, {});
     console.log('result', result);
   }
 
-//  What is the difference between reduce() and reduceRight() ? // !!! Reduce iterates from left side of array while reduceRight iterate from right side of the array
-// ..Explain how the iteration order differs between the two methods.
+  //  What is the difference between reduce() and reduceRight() ? // !!! Reduce iterates from left side of array while reduceRight iterate from right side of the array
+  // ..Explain how the iteration order differs between the two methods.
 
-// How does the initial value of reduceRight() affect the final result ? // @@@
-// ..Ask the candidate to demonstrate the importance of the initial value with a small example.
+  // How does the initial value of reduceRight() affect the final result ? // @@@
+  // ..Ask the candidate to demonstrate the importance of the initial value with a small example.
 
-// Can you provide a simple example of using reduceRight() to concatenate an array of strings in reverse order ? // ###
-// const words = ['world', 'hello'];
-// // Expected result: "helloworld"
+  // Can you provide a simple example of using reduceRight() to concatenate an array of strings in reverse order ? // ###
+  // const words = ['world', 'hello'];
+  // // Expected result: "helloworld"
 
-// Write a function using reduceRight() to reverse an array. // $$$
-// ..Without using the built-in reverse() method, reverse an array using reduceRight().
+  // Write a function using reduceRight() to reverse an array. // $$$
+  // ..Without using the built-in reverse() method, reverse an array using reduceRight().
 
-// Use reduceRight() to implement a function that calculates the product of all numbers in an array starting from the last element. // %%%
-// const numbers = [1, 2, 3, 4];
-// // Expected result: 24 (4 * 3 * 2 * 1)
+  // Use reduceRight() to implement a function that calculates the product of all numbers in an array starting from the last element. // %%%
+  // const numbers = [1, 2, 3, 4];
+  // // Expected result: 24 (4 * 3 * 2 * 1)
 
-// How would you use reduceRight() to convert a nested array into a single flattened array ? // ^^^
-// const nested = [[1, 2], [3, 4], [5]];
-// // Expected result: [5, 4, 3, 2, 1]
+  // How would you use reduceRight() to convert a nested array into a single flattened array ? // ^^^
+  // const nested = [[1, 2], [3, 4], [5]];
+  // // Expected result: [5, 4, 3, 2, 1]
 
-// Using reduceRight(), implement a function to process an array of words into a sentence, starting from the last word. // &&&
-// const words = ['world', 'hello'];
-// // Expected result: "hello world"
+  // Using reduceRight(), implement a function to process an array of words into a sentence, starting from the last word. // &&&
+  // const words = ['world', 'hello'];
+  // // Expected result: "hello world"
 
-// Implement a reduceRight() function to evaluate a mathematical expression stored as an array. // ***
-// const expression = [3, '+', 2, '*', 5];
-// // Expected result: 13 ((2 * 5) + 3)
+  // Implement a reduceRight() function to evaluate a mathematical expression stored as an array. // ***
+  // const expression = [3, '+', 2, '*', 5];
+  // // Expected result: 13 ((2 * 5) + 3)
 
-// How can reduceRight() be used to mimic the behavior of a stack(LIFO structure) ? // (((
-// Demonstrate adding and removing elements using reduceRight().
+  // How can reduceRight() be used to mimic the behavior of a stack(LIFO structure) ? // (((
+  // Demonstrate adding and removing elements using reduceRight().
 
-// Write a function that uses reduceRight() to parse a stringified JSON array back into its original format. // )))
-// const strArray = ['"world"', '"hello"']const objects = [{ a: 1 }, { b: 2 }, { a: 3, c: 4 }];
-// // Expected result: { a: 3, b: 2, c: 4 }
-// // Expected result: ['hello', 'world']
+  // Write a function that uses reduceRight() to parse a stringified JSON array back into its original format. // )))
+  // const strArray = ['"world"', '"hello"']const objects = [{ a: 1 }, { b: 2 }, { a: 3, c: 4 }];
+  // // Expected result: { a: 3, b: 2, c: 4 }
+  // // Expected result: ['hello', 'world']
 
-// Compare the performance of reduce() and reduceRight() in processing large datasets.When would one be preferred over the other ? // @@!!@@
+  // Compare the performance of reduce() and reduceRight() in processing large datasets.When would one be preferred over the other ? // @@!!@@
 
-// Use reduceRight() to generate a deeply nested object from an array. // @@##@@
-// const keys = ['a', 'b', 'c'];
-// // Expected result: { a: { b: { c: {} } } }
+  // Use reduceRight() to generate a deeply nested object from an array. // @@##@@
+  // const keys = ['a', 'b', 'c'];
+  // // Expected result: { a: { b: { c: {} } } }
 
-// When would you use reduceRight() instead of reduce() in real - world scenarios ? //  @@!!@@
-// ..Ask for examples of use cases where iterating from the end is crucial.
+  // When would you use reduceRight() instead of reduce() in real - world scenarios ? //  @@!!@@
+  // ..Ask for examples of use cases where iterating from the end is crucial.
 
-// What are the risks or potential pitfalls of using reduceRight() with large or deeply nested arrays ? // XXXX
-// ..Discuss stack overflow issues and performance considerations.
+  // What are the risks or potential pitfalls of using reduceRight() with large or deeply nested arrays ? // XXXX
+  // ..Discuss stack overflow issues and performance considerations.
 
-// Explain how the order of execution in reduceRight() might affect side effects, such as logging or asynchronous operations. // XXXX
-// ..Explore how reversing the order of execution can lead to different outcomes in side - effect - heavy code.
+  // Explain how the order of execution in reduceRight() might affect side effects, such as logging or asynchronous operations. // XXXX
+  // ..Explore how reversing the order of execution can lead to different outcomes in side - effect - heavy code.
 
-// Recreate the reduceRight() function manually without using the built-in method. // XXXX
-// ..Implement the function in a way that behaves identically to the native reduceRight().
+  // Recreate the reduceRight() function manually without using the built-in method. // XXXX
+  // ..Implement the function in a way that behaves identically to the native reduceRight().
 
-// Using reduceRight(), implement a function to merge an array of objects into one, prioritizing the properties from right to left. // )))
-// const objects = [{ a: 1 }, { b: 2 }, { a: 3, c: 4 }];
-// // Expected result: { a: 3, b: 2, c: 4 }
+  // Using reduceRight(), implement a function to merge an array of objects into one, prioritizing the properties from right to left. // )))
+  // const objects = [{ a: 1 }, { b: 2 }, { a: 3, c: 4 }];
+  // // Expected result: { a: 3, b: 2, c: 4 }
 
 
-// Write a function that uses reduceRight() to traverse a tree - like data structure from the bottom - up. // XXXX
-// Example: A nested array or an object representing a directory structure.
-  
-// How could you use reduceRight() to implement a middleware system in JavaScript ? // XXXX
-// ..For example, processing an array of middleware functions in reverse order.
+  // Write a function that uses reduceRight() to traverse a tree - like data structure from the bottom - up. // XXXX
+  // Example: A nested array or an object representing a directory structure.
 
-// In functional programming, when and why might you prefer reduceRight() over other approaches like recursion or loops ? // XXXX
-// ..Discuss scenarios like backtracking or post - order traversal in trees.
+  // How could you use reduceRight() to implement a middleware system in JavaScript ? // XXXX
+  // ..For example, processing an array of middleware functions in reverse order.
+
+  // In functional programming, when and why might you prefer reduceRight() over other approaches like recursion or loops ? // XXXX
+  // ..Discuss scenarios like backtracking or post - order traversal in trees.
 
 }
