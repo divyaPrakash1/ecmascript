@@ -61,6 +61,7 @@ export class EndsWithComponent implements OnInit {
     let str2 = "Hello, world!!";
     let cleanedStr = str2.replace(/[!?.]$/, ""); // Removes trailing punctuation
     console.log(cleanedStr.endsWith("world")); // true
+
   }
 
   // What is the time complexity of the endsWith() method, and is there any performance concern when using it in large strings ?
@@ -69,12 +70,10 @@ export class EndsWithComponent implements OnInit {
   // How could you use endsWith() in combination with other methods like map(), filter(), or reduce() to perform string operations on an array of strings ?
   withChainingMethod() {
     const files = ["image.jpg", "document.pdf", "photo.jpg", "video.mp4"];
-    const JPGfiles = files.filter(e => e.endsWith('.jpg'))
-    console.log('JPGfiles',JPGfiles);
-
-    const endsWithJPG = files.map(e => e.endsWith('.jpg'))
+    const JPGfiles = files.filter(e => e.endsWith('.jpg'));
+    console.log('JPGfiles', JPGfiles);
+    const endsWithJPG = files.map(e => e.endsWith('.jpg'));
     console.log('endsWithJPG', endsWithJPG);
-
     const jpgCount = files.reduce((count, cv) => cv.endsWith('.jpg') ? count + 1 : count, 0);
     console.log('jpgCount', jpgCount);
   }
@@ -84,8 +83,8 @@ export class EndsWithComponent implements OnInit {
     const str = 'Hello World'
     console.log('case sensitive example', str.endsWith('world')) // false due w is small
   }
-  
+
   // Can you combine endsWith() with a regular expression to perform more complex checks on the end of a string ? Why or why not ?
 
-  
+
 }

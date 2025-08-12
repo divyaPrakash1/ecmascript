@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ArrayEntriesComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {
-    // this.mainMethod();
+    this.mainMethod();
     // this.withChaining();
     // this.modifyAnArray();
     // this.modifyAnSparseArray();
@@ -43,6 +43,7 @@ export class ArrayEntriesComponent implements OnInit {
     const filtered = Array.from(numbers.entries()).filter(([index, value]) => value % 2 === 0).map(([indexedDB, val]) => val);
     const doubledSpred = [...numbers.entries()].map(([index, value]) => value * 2)
     console.log('doubled', doubled, 'filtered', filtered, 'doubledSpred', doubledSpred);
+    const abcde = Array.from(numbers.entries()).filter(([e, v]) => v > 1);
   }
 
   // What happens if you modify the array during iteration with entries() in a loop ? Will it affect the iteration process ?\
@@ -60,7 +61,7 @@ export class ArrayEntriesComponent implements OnInit {
   modifyAnSparseArray() {
     const numbers = [1, 2, undefined, null, 5];
     for (let [i, e] of numbers.entries()) {
-      console.log('asdfasf', i,e);
+      console.log('asdfasf', i, e);
     }
   }
 

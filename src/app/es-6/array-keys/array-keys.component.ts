@@ -11,9 +11,9 @@ export class ArrayKeysComponent implements OnInit {
     // this.mainMethod();
     // this.diffKeyEntriesAndValues();
     // this.effectionsArray();
-    // this.sparseArray();
+    this.sparseArray();
     // this.example1();
-    this.emptyArray();
+    // this.emptyArray();
   }
 
 
@@ -34,7 +34,7 @@ export class ArrayKeysComponent implements OnInit {
     }
     arr.values()
   }
-  
+
   // How would you use Array.keys() to iterate over an array's indexes? Can you provide an example?
   // Can you explain what the result of calling Array.keys() on an array is ? How is it different from just logging the array itself ?
   // What is the return type of Array.keys() when applied to an array ? How would you convert this result into an array of keys ?
@@ -56,7 +56,7 @@ export class ArrayKeysComponent implements OnInit {
   effectionsArray() { // No
     const arr = [1, 2, 3, 4];
     for (let e of arr.keys()) {
-      if(e == 4) arr.push(5)
+      if (e == 4) arr.push(5)
       console.log(e);
     }
   }
@@ -83,6 +83,13 @@ export class ArrayKeysComponent implements OnInit {
     [...numbers.keys()].forEach(index => console.log(`Index: ${index} and Value: ${numbers[index]}`))
     const sum = [...numbers.keys()].reduce((acc, currVal) => acc + currVal, 0);
     console.log("sumsumsumsumsumsumsumsum", sum);
+
+
+    const ddd = [...numbers.keys()].map(e => numbers[e] * 3);
+    const addd = [...numbers.keys()].reduce((acc, cv) => {
+      acc = acc + numbers[cv];
+      return acc
+    }, 0);
   }
 
   // Can you use Array.keys() to get the indexes of an array - like object(e.g., NodeList or arguments object) ? How would that differ from using Object.keys() ?

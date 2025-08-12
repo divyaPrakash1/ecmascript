@@ -61,6 +61,8 @@ export class FunctionRestParamComponent implements OnInit {
     console.log(name);  // Alice
     console.log(age); // 30
     console.log(rest);   // {occupation: 'Engineer', country: 'USA'}
+
+    // const { name, age, occupation, country } = user;
   }
 
   // Can you mix regular parameters and rest parameters in a function? What’s the order in which they should appear ?
@@ -89,6 +91,8 @@ export class FunctionRestParamComponent implements OnInit {
   withBothParams(name: string = 'Dadda', ...rest: any) {
     console.log('asdfasdfasd', name, rest);
   }
+
+
 
   // What are the differences between the rest parameter(...) and the spread operator(...) in JavaScript ?
   restAndSpread(...dadda: any[]) {

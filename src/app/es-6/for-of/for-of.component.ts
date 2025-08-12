@@ -11,7 +11,7 @@ export class ForOfComponent implements OnInit {
   ngOnInit(): void {
     // this.useObjectInForOf();
     // this.modifyArrayWhileIterating();
-    this.fetchData();
+    // this.fetchData();
   }
   // Basic Questions:
   // What is the difference between a for loop and a for...of loop in JavaScript?
@@ -20,12 +20,12 @@ export class ForOfComponent implements OnInit {
     // Use a for...of loop when you want a cleaner and simpler syntax for iterating over iterable objects(e.g., arrays, strings, Sets), especially when you don't need the index of the elements.
     // ...Using traditional for loop
     let array = [10, 20, 30];
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) { // index
       console.log(array[i]);  // Logs 10, 20, 30
     }
 
     // Using for...of loop
-    for (let value of array) {
+    for (let value of array) { // value
       console.log(value);  // Logs 10, 20, 30
     }
   }
@@ -62,6 +62,11 @@ export class ForOfComponent implements OnInit {
     for (let [index, value] of arr.entries()) {
       console.log(index, value);
     }
+
+    for (let [idx, val] of arr.entries()) {
+      console.log(idx, val);
+    }
+
   }
 
   // Can you modify an array while iterating over it with a for...of loop ? What would happen if you do?

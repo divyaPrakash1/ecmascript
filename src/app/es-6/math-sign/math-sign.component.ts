@@ -127,5 +127,5 @@ export class MathSignComponent implements OnInit {
     console.log(Math.floor(3.5));  // 3  (rounds down)
     console.log(Math.floor(-3.5)); // -4 (rounds down towards negative infinity)
   }
-  
+
 }

@@ -51,7 +51,7 @@ export class ArrayFindComponent implements OnInit {
     // ...It execute iterating till last element.
     // ...If no element satisfies the condition, it returns [].
     const result2 = numbers.filter(e => e > 10);
-    console.log(result1) // [16, 25]
+    console.log(result2) // [16, 25]
   }
 
   // How can you use Array.find() to find an object in an array of objects based on a specific property ?
@@ -93,12 +93,12 @@ export class ArrayFindComponent implements OnInit {
   checkTrueAndFalse() {
     const numbers = [1, 2, 3, 4];
     const result = numbers.find(num => num > 2 ? 'Yes' : 'No');
-    console.log('result', result); 
+    console.log('result', result);
   }
   // What happens if the array is mutated(e.g., elements are added or removed) during the execution of Array.find() ?
   // ...lead to unexpected behavior or inconsistent results
 
   // Is it possible to use Array.find() with asynchronous operations ? What are the potential issues ? //XXXX
-    
-  
+
+
 }

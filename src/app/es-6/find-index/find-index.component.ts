@@ -28,15 +28,17 @@ export class FindIndexComponent implements OnInit {
   // Can you explain how Array.findIndex() works with arrays of objects ? Provide an example of finding an object based on one of its properties.
   objectBasedArray() {
     const users = [
-      {id:1, name:'Dadda'},
-      {id:2, name:'Actor'},
-      {id:3, name:'Technical PM'},
-      {id:4, name:'Dadda'},
-      {id:5, name:'Dadda'},
+      { id: 1, name: 'Dadda' },
+      { id: 2, name: 'Actor' },
+      { id: 3, name: 'Technical PM' },
+      { id: 4, name: 'Dadda' },
+      { id: 5, name: 'Dadda' },
     ]
 
     const indexI = users.findIndex(obj => obj.id === 3);
     console.log(indexI);
+
+    const uu = users.findIndex(e => e.id === 3);
   }
 
   // How does Array.findIndex() behave when the array contains undefined, null, or other falsy values ?
@@ -47,7 +49,7 @@ export class FindIndexComponent implements OnInit {
   }
 
   // What will Array.findIndex() return if the array is empty ? //  as element will not found -1
-  
+
   // What happens if the callback function passed to Array.findIndex() always returns false for all elements ? // -1
 
   // Does Array.findIndex() stop iterating once it finds a matching index ? Explain how it works internally. // Yes
@@ -84,7 +86,7 @@ export class FindIndexComponent implements OnInit {
   }
 
   // If the array contains multiple elements that meet the condition, how does Array.findIndex() behave ? // Only First element's Index will return
-  
+
   // Compare Array.findIndex() with indexOf().What are the key differences between these two methods ? 
   // How would you use Array.findIndex() in place of indexOf() when dealing with an array of objects ?
   indexOfFindIndex() {
@@ -130,6 +132,8 @@ export class FindIndexComponent implements OnInit {
     const str = 'ana'
     const result = strings.findIndex(el => el.includes(str))
     console.log(result);
+
+    const re = strings.findIndex(e => e.includes(str));
   }
 
   // How would you find the index of the first number greater than a certain value in a sorted array using Array.findIndex() ?

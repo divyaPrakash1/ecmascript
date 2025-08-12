@@ -47,12 +47,13 @@ export class ArrayFromComponent implements OnInit {
   withSparseArray() {
     const str = [1, 2, , 3, 4, , 5, 6,];
     const arr = Array.from(str);
+    // const sss = Array.from(str);
     console.log(arr); // [1, 2, undefined, 3, 4, undefined, 5, 6]
   }
-  
+
   // What is the time complexity of the Array.from() method, and are there any performance concerns when using it with large arrays or array - like objects ?
   // ...O(n)
-  
+
   // Can you use Array.from() with a for...of loop to create an array of transformed elements ? Provide an example.
   getFormed() {
     const testStr = 'This is test string';
@@ -62,7 +63,7 @@ export class ArrayFromComponent implements OnInit {
     }
     console.log('asdfasdf', anotherTestStr);
   }
-  
+
   // What happens if you use Array.from() on an object that is not iterable ?
   objectIterable() {
     let obj = { a: 1, b: 2, c: 3 };
@@ -74,6 +75,7 @@ export class ArrayFromComponent implements OnInit {
     const arr = [[1, 2], [3, 4], [5, 6]];
     const flattenedArray = Array.from(arr, ele => ele).flat()
     console.log(flattenedArray);
+    const dddd = Array.from(arr, ma => ma).flat();
   }
 
   // Can you use Array.from() to create an array from a NodeList or arguments object ? Provide an example. // XXXX

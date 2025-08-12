@@ -16,7 +16,7 @@ export class MathTruncComponent implements OnInit {
 
   // What does the Math.trunc() function do in JavaScript ?
   // ...remove the decimal pat;
-  // ...It returns the integer a;rt of the number, regardless of whether the number is positive or negative.
+  // ...It returns the integer part of the number, regardless of whether the number is positive or negative.
   // ...It does not round; itj;s;t removes the fractional part.
   // ...Math.trunc(
   // How does Math.trunc() handle negative numbers ? Can you provide an example ?
@@ -29,7 +29,7 @@ export class MathTruncComponent implements OnInit {
     console.log(Math.trunc(0.9));   // Output: 0
     console.log(Math.trunc(-0.9));  // Output: -0
   }
-  
+
   // How is Math.trunc() different from Math.floor() and Math.ceil() ?
   // Does Math.trunc() round the number or just remove the decimal part ? Explain with examples.
   // Can you use Math.trunc() to convert a floating - point number to an integer ? Why or why not ?
@@ -81,17 +81,17 @@ export class MathTruncComponent implements OnInit {
     console.log(Math.trunc(1234567890.987654321));   // Output: 1234567890
     console.log(Math.trunc(-1234567890.987654321));  // Output: -1234567890
   }
-  
+
   // Can you explain the difference between Math.trunc() and the bitwise OR(|) operator for truncating decimal values ? // XXXX
-  
+
   // How would you use Math.trunc() in combination with other Math functions like Math.abs() or Math.pow() ? // XXXX
-  
+
   // How does Math.trunc() handle null or undefined when used as input ?
   functionConsole() {
     // console.log(Math.trunc(null)) // Argument of type 'null' is not assignable to parameter of type 'number'.ts(2345)
     // console.log(Math.trunc(undefined)) // Argument of type 'undefined' is not assignable to parameter of type 'number'.ts(2345)
   }
-  
+
   // What is the result of Math.trunc("3.9") ? How does Math.trunc() handle string inputs ?
   withString() {
     // console.log(Math.trunc('3.9')) // Argument of type 'string' is not assignable to parameter of type 'number'.ts(2345)
@@ -101,7 +101,7 @@ export class MathTruncComponent implements OnInit {
   withDecimalValue() {
     console.log(Math.trunc(0.00000001)); // 0
   }
-  
+
   // How does Math.trunc() behave with floating - point precision issues, such as when applied to numbers like 0.1 + 0.2 ?
   floatingPointPrecision() {
     let result = 0.1 + 0.2;

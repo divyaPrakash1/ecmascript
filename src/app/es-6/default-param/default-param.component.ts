@@ -94,7 +94,7 @@ export class DefaultParamComponent implements OnInit {
 
   // Can you mix default parameters with destructuring in JavaScript ? Provide an example.
   mixParams(name = 'Divya', ...ressst: any) {
-    console.log(name, ressst)
+    console.log(name, ressst);
   }
 
   // What happens if the default value for a parameter is an object or an array ? Are there any considerations ?
