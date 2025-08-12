@@ -10,10 +10,10 @@ export class ObjectEntriesComponent implements OnInit {
   ngOnInit(): void {
     // this.example1();
     // this.entriesKeysValues();
-    // this.iterateEntries();
+    this.iterateEntries();
     // this.emptyObjects();
     // this.withMap();
-    this.swapValue();
+    // this.swapValue();
   }
 
   // What does the Object.entries() method do in JavaScript ?
@@ -96,12 +96,15 @@ export class ObjectEntriesComponent implements OnInit {
         return acc
       }, {});
     console.log('entries', entries);
+
+    const en = Object.entries(obj).map(([k, v]) => [k.toUpperCase(), v * 3]).reduce((acc: any, [k, v]) => acc[k] = v, {});
+    const ee = Object.entries(obj).map(([k, v]) => [k.toUpperCase(), v + 2]).reduce((acc: any, [k, v]) => acc[k] = v, {});
   }
 
   // Can you use Object.entries() with objects that have symbols as keys ? If so, what is returned ? // XXXX
 
   // What is the time complexity of Object.entries() in terms of the number of properties in the object ? // 
-  
+
   // How would you use Object.entries() to filter an object based on certain key - value criteria ?
   filterValue() {
     const obj = { a: 5, b: 15, c: 10, d: 20 };
@@ -117,10 +120,10 @@ export class ObjectEntriesComponent implements OnInit {
   swapValue() {
     const obj: any = { a: 5, b: 15, c: 10, d: 20 };
     const filteredObj = Object.fromEntries(
-    Object.entries(obj)
-      .map(([key, value]: any) => [key, value] = [value, key]) // Filter values greater than 10
+      Object.entries(obj)
+        .map(([key, value]: any) => [key, value] = [value, key]) // Swap values and keys
     );
     console.log(filteredObj);
-    // Output: { b: 15, d: 20 }
+    // Output: { 5: a, 15: b, 10: c, 20: d }
   }
 }
