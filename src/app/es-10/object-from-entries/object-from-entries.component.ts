@@ -38,14 +38,14 @@ export class ObjectFromEntriesComponent implements OnInit {
   // ...Object.entries() and Object.fromEntries() are both JavaScript methods, but they serve opposite purposes:
   example2() {
     const obj = { a: 1, b: 2, c: 3 };
-    const entries = Object.entries(obj); 
+    const entries = Object.entries(obj);
     console.log('entries', entries);  // [['a', 1], ['b', 2], ['c', 3]]
     const fromEntries = Object.fromEntries(entries);
     console.log('fromEntries', fromEntries); // { a: 1, b: 2, c: 3 }
   }
 
   // What types of data can be used with Object.fromEntries() to create an object ? // Array
-  
+
   // How would you handle invalid or malformed entries when using Object.fromEntries() ?
   // How does Object.fromEntries() handle non - iterable values ?
   example3() {
@@ -69,12 +69,12 @@ export class ObjectFromEntriesComponent implements OnInit {
     const doubleValue = Object.values(fromEntries).map((e: any) => e * 2);
     console.log('doubleValue', doubleValue); //  [8, 4, 6]
   }
-  
+
   // Can you convert a Set object to an object using Object.fromEntries() ? // XXXX
-  
-  
+
+
   // What is the time complexity of using Object.fromEntries() ? // O(n)
-  
+
   // How would you use Object.fromEntries() in combination with Array.prototype.map() ? // XXXX
 
   // Is Object.fromEntries() supported in all JavaScript environments ? If not, how would you handle compatibility in older browsers ? // No only es-10 or later
@@ -82,7 +82,7 @@ export class ObjectFromEntriesComponent implements OnInit {
   // Can Object.fromEntries() be used with non - array iterables, like strings or custom iterables ? // XXXX
 
   // How would you handle nested structures while using Object.fromEntries() ?
-  
+
   example6(nestedEntries: any[]): any {
     const transformedEntries = this.transformNestedEntries(this.nestedEntries);
     const obj = Object.fromEntries(transformedEntries);

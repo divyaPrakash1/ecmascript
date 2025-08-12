@@ -1,3 +1,4 @@
+import { concat } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,10 +12,10 @@ export class FlatComponent implements OnInit {
     // this.example1();
     // this.example2();
     // this.example3();
-    this.example4();
+    // this.example4();
     this.example6();
     const nestedArray = [1, [2, [3, [4, [5]]]]];
-    this.example5(nestedArray);
+    // console.log(this.example5(nestedArray));
   }
 
   // What does the Array.prototype.flat() method do?
@@ -51,11 +52,20 @@ export class FlatComponent implements OnInit {
   }
 
   // with reduce
-  example5(nestedArray: any[]) {
+  example5(nestedArray: any[]): any[] {
     // const nestedArray = [1, [2, [3, [4, [5]]]]];
-    const flattnedArray = nestedArray.reduce((accu, cv) => Array.isArray(cv) ? accu.concat(this.example5(cv)) : accu.concat(cv), []);
-    //                      arr.reduce((acc, val) => Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val), []);
-    console.log('flattnedArray', flattnedArray); // [1,2,3,4,5]
+    // const flattnedArray = nestedArray.reduce((accu, cv) => Array.isArray(cv) ? accu.concat(this.example5(cv)) : accu.concat(cv), []);
+    // //                      arr.reduce((acc, val) => Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val), []);
+    // console.log('flattnedArray', flattnedArray); // [1,2,3,4,5]
+
+    return nestedArray.reduce((acc, cv) => {
+      if (Array.isArray(cv)) {
+        return acc.concat(this.example5(cv));
+      } else {
+        return acc.concat(cv);
+      }
+    }, []);
+    // return flatArr;
   }
 
   // Are there any limitations or performance considerations when using the Array.prototype.flat() method on large arrays ?
@@ -84,7 +94,7 @@ export class FlatComponent implements OnInit {
     const flatArray = nestedArray.flat(2); // You can specify the depth you want to flatten the array
     console.log(flatArray); // Output: [ { a: 1 }, { b: 2 }, { c: 3 }, { d: 4 } ]
 
-}
+  }
   // What is the time complexity of the Array.prototype.flat() method ?
 
   // How does Array.prototype.flat() compare to other methods for array flattening in terms of readability and performance ?

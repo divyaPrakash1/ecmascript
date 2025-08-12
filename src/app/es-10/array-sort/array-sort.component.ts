@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class ArraySortComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {
-    // this.example1();
+    this.example1();
     // this.example1();
     // this.example3();
-    this.example4();
+    // this.example4();
   }
 
 
@@ -21,7 +21,7 @@ export class ArraySortComponent implements OnInit {
     const arr = [30, 1, 4, 21, 100];
     const defaultSortedArray = arr.sort();
     console.log(defaultSortedArray); // [1, 100, 21, 30, 4];
-    const sortedArray = arr.sort((a, b) => a-b);
+    const sortedArray = arr.sort((a, b) => a - b);
     console.log(sortedArray); // [1, 4, 21, 30, 100];
   }
 
@@ -44,6 +44,7 @@ export class ArraySortComponent implements OnInit {
   example3() {
     const arr = ['banana', 'Apple', 'cherry', 'apple', 'Banana'];
     const sortedArray = arr.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+    const ssArry = arr.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
     console.log('sortedArray', sortedArray); // ['Apple', 'apple', 'banana', 'Banana', 'cherry']
   }
 
@@ -93,7 +94,7 @@ export class ArraySortComponent implements OnInit {
     // Infinity and - Infinity are treated as numbers and sorted accordingly, with -Infinity at the start and Infinity at the end.
     const arr4 = [1, Infinity, 3, -Infinity, 2];
     console.log(arr4); // Output: [-Infinity, 1, 2, 3, Infinity]
-    
+
     // Boolean values(true, false) are treated as numbers (false as 0 and true as 1), so false will appear before true.
     const arr = [true, false, 3, 1];
     console.log(arr); // Output: [false, 1, 3, true]
@@ -144,7 +145,7 @@ export class ArraySortComponent implements OnInit {
     numbers.sort();
     console.log(numbers); // [1,2,3,3,4,5,7];
   }
-  
+
   // How do you implement a stable sort with Array.prototype.sort() ?
   // ...By default, Array.prototype.sort() is not guaranteed 
 
