@@ -30,19 +30,19 @@ export class ObjHasOwnComponent implements OnInit {
     console.log(obj.hasOwnProperty?.("key")); // ❌ TypeError if ?. is not used
   }
 
-  
+
   // How does Object.hasOwn() handle inherited properties ?
-  
+
   // Is Object.hasOwn() affected by properties added via Object.prototype ? Why ?
-  
+
   // How can Object.hasOwn() be used to filter only direct properties from an object ?
-  
+
   // Can Object.hasOwn() be used on arrays ? If so, how ?
-  
+
   // What happens if you pass a non - object argument to Object.hasOwn() ?
-  
+
   // How does Object.hasOwn() compare to Reflect.has() in JavaScript ?
-  
+
   // Why was Object.hasOwn() introduced in ES2022 ?
 
 }
