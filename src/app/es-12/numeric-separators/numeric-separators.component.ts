@@ -14,7 +14,7 @@ export class NumericSeparatorsComponent implements OnInit {
 
 
   // What are numeric separators(_) in JavaScript, and why are they used?
-  
+
   // ...Underscores(_) are ignored by JavaScript, meaning 1_000 === 1000 is true.
   // ...Cannot start or end with _(e.g., _1000 or 1000_ is invalid).
   // ...Cannot have multiple consecutive _(e.g., 1__000 is invalid).
@@ -42,9 +42,9 @@ export class NumericSeparatorsComponent implements OnInit {
   // ...Cannot start or end with _(e.g., _1000 or 1000_ is invalid).
   // ...Cannot have multiple consecutive _(e.g., 1__000 is invalid).
   // ...Not supported in JSON(JSON does not allow _ in numbers).
-  
-  
-  
+
+
+
   // Do numeric separators affect mathematical operations in JavaScript ?
   example2() {
     const num1 = 4_000; // 4000
@@ -53,6 +53,7 @@ export class NumericSeparatorsComponent implements OnInit {
     console.log(num1 - num2);
     console.log(num1 / num2);
     console.log(num1 * num2);
+    console.log(4_000, 10_20)
   }
 
   // Are numeric separators preserved when converting a number to a string ?
@@ -74,11 +75,11 @@ export class NumericSeparatorsComponent implements OnInit {
   example5() {
     console.log(parseInt("1_000")); // NaN (Invalid number format)
   }
-  
+
   // Are numeric separators supported in all JavaScript engines and browsers ? How can you check compatibility ?
-  
+
   // What are some real - world use cases where numeric separators improve code clarity ?
-  
+
   // What error message do you get if you incorrectly use numeric separators in JavaScript ?
 
 
