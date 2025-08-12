@@ -49,11 +49,11 @@ export class JsExponentiationComponent implements OnInit {
   // ...Readability-	Less concise
   // ...Special Case Handling-	Coerces to number
   // ...Compatibility-	Works in all JS environments
-  
+
   // What happens when you perform exponentiation on a non - numeric value in JavaScript(e.g., 2 ** 'abc') ? // can't accept string value
-  
+
   // Can you use the exponentiation operator(**) with BigInt in JavaScript ? What will happen if you try? // No
-  
+
   // What is the difference in behavior between Math.pow and ** for large exponentiation values in JavaScript ?
   withlargeValue() {
     console.log(Math.pow(10, 1000)); // Infinity (because the result exceeds the max limit)
@@ -74,6 +74,7 @@ export class JsExponentiationComponent implements OnInit {
     // console.log(2n ** 3);  // TypeError: Cannot mix BigInt and other types
 
     console.log(4 ** 0.5);  // 2 (square root of 4)
+    console.log(4 ** .5);
     console.log(8 ** (1 / 3)); // 2 (cube root of 8)
     console.log((-4) ** 0.5); // NaN (cannot take fractional powers of negative numbers)
 
@@ -92,19 +93,19 @@ export class JsExponentiationComponent implements OnInit {
     console.log(0 ** 2);   // 0
     console.log(0 ** -2);  // Infinity (dividing by zero)
     console.log(0 ** 0);   // 1 (JavaScript defines this as 1)
-    
+
     console.log(2 ** -2); // 0.25 (1 / 2^2)
     console.log(5 ** -1); // 0.2 (1 / 5^1)
   }
-  
+
   // Does the exponentiation operator(**) in JavaScript have the same precedence as multiplication or addition ?
   precisionWise() {
     console.log(2 + 3 ** 2); // 2 + (3 ** 2) = 2 + 9 = 11
     console.log(2 * 3 ** 2); // 2 * (3 ** 2) = 2 * 9 = 18
   }
-  
+
   // How would you use exponentiation to calculate the square of a number in JavaScript ? // n ** 2
-  
+
   // Is the ** operator in JavaScript left - associative or right - associative ? Provide an example.
   associationee() {
     console.log(2 ** 3 ** 2); // 512 (evaluates as 2 ** (3 ** 2))

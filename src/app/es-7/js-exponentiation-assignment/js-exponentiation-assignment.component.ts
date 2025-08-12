@@ -9,7 +9,7 @@ export class JsExponentiationAssignmentComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // this.example1();
+    this.example1();
     this.example3();
   }
 
@@ -23,7 +23,7 @@ export class JsExponentiationAssignmentComponent implements OnInit {
     x **= 4;
     console.log(x);
   }
-  
+
   // Working with Different Data Types
   // Q3: What happens if you use the **= operator with a BigInt and a Number together(e.g., 2n **= 3) ? Will it work without errors ? Explain.
   example2() {
@@ -42,23 +42,23 @@ export class JsExponentiationAssignmentComponent implements OnInit {
     console.log(y **= 4); // 0.0016000000000000003
     console.log(3 ** 0);
   }
-  
+
   // Behavior and Side Effects
   // Q7 : What is the result of let x = 3; x **= 0; in JavaScript, and why ? // 1
-  
+
   // Edge Cases and Handling Invalid Operations
   // Q8: What would happen if you try to perform NaN **= 2 in JavaScript ? Explain the result. // NaN
   // Q9: How does JavaScript handle the **= operator when the exponent is Infinity or - Infinity ? Can you provide an example ? // Infinity
 
   // Associativity and Precedence
   // Q10: How does the **= operator behave in terms of precedence when used in expressions with other operators like + or *? Can you demonstrate with an example ? // Hieghest Precidence
-  
+
   // Q11 : What happens when you chain multiple **= operators together(e.g., x **= 2 **= 3) in JavaScript ? How is the order of evaluation determined ?
   example4() {
     let x = 2;
     // x **= 2 **= 3 // 256
   }
-  
+
   // Performance Considerations
   // Q12: If you need to repeatedly apply the **= operator in a loop to calculate exponential values, what performance considerations should you keep in mind ?
 
@@ -69,7 +69,7 @@ export class JsExponentiationAssignmentComponent implements OnInit {
   // Handling Edge Cases with **=
   // Q15: What happens when you use **= with 0 as the base and a negative exponent, for example x = 0 **= -2 ? Is there any special handling for this edge case?
   // Q16: What will happen if you try let y = 2; y **= -2;? How does JavaScript evaluate negative exponents in assignment operations ?
-  
+
   // Type Coercion and Casting
   // Q17: If you use the **= operator with a non - numeric string as the base(e.g., x = '5' **= 2), how does JavaScript handle the coercion of the string ? What’s the result ?
   // Q18 : Does JavaScript automatically convert non - integer values when using **= (e.g., does 3.5 **= 2 work as expected)? Explain how the operator behaves with floating - point values.
