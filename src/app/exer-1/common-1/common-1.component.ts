@@ -49,11 +49,12 @@ export class Common1Component implements OnInit {
     // console.log(this.hasUniqueCharacters("aabbcc"));  // Output: false
 
     // this.convertLowerCaseWithoutLowercase();
-    this.sortArray();
-    console.log(this.factorils(8));
-    this.sortArray();
-    this.findFirstNonRepeatingCharector();
-    console.log(this.fibonaaci(13));
+    // this.sortArray();
+    // console.log(this.factorils(8));
+    // this.sortArray();
+    // this.findFirstNonRepeatingCharector();
+    // console.log(this.fibonaaci(13));
+    this.mergeSortedArray();
   }
 
   // 1. Write a function to check if a number is prime.
@@ -65,7 +66,7 @@ export class Common1Component implements OnInit {
       if (num % 2 === 0) {
         return false;
       } else {
-        for (let i = 3; i * i < num; i+=2) {
+        for (let i = 3; i * i < num; i += 2) {
           if (num % i === 0) {
             return false
           }
@@ -128,12 +129,12 @@ export class Common1Component implements OnInit {
     }, 0)
     console.log('sumsumsumsumsumsum', sum);
   }
-  
+
   // 8. Write a function to check if two strings are anagrams.
   isAnagrams(str1: string, str2: string): boolean {
     return str1.toLowerCase().split('').sort().join('') === str2.toLowerCase().split('').sort().join('')
   }
-  
+
   // 9. Write a function to find the factorial of a number.
   getFactorial(num: number): number {
     let factorial: number = 1;
@@ -144,7 +145,7 @@ export class Common1Component implements OnInit {
     }
     return factorial;
   }
-  
+
   // 10. Write a function to find the greatest common divisor of two numbers.
   // it is Using the Euclidean Algorithm
   // Divide 60 by 36:
@@ -180,7 +181,7 @@ export class Common1Component implements OnInit {
     let sortedArray = tempArray.sort((a, b) => a - b);
     console.log(sortedArray)
     let missingNumbers: number[] = [];
-    for (let i = sortedArray[0]; i <= sortedArray[sortedArray.length-1]; i++) {
+    for (let i = sortedArray[0]; i <= sortedArray[sortedArray.length - 1]; i++) {
       if (!sortedArray.includes(i)) missingNumbers.push(i);
     }
     console.log(missingNumbers);
@@ -202,7 +203,7 @@ export class Common1Component implements OnInit {
     }
     return -1; // Target not found
   }
-  
+
   // 14. Write a function to flatten an array.
   flattenedArray(arra: any[]): any[] {
     let resultArray: any[] = [];
@@ -215,10 +216,10 @@ export class Common1Component implements OnInit {
     });
     return resultArray
   }
-  
+
   // 15. Write a function to find the largest sum of non - adjacent numbers in an array. // XXXX
-  
-  
+
+
   // 16. Write a function to check if a number is a power of two.
   checkPowerOfTwo(num: number): boolean {
     if (num < 0) return false;   // If n is less than or equal to 0, it's not a power of two
@@ -227,7 +228,7 @@ export class Common1Component implements OnInit {
     }
     return num === 1;   // If n becomes 1, it was a power of two
   }
-  
+
   // 17. Write a function to rotate an array by k positions.
   rotateArray(arr: any[], k: number) {
     const n = arr.length;
@@ -254,12 +255,12 @@ export class Common1Component implements OnInit {
       end--;
     }
   }
-    
+
   // 18. Write a function to implement a deep clone of an object.
   deepObject(obj: Object) {
     return JSON.parse(JSON.stringify(obj));
   }
-  
+
   // 19. Write a function to find the most frequent element in an array.
   getMostFrequent() {
     const arr = [1, 2, 3, 3, 2, 2, 4, 5, 3, 2];
@@ -280,7 +281,7 @@ export class Common1Component implements OnInit {
     console.log('mostFrequent', mostFrequent);
 
   }
-  
+
   // 20. Write a function to check if a number is a perfect square.
   isPerfectSquare(num: number): boolean {
     if (num < 0) return false;
@@ -340,16 +341,16 @@ export class Common1Component implements OnInit {
   reverseStrings(str1: string) {
     return str1.split('').reverse().join('');
   }
-  
+
   // 27. Write a function to check if a string is a palindrome.
   isPalindromes(str1: string) {
     return str1.split('').reverse().join('') === str1;
   }
-  
+
   // 28. Write a function to find the longest palindrome in a string. // XXXX
-  
+
   // 29. Write a function to find the longest common prefix among an array of strings.
-  getCommonPrefix(arr: string[]): string |undefined {
+  getCommonPrefix(arr: string[]): string | undefined {
     if (!arr.length) return '';
     // Sort the array of strings
     arr.sort();
@@ -359,10 +360,10 @@ export class Common1Component implements OnInit {
     let i = 0;
     while (i < first.length && i < last.length && first[i] === last[i]) {
       i++;
-    }  
+    }
     return first.slice(0, i);
   }
-  
+
   // 30. Write a function to check if a string contains only unique characters.
   hasUniqueCharacters(str: string): boolean {
     let strChar: string[] = [];
@@ -385,7 +386,7 @@ export class Common1Component implements OnInit {
     strArr.forEach(e => lowerCaseStr = lowerCaseStr + (e != ' ' ? (String.fromCharCode(e.charCodeAt(0) + 32)) : ' '));
     console.log('asdfasdf', lowerCaseStr);
   }
-  
+
   // 32. Write a function to sort an array of numbers in ascending order.
   sortArray() {
     const tempArray = [1, 2, 3, 2, 1, 2, 3, 4, 5, 4, 3, 3, 2, 2];
@@ -400,23 +401,23 @@ export class Common1Component implements OnInit {
     }
     console.log('sortedArray', tempArray);
   }
-  
+
   // 33. Write a function to implement the bubble sort algorithm. // XXXX
-  
+
   // 34. Write a function to implement the insertion sort algorithm. // XXXX
-  
+
   // 35. Write a function to implement the selection sort algorithm. // XXXX
-  
+
   // 36. Write a function to implement the merge sort algorithm. // XXXX
-  
+
   // 37. Write a function to implement the quicksort algorithm. // XXXX
-  
+
   // 38. Write a function to find the first non - repeating character in a string.
   findFirstNonRepeatingCharector() {
     let str = 'level';
     let charCount: any = {}
     for (let char of str) {
-      charCount[char] = (charCount[char] || 0) + 1; 
+      charCount[char] = (charCount[char] || 0) + 1;
     }
     let nonRepeatingChar: string = '';
     for (let c of str) {
@@ -443,10 +444,17 @@ export class Common1Component implements OnInit {
       libSeries.push(libSeries[libSeries.length - 1] + libSeries[libSeries.length - 2]);
       n--;
     }
-    return libSeries
+    return libSeries;
   }
 
+  // Merge two sorted arrays into one sorted array.
+  mergeSortedArray() {
+    const ar1 = [1, 3, 5];
+    const ar2 = [2, 4, 6];
+    let resultedArray = ar1.concat(ar2).sort((a, b) => a - b);
+    console.log(resultedArray);
 
+  }
 
 
 }

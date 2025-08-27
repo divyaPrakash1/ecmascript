@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './string-at.component.html',
   styleUrl: './string-at.component.scss'
 })
+
 export class StringAtComponent implements OnInit {
   constructor() { }
 

@@ -8,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class Common3Component implements OnInit {
   constructor() { }
   ngOnInit(): void {
-    
+
   }
 
   // TypeScript and JavaScript Integration
-  // 81. Write a function to find the largest prime factor of a number.  
-  // 82. Write a function to generate the powerset of a set of numbers.
-  // 83. Write a function to count the number of set bits(1s) in a number.
-  // 84. Write a function to find the Hamming distance between two numbers.
+  // 81. Write a function to find the largest prime factor of a number.  // XXXX
+  // 82. Write a function to generate the powerset of a set of numbers.  // XXXX
+  // 83. Write a function to count the number of set bits(1s) in a number. // XXXX
+  // 84. Write a function to find the Hamming distance between two numbers. // XXXX
   // 85. Write a function to find the longest consecutive sequence in an unsorted array.
   // 86. Write a function to implement the bind() method in JavaScript.
   // 87. Write a function to calculate the sum of all multiples of 3 and 5 below a given number.
