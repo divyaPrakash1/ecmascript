@@ -56,6 +56,10 @@ const routes: Routes = [
     path: 'exer-1',
     loadChildren: () => import('./exer-1/exer-1.module').then(m => m.Exer1Module)
   },
+  {
+    path: 'coding-task',
+    loadChildren: () => import('./coding-task/coding-task.module').then(m => m.CodingTaskModule)
+  },
 ];
 
 @NgModule({

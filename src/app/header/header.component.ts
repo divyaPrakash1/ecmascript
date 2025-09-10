@@ -27,6 +27,7 @@ export class HeaderComponent {
     { title: 'JS - 2024', link: 'js-2024' },
     { title: 'RxJs', link: 'rxjs' },
     { title: 'Exercise 1', link: 'exer-1' },
+    { title: 'Coding Task', link: 'coding-task' },
   ];
 
   exclusive: boolean = false;
