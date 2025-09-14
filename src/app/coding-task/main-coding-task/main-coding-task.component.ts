@@ -15,5 +15,6 @@ export class MainCodingTaskComponent {
     { title: 'New NgFor', link: 'new-ng-for' },
     { title: 'Content Projection', link: 'content-projection' },
     { title: 'Search Switch Map', link: 'search-switch-map' },
+    { title: 'Parent to Child Comm', link: 'parent-to-child-comm' },
   ];
 }

@@ -36,6 +36,8 @@ import { ConcatwithUnderscorePipe } from './utils/pipes/concatwith-underscore.pi
 import { NewNgForComponent } from './new-ng-for/new-ng-for.component';
 import { ContentProjectionComponent } from './content-projection/content-projection.component';
 import { SearchSwitchMapComponent } from './search-switch-map/search-switch-map.component';
+import { ParentChildCommComponent } from './parent-child-comm/parent-child-comm.component';
+import { ChildComponent } from './parent-child-comm/child/child.component';
 
 
 @NgModule({
@@ -72,7 +74,9 @@ import { SearchSwitchMapComponent } from './search-switch-map/search-switch-map.
     ConcatwithUnderscorePipe,
     NewNgForComponent,
     ContentProjectionComponent,
-    SearchSwitchMapComponent],
+    SearchSwitchMapComponent,
+    ParentChildCommComponent,
+    ChildComponent],
   imports: [
     CommonModule,
     CodingTaskRoutingModule,
