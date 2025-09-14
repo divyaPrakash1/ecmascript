@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnDestroy, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { concatMap, debounceTime, distinctUntilChanged, filter, map, mergeMap, pluck, Subject, Subscription, switchMap, takeUntil } from 'rxjs';
+import { debounceTime, distinctUntilChanged, filter, map, pluck, Subject, Subscription, switchMap, takeUntil } from 'rxjs';
 import { CommonService } from '../service/comman.service';
 import { Product } from '../interface/product.interface';
 

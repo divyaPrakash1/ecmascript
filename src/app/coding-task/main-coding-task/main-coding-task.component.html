@@ -2,7 +2,7 @@
     <div class="content">
         <div class="right-side">
             <div class="pill-group-1">
-                @for (item of items; track item.title;) {
+                @for (item of items; track item.title; let i=$index; let isEven=$even; let isOdd=$odd; let isFirst= $first; let isLast=$last) {
                 <a class="pill-item" [routerLink]="item.link" rel="noopener">
                     <span class="item-name">{{ item.title }}</span> <br />
                 </a>

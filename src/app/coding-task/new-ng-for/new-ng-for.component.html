@@ -1,0 +1,8 @@
+<div class="main-container row">
+    @for(studentDetail of studentDetails; track studentDetail.name; let i=$index; let isFirst=$first; let isLast=$last; let isEven=$even; let isOdd=$odd) {
+        <div class="col-md-3 my-2">Name: {{studentDetail.name}}</div>
+        <div class="col-md-3 my-2">Age: {{studentDetail.age}}</div>
+        <div class="col-md-3 my-2">Gender: {{studentDetail.gender}}</div>
+        <div class="col-md-3 my-2">Mobile: {{studentDetail.mobile}}</div>
+    }
+</div>

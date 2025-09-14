@@ -1,0 +1,19 @@
+<div>
+
+    <form [formGroup]="myForm">
+        <div>
+            <span>Seacrh</span>
+            <input type="text" name="search" id="search" formControlName="search" class="form-control">
+        </div>
+    </form>
+    @for(product of products; track product.id) {
+        <ul>
+            <li>{{product.body}}</li>
+            <li>{{product.email}}</li>
+            <li>{{product.id}}</li>
+            <li>{{product.name}}</li>
+            <li>{{product.postId}}</li>
+        </ul>
+    }
+
+</div>

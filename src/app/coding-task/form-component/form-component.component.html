@@ -1,0 +1,119 @@
+<div class="main-contriner">
+
+
+    <form [formGroup]="playersDetails" (ngSubmit)="submitPlayerDetails()">
+
+        <div class="row">
+            <h3>Main Details</h3>
+            <div class="col-md-4">
+                <span>Name</span>
+                <input type="text" name="name" id="name" class="form-control" formControlName="name">
+                <div *ngIf="f['name']?.touched && f['name']?.invalid">
+                    <small *ngIf="f['name']?.errors?.['required']" class="text-danger">Name is required</small>
+                    <small *ngIf="f['name']?.errors?.['onlyAlphabet']" class="text-danger">Name should be in characters
+                        only</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <span>Age</span>
+                <input type="text" name="age" id="age" class="form-control" formControlName="age">
+                <div *ngIf="f['age']?.touched && f['age']?.invalid">
+                    <small *ngIf="f['age']?.errors?.['required']" class="text-danger">Age is required</small>
+                    <small *ngIf="f['age']?.errors?.['ageBetween']" class="text-danger">Age should be between 18 to
+                        40</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <span>Mobile</span>
+                <input type="text" name="mobile" id="mobile" class="form-control" formControlName="mobile">
+                <div *ngIf="f['mobile']?.touched && f['mobile']?.invalid">
+                    <small *ngIf="f['mobile']?.errors?.['required']" class="text-danger">Mobile is required</small>
+                    <small *ngIf="f['mobile']?.errors?.['pattern']" class="text-danger">Mobile number should be 10
+                        digits and should start 6-9.</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" formGroupName="address">
+            <h3>Address</h3>
+            <div class="col-md-3">
+                <span>House number</span>
+                <input type="text" name="housenumber" id="housenumber" class="form-control"
+                    formControlName="housenumber">
+                <div *ngIf="a.get('housenumber')?.touched && a.get('housenumber')?.invalid">
+                    <small *ngIf="a.get('housenumber')?.errors?.['required']" class="text-danger">House number is
+                        required</small>
+                    <small *ngIf="a.get('housenumber')?.errors?.['numberShouldBeGivenDigits']" class="text-danger">House
+                        number should be 2 digits</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <span>City</span>
+                <input type="text" name="city" id="city" class="form-control" formControlName="city">
+                <div *ngIf="a.get('city')?.touched && a.get('city')?.invalid">
+                    <small *ngIf="a.get('city')?.errors?.['required']" class="text-danger">City is required</small>
+                    <small *ngIf="a.get('city')?.errors?.['onlyAlphabet']" class="text-danger">City should be in
+                        characters only</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <span>Landmark</span>
+                <input type="text" name="landmark" id="landmark" class="form-control" formControlName="landmark">
+                <div *ngIf="a.get('landmark')?.touched && a.get('landmark')?.invalid">
+                    <small *ngIf="a.get('landmark')?.errors?.['required']" class="text-danger">Landmark is
+                        required</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <span>Pincode</span>
+                <input type="text" name="pincode" id="pincode" class="form-control" formControlName="pincode">
+                <div *ngIf="a.get('pincode')?.touched && a.get('pincode')?.invalid">
+                    <small *ngIf="a.get('pincode')?.errors?.['required']" class="text-danger">Pincode is
+                        required</small>
+                    <small *ngIf="a.get('pincode')?.errors?.['onlyNumbersAllowed']" class="text-danger">Pincode should
+                        be 6 digits</small>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" formArrayName="stadiumdetails">
+            <h3>Stadium Details</h3>
+            <div *ngFor="let d of sd.controls; let i=index" [formGroupName]="i">
+                <div class="col-md-3">
+                    <span>Stadium name</span>
+                    <input type="text" name="stadiumname" id="stadiumname" class="form-control"
+                        formControlName="stadiumname">
+                    <div *ngIf="d.get('stadiumname')?.touched && d.get('stadiumname')?.invalid">
+                        <small *ngIf="d.get('stadiumname')?.errors?.['required']" class="text-danger">Stadium name is
+                            required</small>
+                        <small *ngIf="d.get('stadiumname')?.errors?.['onlyAlphabet']"
+                            class="text-danger">Stadium name should be in characters only</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <span>Stadium capacity</span>
+                    <input type="text" name="stadiumcapacity" id="stadiumcapacity" class="form-control" formControlName="stadiumcapacity">
+                    <div *ngIf="d.get('stadiumcapacity')?.touched && d.get('stadiumcapacity')?.invalid">
+                        <small *ngIf="d.get('stadiumcapacity')?.errors?.['required']" class="text-danger">Stadium capacity is required</small>
+                        <small *ngIf="d.get('stadiumcapacity')?.errors?.['onlyNumbersAllowed']" class="text-danger">Stadium capacity should be in
+                            digits only</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <span>Stadium city</span>
+                    <input type="text" name="stadiumcity" id="stadiumcity" class="form-control" formControlName="stadiumcity">
+                    <div *ngIf="d.get('stadiumcity')?.touched && d.get('stadiumcity')?.invalid">
+                        <small *ngIf="d.get('stadiumcity')?.errors?.['required']" class="text-danger">Landmark is
+                            required</small>
+                        <small *ngIf="d.get('stadiumcity')?.errors?.['onlyAlphabet']" class="text-danger">Landmark should be in characters only</small>
+                    </div>
+                </div>
+                <button  class="col-md-3" type="button" (click)="removeStadiumDetails(i)">(-)</button>
+            </div>
+        </div>
+
+        <button type="button" (click)="addStadiumDetails()">(+)</button>
+        <button type="submit" class="form-control" (click)="submitPlayerDetails()">Add Player Details</button>
+    </form>
+</div>

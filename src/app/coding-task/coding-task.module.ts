@@ -13,15 +13,29 @@ import { EllipsePipe } from './utils/pipes/ellipse.pipe';
 import { CapitalizePipe } from './utils/pipes/capitalize.pipe';
 import { ConcatwithPipe } from './utils/pipes/concatwith.pipe';
 import { LowerDirective } from './utils/directives/lower.directive';
-import { Child1Component } from './child1/child1.component';
-import { Child2Component } from './child2/child2.component';
-import { Child3Component } from './child3/child3.component';
-import { Child4Component } from './child4/child4.component';
+import { Child1Component } from './content-projection/child1/child1.component';
+import { Child2Component } from './content-projection/child2/child2.component';
+import { Child3Component } from './content-projection/child3/child3.component';
+import { Child4Component } from './content-projection/child4/child4.component';
 import { UpperPipe } from './utils/pipes/upper.pipe';
 import { FilterPipe } from './utils/pipes/filter.pipe';
 import { ClasssDirective } from './utils/directives/classs.directive';
 import { CutomClassDirective } from './utils/directives/cutom-class.directive';
 import { CapitalizeDirective } from './utils/directives/capitalize.directive';
+import { AnyPipe } from './utils/pipes/any.pipe';
+import { HoversDirective } from './utils/directives/hovers.directive';
+import { DirectiveComponent } from './directive/directive.component';
+import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
+import { HoverClassDirective } from './utils/directives/hover-class.directive';
+import { CapitalDirective } from './utils/directives/capital.directive';
+import { SmallDirective } from './utils/directives/small.directive';
+import { FirstCapitalPipe } from './utils/pipes/first-capital.pipe';
+import { FirstAndLastCapitalPipe } from './utils/pipes/first-and-last-capital.pipe';
+import { CapitalsPipe } from './utils/pipes/capitals.pipe';
+import { ConcatwithUnderscorePipe } from './utils/pipes/concatwith-underscore.pipe';
+import { NewNgForComponent } from './new-ng-for/new-ng-for.component';
+import { ContentProjectionComponent } from './content-projection/content-projection.component';
+import { SearchSwitchMapComponent } from './search-switch-map/search-switch-map.component';
 
 
 @NgModule({
@@ -44,7 +58,21 @@ import { CapitalizeDirective } from './utils/directives/capitalize.directive';
     FilterPipe,
     ClasssDirective,
     CutomClassDirective,
-    CapitalizeDirective],
+    CapitalizeDirective,
+    AnyPipe,
+    HoversDirective,
+    DirectiveComponent,
+    CustomPipeComponent,
+    HoverClassDirective,
+    CapitalDirective,
+    SmallDirective,
+    FirstCapitalPipe,
+    FirstAndLastCapitalPipe,
+    CapitalsPipe,
+    ConcatwithUnderscorePipe,
+    NewNgForComponent,
+    ContentProjectionComponent,
+    SearchSwitchMapComponent],
   imports: [
     CommonModule,
     CodingTaskRoutingModule,

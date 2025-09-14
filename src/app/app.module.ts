@@ -21,7 +21,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
   ],
   providers: [
     provideClientHydration(),
-    provideHttpClient(withFetch())  // 👈 Enables fetch API for HttpClient
+    provideHttpClient(withFetch())
 
   ],
   bootstrap: [AppComponent]
