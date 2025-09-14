@@ -16,5 +16,6 @@ export class MainCodingTaskComponent {
     { title: 'Content Projection', link: 'content-projection' },
     { title: 'Search Switch Map', link: 'search-switch-map' },
     { title: 'Parent to Child Comm', link: 'parent-to-child-comm' },
+    { title: 'Async Pipe', link: 'async-pipe' },
   ];
 }

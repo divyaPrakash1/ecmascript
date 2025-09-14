@@ -38,6 +38,7 @@ import { ContentProjectionComponent } from './content-projection/content-project
 import { SearchSwitchMapComponent } from './search-switch-map/search-switch-map.component';
 import { ParentChildCommComponent } from './parent-child-comm/parent-child-comm.component';
 import { ChildComponent } from './parent-child-comm/child/child.component';
+import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { ChildComponent } from './parent-child-comm/child/child.component';
     ContentProjectionComponent,
     SearchSwitchMapComponent,
     ParentChildCommComponent,
-    ChildComponent],
+    ChildComponent,
+    AsyncPipeComponent],
   imports: [
     CommonModule,
     CodingTaskRoutingModule,

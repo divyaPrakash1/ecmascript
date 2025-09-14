@@ -9,6 +9,7 @@ import { NewNgForComponent } from './new-ng-for/new-ng-for.component';
 import { ContentProjectionComponent } from './content-projection/content-projection.component';
 import { SearchSwitchMapComponent } from './search-switch-map/search-switch-map.component';
 import { ParentChildCommComponent } from './parent-child-comm/parent-child-comm.component';
+import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
       { path: 'content-projection', component: ContentProjectionComponent, },
       { path: 'search-switch-map', component: SearchSwitchMapComponent, },
       { path: 'parent-to-child-comm', component: ParentChildCommComponent, },
+      { path: 'async-pipe', component: AsyncPipeComponent, },
     ],
   }
 ];
